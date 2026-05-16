@@ -1,0 +1,1086 @@
+[
+  {
+    "id": "tianting_s02_0105",
+    "name": "乾坤 阳",
+    "faction": "tianting",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "qiankun_yang_destroy",
+        "kind": "activated",
+        "text": "击杀对方1张原本兵力不高于3000的军团。可返还1士气：抽取1张牌。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_original_power": 3000,
+          "follow_up_action": {
+            "optional": true,
+            "action": "draw_cards",
+            "count": 1,
+            "cost": {
+              "refund_morale": 1
+            }
+          }
+        }
+      }
+    ],
+    "text": "击杀对方1张原本兵力不高于3000的军团。\n可返还1士气：抽取1张牌。",
+    "image_path": "res://规则/牌面/天廷/乾坤 阳.png"
+  },
+  {
+    "id": "tianting_s02_0106",
+    "name": "乾坤 阴",
+    "faction": "tianting",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "qiankun_yin_counter",
+        "kind": "activated",
+        "text": "对方进攻或发动效果时：展示牌库顶部1张牌。若其为费用不高于3的天廷军团，将其弃置并强化我方1张军团，否则将其返回牌库底部。",
+        "resolution": {
+          "action": "tianting_qiankun_yin"
+        }
+      }
+    ],
+    "text": "对方 进攻或发动效果时：展示牌库顶部1张牌。若其为费用不高于3的【天廷】军团，将其弃置。随后选择我方1张军团，本回合增加因此效果弃置军团的费用和兵力，否则将其返回牌库底部。",
+    "image_path": "res://规则/牌面/天廷/乾坤 阴.png"
+  },
+  {
+    "id": "tianting_s01_0106",
+    "name": "关羽",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [
+      "must_hit"
+    ],
+    "effects": [
+      {
+        "id": "guanyu_free_move",
+        "kind": "activated",
+        "text": "我方回合1次 可进行1次位移。",
+        "target_mode": "none",
+        "once_per_turn_key": "guanyu_free_move",
+        "resolution": {
+          "action": "move_source_one_step"
+        }
+      },
+      {
+        "id": "guanyu_attack_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时 可返还1士气：此军团本回合兵力+1000。",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "modify_source_power_until_turn_end",
+          "amount": 1000
+        }
+      },
+      {
+        "id": "guanyu_attack_no_support",
+        "kind": "continuous",
+        "text": "进攻时无法被支援。",
+        "resolution": {
+          "action": "cannot_be_supported",
+          "target_scope": "attack_target",
+          "only_when_attacking": true
+        }
+      }
+    ],
+    "text": "我方 回合1次 可进行1次位移。\n进攻时 可返还1士气：此军团本回合兵力+1000，并获得必中。\n（进攻无法被抵挡/支援）",
+    "image_path": "res://规则/牌面/天廷/关羽.png",
+    "troop_type": "骑兵"
+  },
+  {
+    "id": "tianting_s01_0113",
+    "name": "养由基",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "yangyouji_enable_back_attack",
+        "kind": "activated",
+        "text": "位于后排可返还1士气：此军团本回合可进攻对方后排。",
+        "target_mode": "none",
+        "once_per_turn_key": "yangyouji_enable_back_attack",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "action": "tianting_yangyouji_enable_back_attack",
+          "required_row": "back"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n「位于后排」可返还1士气：此军团本回合可进攻对方后排。",
+    "image_path": "res://规则/牌面/天廷/养由基.png",
+    "troop_type": "弓手"
+  },
+  {
+    "id": "tianting_s01_0105",
+    "name": "刘备",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 5,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "liubei_entry_deploy_brother",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可返还1士气：选择将手牌中1张关羽或张飞活跃登场。",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_liu_bei_deploy_brother"
+        }
+      },
+      {
+        "id": "liubei_rest_search_brother",
+        "kind": "activated",
+        "text": "主动休整 可返还1士气：查看我方牌库，选择1张关羽或张飞展示并加入手牌。随后重洗牌库。",
+        "target_mode": "none",
+        "rest_source": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "action": "tianting_liu_bei_search_brother"
+        }
+      }
+    ],
+    "text": "登场时 可返还1士气：选择将手牌中1张<关羽>或<张飞>活跃登场。\n主动休整 可返还1士气：查看我方牌库，选择1张<关羽>或<张飞>展示并加入手牌。随后，重洗牌库。",
+    "image_path": "res://规则/牌面/天廷/刘备.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "tianting_s01_0101",
+    "name": "吕布",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "attack_no_loss",
+      "cannot_be_attacked_by_ranged"
+    ],
+    "effects": [
+      {
+        "id": "lvbu_attack_ready",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "此军团进攻后，可返还4士气，将此军团转为活跃。",
+        "cost": {
+          "refund_morale": 4
+        },
+        "resolution": {
+          "optional": true,
+          "action": "ready_source_card"
+        }
+      },
+      {
+        "id": "lvbu_entry_destroy_low_calamity",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可返还2士气：击杀对方1张天灾等级1或2的军团。",
+        "cost": {
+          "refund_morale": 2
+        },
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_calamity_level": 2
+        }
+      }
+    ],
+    "text": "进攻无损，无法被远程进攻。\n此军团进攻后，可返还4士气，将此军团转为活跃。\n登场时 可返还2士气：击杀对方1张天灾等级1或2的军团。",
+    "image_path": "res://规则/牌面/天廷/吕布.png",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "tianting_s01_0110",
+    "name": "墨子",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "mozi_entry_grant_cannot_die",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可返还1士气：选择我方最多2张天廷军团，直到我方下个回合开始前获得免死。",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_mozi_grant_cannot_die"
+        }
+      },
+      {
+        "id": "mozi_died_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可返还1士气：选择我方最多2张【天廷】军团，直到我方下个回合开始前获得免死。\n（仅1次，即将阵亡时，将兵力在本回合变为1000作为代替）\n阵亡时 抽取1张牌。",
+    "image_path": "res://规则/牌面/天廷/墨子.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "tianting_s02_0101",
+    "name": "始皇帝 嬴政",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "yingzheng_entry_clear_board",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "tianting_yingzheng_entry"
+        }
+      }
+    ],
+    "text": "「位于前排」我方主宰无法被兵力不高于2000的军团进攻。\n登场时 弃置手牌中1张费用为8的军团：击杀除此军团以外的所有军团。随后返还所有士气，且本回合我方无法因阵营效果以外的方式追加士气。\n若未能满足登场时效果的发动条件，则展示我方所有手牌。",
+    "image_path": "res://规则/牌面/天廷/始皇帝 嬴政.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "tianting_s01_0112",
+    "name": "孙武",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 10,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "sunwu_entry_free_tactic",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可返还1士气：本回合从手牌中打出的下1张战术卡无需消耗费用。",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_sunwu_prepare_free_tactic"
+        }
+      },
+      {
+        "id": "sunwu_died_return_tactic",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "calamity_value_at_most": 4
+        },
+        "resolution": {
+          "action": "return_from_grave_to_hand",
+          "type": "tactic",
+          "max_target_cost": 4,
+          "always_request_choice": true
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可返还1士气：本回合从手牌中打出的下1张战术卡无需消耗费用。\n阵亡时 若天灾值不高于4，可选择墓地1张费用不高于4的战术卡回到手牌。",
+    "image_path": "res://规则/牌面/天廷/孙武.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "tianting_s01_0117",
+    "name": "山河社稷图",
+    "faction": "tianting",
+    "type": "artifact",
+    "cost": 3,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "shanhe_entry_add_active_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "add_morale",
+          "count": 1,
+          "orientation": "active"
+        }
+      },
+      {
+        "id": "shanhe_rested_choose_mode",
+        "kind": "activated",
+        "text": "主动休整 选择以下一项。",
+        "target_mode": "none",
+        "rest_source": true,
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "选择以下一项",
+          "options": [
+            {
+              "id": "draw",
+              "label": "返还1士气抽1",
+              "cost": {
+                "refund_morale": 1
+              },
+              "resolution": {
+                "action": "draw_cards",
+                "count": 1
+              }
+            },
+            {
+              "id": "scout",
+              "label": "弃1手牌观顶3",
+              "cost": {
+                "discard_cards": 1
+              },
+              "resolution": {
+                "action": "tianting_shanhe_scout"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "登场时 从士气牌库追加1张活跃的士气。\n主动休整 选择以下一项。\n返还1活跃士气：抽取1张牌。\n弃置1张手牌：查看牌库顶部3张牌，选择其中1张【天廷】卡牌，展示并加入手牌，其余卡牌自选顺序返回牌库顶部或底部。",
+    "image_path": "res://规则/牌面/天廷/山河社稷图.png"
+  },
+  {
+    "id": "tianting_s02_0103",
+    "name": "平阳昭公主",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 4,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "pingyang_entry_master_bonus",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "grant_master_damage_bonus",
+          "amount": 1
+        }
+      },
+      {
+        "id": "pingyang_attack_reveal_top",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "tianting_pingyang_attack_reveal_top"
+        }
+      }
+    ],
+    "text": "登场时 本回合我方主宰对对方主宰造成的下一次伤害变为2。\n进攻时 可展示牌库顶部1张牌。若其为费用不高于5的【天廷】卡牌，此军团本回合兵力+2000；否则将其返回牌库底部。",
+    "image_path": "res://规则/牌面/天廷/平阳昭公主.png",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "tianting_s01_0107",
+    "name": "张飞",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 5,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "zhangfei_discount",
+        "kind": "continuous",
+        "text": "若我方士气少于对方，此军团登场费用-1。",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "controller_morale_less_than_opponent": true
+        }
+      },
+      {
+        "id": "zhangfei_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "taunt"
+        }
+      },
+      {
+        "id": "zhangfei_front_guard",
+        "kind": "continuous",
+        "text": "位于前排时，且在对方回合此军团兵力+1000。",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "front",
+          "only_during_opponent_turn": true,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "若我方士气少于对方，此军团登场费用-1。\n「位于前排」获得挑衅，且在对方回合此军团兵力+1000。\n（对方只可进攻带有此效果的军团）",
+    "image_path": "res://规则/牌面/天廷/张飞.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "tianting_s02_0102",
+    "name": "李牧",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "limu_entry_reveal_top_tactic",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "tianting_limu_entry_reveal_top_tactic"
+        }
+      },
+      {
+        "id": "limu_master_refund_trigger",
+        "kind": "triggered",
+        "event": "EffectResolved",
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_turn_only": true,
+          "event_player_is_controller": true,
+          "resolved_source_is_controller_master": true,
+          "command_created_morale_readied_at_least": 4
+        },
+        "once_per_turn_key": "limu_master_refund_trigger",
+        "resolution": {
+          "action": "tianting_limu_refund_morale_trigger"
+        }
+      }
+    ],
+    "text": "我方 回合1次 我方士气因主宰效果返还4张及以上时，可从士气牌库追加1张休整的士气。\n登场时 可展示牌库顶部1张牌。若其为费用不高于4的<主动战术>，可无需消耗费用将其打出；否则将其返回牌库底部。随后可抽取1张牌。",
+    "image_path": "res://规则/牌面/天廷/李牧.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "tianting_s01_0103",
+    "name": "李靖",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "lijing_entry_reveal_top",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "tianting_lijing_reveal_top"
+        }
+      }
+    ],
+    "text": "登场时 可展示牌库顶部1张牌。随后，选择将其放回牌库顶部或底部。\n若展示卡牌为费用不高于5的【天廷】军团，可返还1士气，将其活跃登场作为代替。",
+    "image_path": "res://规则/牌面/天廷/李靖.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "tianting_s01_0102",
+    "name": "武则天",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 10,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "wuzetian_entry_freeze_rested",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_freeze_enemy_units",
+          "count": 2
+        }
+      },
+      {
+        "id": "wuzetian_died_heal",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "heal_master",
+          "amount": 1
+        }
+      },
+      {
+        "id": "wuzetian_died_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "登场时 可返还1士气：选择对方最多2张休整的军团，在下个对方重置阶段无法转为活跃。\n阵亡时 抽取1张牌，我方主宰增加1点血量。",
+    "image_path": "res://规则/牌面/天廷/武则天.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "tianting_s01_0109",
+    "name": "白起",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "baiqi_entry_add_rested_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "add_morale",
+          "count": 3,
+          "orientation": "rested"
+        }
+      },
+      {
+        "id": "baiqi_rested_add_rested_morale",
+        "kind": "activated",
+        "text": "主动休整 从士气牌库追加1张休整的士气。",
+        "target_mode": "none",
+        "rest_source": true,
+        "resolution": {
+          "action": "add_morale",
+          "count": 1,
+          "orientation": "rested"
+        }
+      }
+    ],
+    "text": "登场时 从士气牌库追加3张休整的士气。\n主动休整 从士气牌库追加1张休整的士气。",
+    "image_path": "res://规则/牌面/天廷/白起.png",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "tianting_s02_0104",
+    "name": "神农鼎",
+    "faction": "tianting",
+    "type": "artifact",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "shennongding_entry_draw",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "draw_cards",
+          "count": 1
+        }
+      },
+      {
+        "id": "shennongding_reset_master_effect",
+        "kind": "activated",
+        "text": "主动休整 返还1士气：重置我方主宰其中1个效果的使用次数。",
+        "target_mode": "none",
+        "rest_source": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "action": "tianting_reset_master_effect_once"
+        }
+      }
+    ],
+    "text": "登场时 可抽取1张牌。\n主动休整 返还1士气：重置我方主宰其中1个效果的使用次数。",
+    "image_path": "res://规则/牌面/天廷/神农鼎.png"
+  },
+  {
+    "id": "tianting_s01_0118",
+    "name": "神妙行军",
+    "faction": "tianting",
+    "type": "tactic",
+    "cost": 4,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "shenmiao_buff_front",
+        "kind": "activated",
+        "text": "选择我方前排1张军团，本回合兵力+2000。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "required_row": "front",
+          "amount": 2000,
+          "follow_up_action": {
+            "optional": true,
+            "action": "choose_and_destroy_unit",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "max_target_power": 6000,
+            "cost": {
+              "refund_morale": 2
+            }
+          }
+        }
+      }
+    ],
+    "text": "选择我方前排1张军团，本回合兵力+2000。\n可返还2士气：击杀对方1张兵力不高于6000的军团。",
+    "image_path": "res://规则/牌面/天廷/神妙行军.png"
+  },
+  {
+    "id": "tianting_s01_0114",
+    "name": "秦良玉",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "qinliangyu_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "controller_morale_less_than_opponent": true
+        }
+      },
+      {
+        "id": "qinliangyu_entry_add_rested_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "add_morale",
+          "count": 1,
+          "orientation": "rested"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n若我方士气少于对方，此军团登场费用-1。\n登场时 从士气牌库追加1张休整的士气。",
+    "image_path": "res://规则/牌面/天廷/秦良玉.png",
+    "troop_type": "弓手"
+  },
+  {
+    "id": "tianting_s01_0120",
+    "name": "空城计",
+    "faction": "tianting",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "kongchengji_counter_attack",
+        "kind": "activated",
+        "response_requires_pending_attack": true,
+        "text": "对方进攻时 可返还1士气：可抵挡本次进攻。",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "action": "tianting_counter_pending_attack_then_draw_if_no_frontline"
+        }
+      }
+    ],
+    "text": "对方 进攻时 可返还1士气：可抵挡本次进攻。\n若我方战场前排没有军团，可抽取1张牌。",
+    "image_path": "res://规则/牌面/天廷/空城计.png"
+  },
+  {
+    "id": "tianting_s01_0108",
+    "name": "花木兰",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 2,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "mulan_entry_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "mulan_died_freeze_morale",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "opponent_turn_only": true
+        },
+        "resolution": {
+          "action": "tianting_freeze_enemy_morale"
+        }
+      }
+    ],
+    "text": "登场时 可返还1士气：获得冲锋。\n（可在登场回合进攻）\n对方回合 阵亡时 选择对方场上1张休整的士气，在下个对方重置阶段无法转为活跃。",
+    "image_path": "res://规则/牌面/天廷/花木兰.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "tianting_s01_0115",
+    "name": "荆轲",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "jingke_front_ranged",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "ranged"
+        }
+      },
+      {
+        "id": "jingke_front_ranged_no_loss",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "ranged_no_loss"
+        }
+      },
+      {
+        "id": "jingke_entry_draw_if_low_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "own_active_morale_at_most": 7
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1
+        }
+      },
+      {
+        "id": "jingke_died_destroy_small",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_power": 2000
+        }
+      }
+    ],
+    "text": "「位于前排」进攻距离+1，远程进攻无损。\n登场时 若我方士气不高于7，可抽取1张牌。\n阵亡时 可返还1士气：击杀对方最多1张兵力不高于2000的军团。",
+    "image_path": "res://规则/牌面/天廷/荆轲.png",
+    "troop_type": "刺客"
+  },
+  {
+    "id": "tianting_s01_0116",
+    "name": "西施",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "xishi_trade",
+        "kind": "activated",
+        "text": "我方回合 可弃置此军团并返还1士气：选择手牌中最多1张西施以外兵力不高于2000的军团活跃登场。随后抽取1张牌。",
+        "target_mode": "none",
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "action": "tianting_xishi_swap"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n我方回合 可弃置此军团并返还1士气：选择手牌中最多1张<西施>以外兵力不高于2000的军团活跃登场。随后抽取1张牌。",
+    "image_path": "res://规则/牌面/天廷/西施.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "tianting_s01_0119",
+    "name": "观星",
+    "faction": "tianting",
+    "type": "tactic",
+    "cost": 6,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "guanxing_reorder_top",
+        "kind": "activated",
+        "text": "查看牌库顶部5张牌，自选顺序放回牌库顶部或底部。随后，可从士气牌库追加1张活跃的士气。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "tianting_guanxing"
+        }
+      }
+    ],
+    "text": "查看牌库顶部5张牌，自选顺序放回牌库顶部或底部。\n随后，可从士气牌库追加1张活跃的士气。",
+    "image_path": "res://规则/牌面/天廷/观星.png"
+  },
+  {
+    "id": "tianting_s01_0111",
+    "name": "诸葛亮",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "zhugeliang_entry_peek_calamity",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "tianting_zhugeliang_peek_calamity"
+        }
+      },
+      {
+        "id": "zhugeliang_attack_reveal_top",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_zhugeliang_reveal_top_artifact_or_hand"
+        }
+      },
+      {
+        "id": "zhugeliang_died_reveal_top",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "tianting_zhugeliang_reveal_top_artifact_or_hand"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 查看下1张天灾卡。随后，可选择将天灾值增加或减少1点。\n进攻时 阵亡时 可返还1士气：将牌库顶部1张牌展示并加入手牌。若展示的是【圣物】，则可选择将其活跃登场作为代替。",
+    "image_path": "res://规则/牌面/天廷/诸葛亮.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "tianting_s01_0104",
+    "name": "韩信",
+    "faction": "tianting",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hanxin_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "controller_morale_less_than_opponent": true
+        }
+      },
+      {
+        "id": "hanxin_attack_bonus",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "refund_morale": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "modify_source_power_until_turn_end",
+          "amount": 1000,
+          "follow_up_action": {
+            "action": "grant_master_damage_bonus",
+            "amount": 1
+          }
+        }
+      }
+    ],
+    "text": "若我方士气少于对方，此军团登场费用-1。\n进攻时 可返还1士气：此军团本回合兵力+1000，并获得强攻。\n（进攻对主宰造成额外1点伤害）",
+    "image_path": "res://规则/牌面/天廷/韩信.png",
+    "troop_type": "武者"
+  }
+]

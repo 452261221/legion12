@@ -1,0 +1,121 @@
+[
+  {
+    "id": "dev_legion_alpha",
+    "name": "先锋军团",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 1,
+    "power": 3000,
+    "hp": 3000,
+    "keywords": [],
+    "effects": [],
+    "text": "测试用 3000 普通军团",
+    "status": "tested"
+  },
+  {
+    "id": "dev_legion_beta",
+    "name": "守备军团",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 1,
+    "power": 2000,
+    "hp": 2000,
+    "keywords": [],
+    "effects": [],
+    "text": "测试用 2000 普通军团",
+    "status": "tested"
+  },
+  {
+    "id": "dev_artifact_lens",
+    "name": "观测透镜",
+    "faction": "neutral",
+    "type": "artifact",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "lens_draw",
+        "kind": "activated",
+        "cost": { "morale": 1 },
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "pay 1 morale: draw 1 card"
+      }
+    ],
+    "text": "测试用圣物：支付1士气，抽1张牌",
+    "status": "tested"
+  },
+  {
+    "id": "dev_tactic_bolt",
+    "name": "速射战术",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "bolt_damage",
+        "kind": "activated",
+        "resolution": { "action": "deal_legion_damage", "amount": 2000 },
+        "text": "deal 2000 damage to target unit"
+      }
+    ],
+    "text": "测试用战术：对目标军团造成2000伤害",
+    "status": "tested"
+  },
+  {
+    "id": "dev_tactic_rally",
+    "name": "集结战术",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "rally_draw",
+        "kind": "activated",
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "draw 1 card"
+      }
+    ],
+    "text": "测试用战术：直接抽1张牌",
+    "status": "tested"
+  },
+  {
+    "id": "dev_tactic_smite",
+    "name": "裁决战术",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "smite_master",
+        "kind": "activated",
+        "resolution": { "action": "deal_master_damage", "amount": 2, "target": "enemy_master" },
+        "text": "deal 2 damage to enemy master"
+      }
+    ],
+    "text": "测试用战术：对敌方主宰造成2点伤害",
+    "status": "tested"
+  },
+  {
+    "id": "dev_counter_tactic_nullify",
+    "name": "无效战术",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "nullify_stack",
+        "kind": "activated",
+        "can_activate_on_stack": true,
+        "response_only": true,
+        "resolution": { "action": "counter_target_stack" },
+        "text": "counter target stack item"
+      }
+    ],
+    "text": "测试用反击战术：反制一个堆叠项",
+    "status": "tested"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "takamagahara_s01_0411",
+    "name": "安倍晴明",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "seimei_entry_grant_cannot_die_once",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时选择我方1张军团，直到下个我方回合开始前，获得免死。仅1次，即将阵亡时，将兵力在本回合变为1000作为代替。",
+        "resolution": {
+          "action": "grant_cannot_die_once_until_next_own_turn_start",
+          "target_scope": "allied_battlefield",
+          "type": "legion"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 选择我方1张军团，直到下个我方回合开始前，获得免死。\n（仅1次，即将阵亡时，将兵力在本回合变为1000作为代替）",
+    "image_path": "res://规则/牌面/高天原/安倍晴明.png",
+    "source": {
+      "card_code": "S01-0411",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "术师"
+  }
+]

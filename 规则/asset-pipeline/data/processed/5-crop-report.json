@@ -1,0 +1,44 @@
+[
+  {
+    "pageImage": "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\intermediate\\rendered\\5\\5-page-001.png",
+    "boxes": [
+      [
+        139,
+        191,
+        1056,
+        1457
+      ]
+    ],
+    "crops": [
+      "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\processed\\card-crops\\5\\5-page-001-card-01.png"
+    ]
+  },
+  {
+    "pageImage": "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\intermediate\\rendered\\5\\5-page-002.png",
+    "boxes": [
+      [
+        139,
+        16,
+        1056,
+        1305
+      ]
+    ],
+    "crops": [
+      "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\processed\\card-crops\\5\\5-page-002-card-01.png"
+    ]
+  },
+  {
+    "pageImage": "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\intermediate\\rendered\\5\\5-page-003.png",
+    "boxes": [
+      [
+        139,
+        16,
+        1056,
+        1305
+      ]
+    ],
+    "crops": [
+      "E:\\代码项目\\十二军团\\规则\\asset-pipeline\\data\\processed\\card-crops\\5\\5-page-003-card-01.png"
+    ]
+  }
+]

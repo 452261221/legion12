@@ -1,0 +1,48 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local tool and editor state
+.claude/
+.godot_appdata/
+.godot_cli_userdata/
+.gradle_user_home/
+.tmp_appdata/
+.tmp_history_probe/
+.trae_appdata/
+.trae_tmp_capture.gd
+.trae_tmp_capture.gd.uid
+.trae_godot_appdata/
+.trae_localappdata/
+.trae_temp/
+
+# Generated outputs and exports
+/apk_ascii/
+/apk_out/
+/battle_logs/
+/exports/
+/tmp/
+/tmp_ai_eval/
+/tmp_editor_data/
+/tmp_godot_probe_project/
+/tmp_godot_user/
+/tmp_logs/
+/tmp_replays/
+/导出/
+**/dist/
+**/node_modules/
+规则/h5-app/
+
+# Temporary files and logs
+*.log
+*.jsonl
+_tmp_*
+tmp_*
+ui_dual_ai_soak*
+ai_selfplay_probe.txt
+godot_boot_log.txt
+override.cfg
+
+# Built binaries and packages
+*.apk
+*.exe

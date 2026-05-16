@@ -1,0 +1,58 @@
+{
+  "source": {
+    "rule_book": "规则/1.pdf",
+    "page": 6,
+    "notes": [
+      "按规则书第1册第6页预组框抄录。",
+      "当前作为原始导入基线，尚未替换默认 demo 对局。",
+      "草薙剑名称参考规则 FAQ 中对 S01-0417 的明确写法；图鉴 OCR 常识别为草剑。"
+    ]
+  },
+  "decks": [
+    {
+      "id": "starter_takamagahara_exorcism_tale_raw",
+      "name": "高天原·除魔物语",
+      "faction": "takamagahara",
+      "master_name": "须佐之男",
+      "cards": [
+        { "name": "稻姬本多小松", "count": 1 },
+        { "name": "服部半藏", "count": 2 },
+        { "name": "巴御前", "count": 3 },
+        { "name": "源博雅", "count": 2 },
+        { "name": "桂小五郎", "count": 3 },
+        { "name": "源义经", "count": 3 },
+        { "name": "真田幸村", "count": 3 },
+        { "name": "宫本武藏", "count": 3 },
+        { "name": "本多忠胜", "count": 3 },
+        { "name": "佣兵部队", "count": 3 },
+        { "name": "草薙剑", "count": 3, "aliases": ["草剑"] },
+        { "name": "花魁的馈赠", "count": 3 },
+        { "name": "天诛", "count": 3 },
+        { "name": "绝对防御", "count": 2 },
+        { "name": "议和谈判", "count": 3 }
+      ]
+    },
+    {
+      "id": "starter_asgard_thousand_faces_raw",
+      "name": "阿斯加德·万千面相",
+      "faction": "asgard",
+      "master_name": "洛基",
+      "cards": [
+        { "name": "夺命诗人埃吉尔", "count": 3 },
+        { "name": "铁盾拉葛莎", "count": 3 },
+        { "name": "古斯塔夫一世", "count": 2 },
+        { "name": "阿尔维达", "count": 3 },
+        { "name": "佣兵部队", "count": 3 },
+        { "name": "奥拉夫二世", "count": 3 },
+        { "name": "血斧艾瑞克", "count": 3 },
+        { "name": "勇士比约恩", "count": 3 },
+        { "name": "传奇的拉格纳", "count": 3 },
+        { "name": "黑胡子蒂奇", "count": 3 },
+        { "name": "议和谈判", "count": 3 },
+        { "name": "女武神的召唤", "count": 3 },
+        { "name": "猎杀时刻", "count": 3 },
+        { "name": "绝对防御", "count": 2 }
+      ]
+    }
+  ]
+}

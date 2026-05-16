@@ -1,0 +1,237 @@
+[
+  {
+    "id": "bijie_s02_033",
+    "name": "侍从骑士",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "squire_died_advance_trial",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时 试炼+1。",
+        "resolution": {
+          "action": "advance_trial_progress",
+          "target": "first_trial",
+          "skip_completed": true,
+          "count": 1,
+          "complete_at": 2
+        }
+      }
+    ],
+    "text": "无法进攻主宰。\n阵亡时 试炼+1。",
+    "troop_type": "武者"
+  },
+  {
+    "id": "bijie_s02_034",
+    "name": "符文之力",
+    "faction": "bijie",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "runic_power_cast",
+        "kind": "activated",
+        "text": "获得1符文。可消耗1士气：查看牌库顶部3张牌，选择1张<符文之力>以外的【彼界】卡牌，展示并加入手牌，其余卡牌自选顺序返回牌库底部。",
+        "resolution": {
+          "action": "add_rune",
+          "count": 1,
+          "follow_up_action": {
+            "action": "choose_option_with_cost",
+            "title": "可消耗1士气：选择是否检索彼界卡牌",
+            "optional": true,
+            "options": [
+              {
+                "id": "search_bijie",
+                "label": "检索彼界卡牌",
+                "cost": {
+                  "morale": 1
+                },
+                "resolution": {
+                  "action": "search_deck",
+                  "max_look": 3,
+                  "count": 1,
+                  "match": {
+                    "faction": "bijie",
+                    "exclude_definition_id": "bijie_s02_034"
+                  },
+                  "reorder_remaining_to_bottom": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "text": "获得1符文。\n可消耗1士气：查看牌库顶部3张牌，选择1张<符文之力>以外的【彼界】卡牌，展示并加入手牌，其余卡牌自选顺序返回牌库底部。"
+  },
+  {
+    "id": "bijie_s02_037",
+    "name": "伊丽莎白·都铎",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 1000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "traits": [],
+    "effects": [
+      {
+        "id": "elizabeth_entry_add_rune",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 获得1符文。",
+        "resolution": {
+          "action": "add_rune",
+          "count": 1
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 获得1符文。",
+    "troop_type": "术师"
+  },
+  {
+    "id": "bijie_s02_040",
+    "name": "康斯坦丝",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "traits": [],
+    "effects": [
+      {
+        "id": "constance_entry_choice",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 选择以下一项。获得1符文。发动试炼。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "康斯坦丝：选择效果",
+          "options": [
+            {
+              "id": "gain_rune",
+              "label": "获得1符文",
+              "resolution": {
+                "action": "add_rune",
+                "count": 1
+              }
+            },
+            {
+              "id": "advance_trial",
+              "label": "发动试炼",
+              "resolution": {
+                "action": "advance_trial_progress",
+                "target": "first_trial",
+                "skip_completed": true,
+                "count": 1,
+                "complete_at": 2
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 选择以下一项。\n·获得1符文。\n·发动试炼。",
+    "troop_type": "弓手"
+  },
+  {
+    "id": "bijie_s02_041",
+    "name": "加拉哈德",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "galahad_entry_advance_trial",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可发动试炼。",
+        "resolution": {
+          "optional": true,
+          "action": "advance_trial_progress",
+          "target": "first_trial",
+          "skip_completed": true,
+          "count": 1,
+          "complete_at": 2
+        }
+      }
+    ],
+    "text": "登场时 可发动试炼。\n我方回合 试炼<寻找圣杯之旅>完成后，可弃置此军团：抽取1张牌，我方主宰可增加1点血量。",
+    "troop_type": "武者"
+  },
+  {
+    "id": "bijie_s02_056",
+    "name": "寻找圣杯之旅",
+    "faction": "bijie",
+    "type": "trial",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "holy_grail_complete_search",
+        "kind": "triggered",
+        "event": "TrialCompleted",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "event_card_id_is_source": true
+        },
+        "text": "触发 可查看我方牌库，选择1张【彼界】军团展示并加入手牌。随后重洗牌库。",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 40,
+          "count": 1,
+          "match": {
+            "type": "legion",
+            "faction": "bijie"
+          }
+        }
+      }
+    ],
+    "text": "触发 可查看我方牌库，选择1张【彼界】军团展示并加入手牌。随后重洗牌库。\n我方 回合1次 我方【圆桌骑士】登场时，可获得1符文。"
+  }
+]

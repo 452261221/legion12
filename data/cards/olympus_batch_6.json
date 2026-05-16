@@ -1,0 +1,85 @@
+[
+  {
+    "id": "olympus_s02_0516",
+    "name": "汉尼拔",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hannibal_active_cannot_be_attacked",
+        "kind": "continuous",
+        "resolution": {
+          "action": "cannot_be_attacked",
+          "target_scope": "self",
+          "required_orientation": "active"
+        }
+      },
+      {
+        "id": "hannibal_adjacent_buff",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "adjacent_battlefield",
+          "amount": 1000
+        }
+      },
+      {
+        "id": "hannibal_attack_weaken",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，可消耗1神力：选择双方各1张军团，本回合兵力-2000。",
+        "cost": {
+          "divine": 1
+        },
+        "resolution": {
+          "action": "olympus_hannibal_attack_weaken"
+        }
+      }
+    ],
+    "text": "此军团活跃时不可被进攻。左右相邻军团兵力+1000。\n进攻时 可消耗1神力：选择双方各1张军团，本回合兵力-2000。",
+    "image_path": "res://规则/牌面/奥林匹斯/汉尼拔.png",
+    "troop_type": "领军",
+    "source": {
+      "card_code": "S02-0516"
+    }
+  },
+  {
+    "id": "olympus_s02_0515",
+    "name": "海伦",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "helen_entry_discard_if_divine",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "olympus_helen_entry_discard_if_divine"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 若我方神力为1张及以上，对方弃置1张手牌。\n「位于前排」回合1次 即将阵亡时，可弃置手牌中1张<海伦>以外的军团卡代替承受本次致命进攻或效果。",
+    "image_path": "res://规则/牌面/奥林匹斯/海伦.png",
+    "troop_type": "术师",
+    "source": {
+      "card_code": "S02-0515"
+    }
+  }
+]

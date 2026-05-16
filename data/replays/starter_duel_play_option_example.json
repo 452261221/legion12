@@ -1,0 +1,65 @@
+{
+	"version": 1,
+	"ruleset_id": "dev_ruleset",
+	"seed": 1328,
+	"initial_decks": [
+		[
+			"asgard_s01_0303",
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"asgard_s01_0312",
+			"asgard_s01_0306",
+			"neutral_s01_0001"
+		],
+		[
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"asgard_s01_0318",
+			"asgard_s01_0306",
+			"asgard_s01_0312",
+			"neutral_s01_0002"
+		]
+	],
+	"winner": -1,
+	"loss_reason": "",
+	"commands": [
+		{
+			"player_id": 0,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "add_morale",
+				"player_id": 0,
+				"count": 5
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "set_master_hp",
+				"player_id": 0,
+				"hp": 8
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0001",
+				"row": "front",
+				"col": 0,
+				"play_option_id": "ragnar_blood_price"
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		}
+	]
+}

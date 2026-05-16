@@ -1,0 +1,65 @@
+[
+  {
+    "id": "takamagahara_s02_0401",
+    "name": "武田信玄",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "takeda_lock_master_morale_ready",
+        "kind": "continuous",
+        "resolution": {
+          "action": "prevent_master_ready_spent_morale"
+        }
+      },
+      {
+        "id": "takeda_entry_search_and_deploy_yukimura",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可查看我方牌库，选择1张兵力不高于5000的高天原军团展示并加入手牌。随后重洗牌库，选择将手牌中1张真田幸村活跃登场，并将1张士气转为活跃",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 99,
+          "count": 1,
+          "always_request_choice": true,
+          "match": {
+            "type": "legion",
+            "faction": "takamagahara",
+            "max_power": 5000
+          },
+          "follow_up_action": {
+            "action": "reveal_found_cards_to_opponent",
+            "title": "武田信玄：向对方展示加入手牌的卡牌",
+            "follow_up_action": {
+              "action": "shuffle_deck",
+              "follow_up_action": {
+                "action": "deploy_matching_legion_from_hand",
+                "type": "legion",
+                "id": "takamagahara_s01_0404",
+                "follow_up_action": {
+                  "action": "ready_spent_morale",
+                  "count": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "text": "我方士气无法因主宰效果转为活跃。\n登场时 可查看我方牌库，选择1张兵力不高于5000的【高天原】军团展示并加入手牌。随后重洗牌库，选择将手牌中1张<真田幸村>活跃登场，并将1张士气转为活跃。",
+    "image_path": "res://规则/牌面/高天原/武田信玄.png",
+    "source": {
+      "card_code": "S02-0401",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "领军"
+  }
+]

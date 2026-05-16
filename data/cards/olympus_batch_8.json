@@ -1,0 +1,41 @@
+[
+  {
+    "id": "olympus_s02_0523",
+    "name": "特洛伊木马",
+    "faction": "olympus",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "trojan_horse_after_attack",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "hidden_from_actions": true,
+        "only_during_opponent_turn": true,
+        "text": "对方进攻后：可将此战术置入对方战场任意空位，直到下个我方回合结束。随后弃置此战术，抽取1张牌。",
+        "resolution": {
+          "optional": true,
+          "action": "olympus_trojan_horse_after_attack"
+        }
+      },
+      {
+        "id": "trojan_horse_weaken_host_board",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "allied_battlefield",
+          "amount": -1000
+        }
+      }
+    ],
+    "text": "对方 进攻后：可将此战术置入对方战场任意空位，直到下个我方回合结束。随后弃置此战术，抽取1张牌。\n此战术在对方战场时：对方所有军团兵力-1000。",
+    "image_path": "res://规则/牌面/奥林匹斯/特洛伊木马.png",
+    "source": {
+      "card_code": "S02-0523"
+    }
+  }
+]

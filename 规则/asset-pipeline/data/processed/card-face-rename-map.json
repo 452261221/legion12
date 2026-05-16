@@ -1,0 +1,2270 @@
+[
+  {
+    "folder": "天廷",
+    "original": "乾坤 阳.png",
+    "renamed": "乾坤 阳.png",
+    "name": "乾坤 阳",
+    "code": "S02-0105",
+    "type": "战术",
+    "legacyMatch": "乾坤"
+  },
+  {
+    "folder": "天廷",
+    "original": "乾坤 阴.png",
+    "renamed": "乾坤 阴.png",
+    "name": "乾坤 阴",
+    "code": "S02-0106",
+    "type": "反击战术",
+    "legacyMatch": "乾坤"
+  },
+  {
+    "folder": "天廷",
+    "original": "关羽.png",
+    "renamed": "关羽.png",
+    "name": "关羽",
+    "code": "S01-0106",
+    "type": "军团",
+    "legacyMatch": "关羽"
+  },
+  {
+    "folder": "天廷",
+    "original": "养由基.png",
+    "renamed": "养由基.png",
+    "name": "养由基",
+    "code": "S01-0113",
+    "type": "军团",
+    "legacyMatch": "养由基"
+  },
+  {
+    "folder": "天廷",
+    "original": "刘备.png",
+    "renamed": "刘备.png",
+    "name": "刘备",
+    "code": "S01-0105",
+    "type": "军团",
+    "legacyMatch": "刘备"
+  },
+  {
+    "folder": "天廷",
+    "original": "吕布.png",
+    "renamed": "吕布.png",
+    "name": "吕布",
+    "code": "S01-0101",
+    "type": "军团",
+    "legacyMatch": "斗士"
+  },
+  {
+    "folder": "天廷",
+    "original": "哮天犬·稚.png",
+    "renamed": "哮天犬·稚.png",
+    "name": "哮天犬·稚",
+    "code": "S02-01S1",
+    "type": "衍生卡",
+    "legacyMatch": "哮天犬·稚天廷/杨专属"
+  },
+  {
+    "folder": "天廷",
+    "original": "墨子.png",
+    "renamed": "墨子.png",
+    "name": "墨子",
+    "code": "S01-0110",
+    "type": "军团",
+    "legacyMatch": "墨子"
+  },
+  {
+    "folder": "天廷",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S01-01C1A",
+    "type": "士气卡",
+    "legacyMatch": "天廷"
+  },
+  {
+    "folder": "天廷",
+    "original": "天廷 灵霄宝殿.png",
+    "renamed": "天廷 灵霄宝殿.png",
+    "name": "天廷 灵霄宝殿",
+    "code": "S01-01D1",
+    "type": "主城",
+    "legacyMatch": "天廷灵宝殿"
+  },
+  {
+    "folder": "天廷",
+    "original": "始皇帝 嬴政.png",
+    "renamed": "始皇帝 嬴政.png",
+    "name": "始皇帝 嬴政",
+    "code": "S02-0101",
+    "type": "军团",
+    "legacyMatch": "始皇帝"
+  },
+  {
+    "folder": "天廷",
+    "original": "孙悟空.png",
+    "renamed": "孙悟空.png",
+    "name": "孙悟空",
+    "code": "S02-01M1",
+    "type": "主宰",
+    "legacyMatch": "孙悟空"
+  },
+  {
+    "folder": "天廷",
+    "original": "孙武.png",
+    "renamed": "孙武.png",
+    "name": "孙武",
+    "code": "S01-0112",
+    "type": "军团",
+    "legacyMatch": "孙武"
+  },
+  {
+    "folder": "天廷",
+    "original": "孟婆.png",
+    "renamed": "孟婆.png",
+    "name": "孟婆",
+    "code": "S01-01M2",
+    "type": "主宰",
+    "legacyMatch": "孟婆"
+  },
+  {
+    "folder": "天廷",
+    "original": "山河社稷图.png",
+    "renamed": "山河社稷图.png",
+    "name": "山河社稷图",
+    "code": "S01-0117",
+    "type": "圣物",
+    "legacyMatch": "山河社稷图"
+  },
+  {
+    "folder": "天廷",
+    "original": "平阳昭公主.png",
+    "renamed": "平阳昭公主.png",
+    "name": "平阳昭公主",
+    "code": "S02-0103",
+    "type": "军团",
+    "legacyMatch": "平阳昭公主"
+  },
+  {
+    "folder": "天廷",
+    "original": "张飞.png",
+    "renamed": "张飞.png",
+    "name": "张飞",
+    "code": "S01-0107",
+    "type": "军团",
+    "legacyMatch": "张飞"
+  },
+  {
+    "folder": "天廷",
+    "original": "李牧.png",
+    "renamed": "李牧.png",
+    "name": "李牧",
+    "code": "S02-0102",
+    "type": "军团",
+    "legacyMatch": "李牧"
+  },
+  {
+    "folder": "天廷",
+    "original": "李靖.png",
+    "renamed": "李靖.png",
+    "name": "李靖",
+    "code": "S01-0103",
+    "type": "军团",
+    "legacyMatch": "领军灿"
+  },
+  {
+    "folder": "天廷",
+    "original": "杨戬-2.png",
+    "renamed": "杨戬-2.png",
+    "name": "杨戬",
+    "code": "S01-01M1",
+    "type": "主宰",
+    "legacyMatch": "二郎神"
+  },
+  {
+    "folder": "天廷",
+    "original": "杨戬.png",
+    "renamed": "杨戬.png",
+    "name": "杨戬",
+    "code": "S01-01M1A",
+    "type": "主宰",
+    "legacyMatch": "二郎神"
+  },
+  {
+    "folder": "天廷",
+    "original": "武则天.png",
+    "renamed": "武则天.png",
+    "name": "武则天",
+    "code": "S01-0102",
+    "type": "军团",
+    "legacyMatch": "领军拟"
+  },
+  {
+    "folder": "天廷",
+    "original": "白起.png",
+    "renamed": "白起.png",
+    "name": "白起",
+    "code": "S01-0109",
+    "type": "军团",
+    "legacyMatch": "白起"
+  },
+  {
+    "folder": "天廷",
+    "original": "神农鼎.png",
+    "renamed": "神农鼎.png",
+    "name": "神农鼎",
+    "code": "S02-0104",
+    "type": "圣物",
+    "legacyMatch": "神农鼎"
+  },
+  {
+    "folder": "天廷",
+    "original": "神妙行军.png",
+    "renamed": "神妙行军.png",
+    "name": "神妙行军",
+    "code": "S01-0118",
+    "type": "战术",
+    "legacyMatch": "神妙行军"
+  },
+  {
+    "folder": "天廷",
+    "original": "秦良玉.png",
+    "renamed": "秦良玉.png",
+    "name": "秦良玉",
+    "code": "S01-0114",
+    "type": "军团",
+    "legacyMatch": "秦良玉"
+  },
+  {
+    "folder": "天廷",
+    "original": "空城计.png",
+    "renamed": "空城计.png",
+    "name": "空城计",
+    "code": "S01-0120",
+    "type": "战术",
+    "legacyMatch": "空城计"
+  },
+  {
+    "folder": "天廷",
+    "original": "花木兰.png",
+    "renamed": "花木兰.png",
+    "name": "花木兰",
+    "code": "S01-0108",
+    "type": "军团",
+    "legacyMatch": "花木兰"
+  },
+  {
+    "folder": "天廷",
+    "original": "荆轲.png",
+    "renamed": "荆轲.png",
+    "name": "荆轲",
+    "code": "S01-0115",
+    "type": "军团",
+    "legacyMatch": "刺客机"
+  },
+  {
+    "folder": "天廷",
+    "original": "西施.png",
+    "renamed": "西施.png",
+    "name": "西施",
+    "code": "S01-0116",
+    "type": "军团",
+    "legacyMatch": "西施"
+  },
+  {
+    "folder": "天廷",
+    "original": "观星.png",
+    "renamed": "观星.png",
+    "name": "观星",
+    "code": "S01-0119",
+    "type": "战术",
+    "legacyMatch": "观星"
+  },
+  {
+    "folder": "天廷",
+    "original": "诸葛亮.png",
+    "renamed": "诸葛亮.png",
+    "name": "诸葛亮",
+    "code": "S01-0111",
+    "type": "军团",
+    "legacyMatch": "诸葛亮"
+  },
+  {
+    "folder": "天廷",
+    "original": "韩信.png",
+    "renamed": "韩信.png",
+    "name": "韩信",
+    "code": "S01-0104",
+    "type": "军团",
+    "legacyMatch": "韩信"
+  },
+  {
+    "folder": "天灾",
+    "original": "傲慢之罪.png",
+    "renamed": "傲慢之罪.png",
+    "name": "傲慢之罪",
+    "code": "S02-DS06",
+    "type": "天灾终局",
+    "legacyMatch": "傲慢之罪"
+  },
+  {
+    "folder": "天灾",
+    "original": "天启默示录.png",
+    "renamed": "天启默示录.png",
+    "name": "天启默示录",
+    "code": "S01-DS07",
+    "type": "天灾终局",
+    "legacyMatch": "天启默示录"
+  },
+  {
+    "folder": "天灾",
+    "original": "天地异变.png",
+    "renamed": "天地异变.png",
+    "name": "天地异变",
+    "code": "S02-DS01",
+    "type": "天灾终局",
+    "legacyMatch": "天地异变"
+  },
+  {
+    "folder": "天灾",
+    "original": "无眠之夜.png",
+    "renamed": "无眠之夜.png",
+    "name": "无眠之夜",
+    "code": "S02-DS03",
+    "type": "天灾终局",
+    "legacyMatch": "无眠之夜"
+  },
+  {
+    "folder": "天灾",
+    "original": "暴怒之罪.png",
+    "renamed": "暴怒之罪.png",
+    "name": "暴怒之罪",
+    "code": "S02-DS05",
+    "type": "天灾终局",
+    "legacyMatch": "暴怒之罪"
+  },
+  {
+    "folder": "天灾",
+    "original": "最终天灾 湮灭.png",
+    "renamed": "最终天灾 湮灭.png",
+    "name": "最终天灾 湮灭",
+    "code": "S01-DS10",
+    "type": "",
+    "legacyMatch": null
+  },
+  {
+    "folder": "天灾",
+    "original": "百鬼夜行.png",
+    "renamed": "百鬼夜行.png",
+    "name": "百鬼夜行",
+    "code": "S01-DS02",
+    "type": "天灾终局",
+    "legacyMatch": "百鬼夜行"
+  },
+  {
+    "folder": "天灾",
+    "original": "神之天平.png",
+    "renamed": "神之天平.png",
+    "name": "神之天平",
+    "code": "S01-DS06",
+    "type": "天灾终局",
+    "legacyMatch": "神之天平"
+  },
+  {
+    "folder": "天灾",
+    "original": "腐秽大地.png",
+    "renamed": "腐秽大地.png",
+    "name": "腐秽大地",
+    "code": "S01-DS03",
+    "type": "天灾终局",
+    "legacyMatch": "腐秽大地"
+  },
+  {
+    "folder": "天灾",
+    "original": "虚构的圣杯.png",
+    "renamed": "虚构的圣杯.png",
+    "name": "虚构的圣杯",
+    "code": "S01-DS08",
+    "type": "天灾终局",
+    "legacyMatch": "虚构的圣杯"
+  },
+  {
+    "folder": "天灾",
+    "original": "诸神黄昏.png",
+    "renamed": "诸神黄昏.png",
+    "name": "诸神黄昏",
+    "code": "S01-DS09",
+    "type": "天灾终局",
+    "legacyMatch": "诸神黄昏"
+  },
+  {
+    "folder": "天灾",
+    "original": "迷雾绝境.png",
+    "renamed": "迷雾绝境.png",
+    "name": "迷雾绝境",
+    "code": "S02-DS02",
+    "type": "天灾终局",
+    "legacyMatch": "迷雾绝境"
+  },
+  {
+    "folder": "天灾",
+    "original": "雷霆天怒.png",
+    "renamed": "雷霆天怒.png",
+    "name": "雷霆天怒",
+    "code": "S01-DS04",
+    "type": "天灾终局",
+    "legacyMatch": "雷霆天怒"
+  },
+  {
+    "folder": "天灾",
+    "original": "风暴乱象.png",
+    "renamed": "风暴乱象.png",
+    "name": "风暴乱象",
+    "code": "S02-DS04",
+    "type": "天灾终局",
+    "legacyMatch": "风暴乱象"
+  },
+  {
+    "folder": "天灾",
+    "original": "魔龙降世.png",
+    "renamed": "魔龙降世.png",
+    "name": "魔龙降世",
+    "code": "S01-DS05",
+    "type": "天灾终局",
+    "legacyMatch": "魔龙降世"
+  },
+  {
+    "folder": "天灾",
+    "original": "黯陨晨星.png",
+    "renamed": "黯陨晨星.png",
+    "name": "黯陨晨星",
+    "code": "S01-DS01",
+    "type": "",
+    "legacyMatch": null
+  },
+  {
+    "folder": "太阳城",
+    "original": "不朽之礼.png",
+    "renamed": "不朽之礼.png",
+    "name": "不朽之礼",
+    "code": "S01-0223",
+    "type": "战术",
+    "legacyMatch": "不朽之礼"
+  },
+  {
+    "folder": "太阳城",
+    "original": "伊姆何泰普.png",
+    "renamed": "伊姆何泰普.png",
+    "name": "伊姆何泰普",
+    "code": "S02-0204",
+    "type": "军团",
+    "legacyMatch": "伊姆何泰普"
+  },
+  {
+    "folder": "太阳城",
+    "original": "伊西斯.png",
+    "renamed": "伊西斯.png",
+    "name": "伊西斯",
+    "code": "S01-02M1",
+    "type": "主宰",
+    "legacyMatch": "伊西斯"
+  },
+  {
+    "folder": "太阳城",
+    "original": "克利奥帕特拉七世.png",
+    "renamed": "克利奥帕特拉七世.png",
+    "name": "克利奥帕特拉七世",
+    "code": "S01-0214",
+    "type": "军团",
+    "legacyMatch": "克利奥帕特拉七世"
+  },
+  {
+    "folder": "太阳城",
+    "original": "卡诺匹斯箱.png",
+    "renamed": "卡诺匹斯箱.png",
+    "name": "卡诺匹斯箱",
+    "code": "S01-0216",
+    "type": "圣物",
+    "legacyMatch": "卡诺匹斯箱"
+  },
+  {
+    "folder": "太阳城",
+    "original": "卡诺匹斯罐 一.png",
+    "renamed": "卡诺匹斯罐 一.png",
+    "name": "卡诺匹斯罐 一",
+    "code": "S01-0217",
+    "type": "圣物",
+    "legacyMatch": "卡诺匹斯罐"
+  },
+  {
+    "folder": "太阳城",
+    "original": "卡诺匹斯罐 三.png",
+    "renamed": "卡诺匹斯罐 三.png",
+    "name": "卡诺匹斯罐 三",
+    "code": "S01-0219",
+    "type": "圣物",
+    "legacyMatch": "卡诺匹斯罐"
+  },
+  {
+    "folder": "太阳城",
+    "original": "卡诺匹斯罐 二.png",
+    "renamed": "卡诺匹斯罐 二.png",
+    "name": "卡诺匹斯罐 二",
+    "code": "S01-0218",
+    "type": "圣物",
+    "legacyMatch": "卡诺匹斯罐"
+  },
+  {
+    "folder": "太阳城",
+    "original": "卡诺匹斯罐 四.png",
+    "renamed": "卡诺匹斯罐 四.png",
+    "name": "卡诺匹斯罐 四",
+    "code": "S01-0220",
+    "type": "圣物",
+    "legacyMatch": "卡诺匹斯罐"
+  },
+  {
+    "folder": "太阳城",
+    "original": "哈特谢普苏特.png",
+    "renamed": "哈特谢普苏特.png",
+    "name": "哈特谢普苏特",
+    "code": "S02-0203",
+    "type": "军团",
+    "legacyMatch": "哈特谢普苏特"
+  },
+  {
+    "folder": "太阳城",
+    "original": "图坦卡蒙.png",
+    "renamed": "图坦卡蒙.png",
+    "name": "图坦卡蒙",
+    "code": "S01-0207",
+    "type": "军团",
+    "legacyMatch": "图坦卡蒙"
+  },
+  {
+    "folder": "太阳城",
+    "original": "图特摩斯三世.png",
+    "renamed": "图特摩斯三世.png",
+    "name": "图特摩斯三世",
+    "code": "S01-0201",
+    "type": "军团",
+    "legacyMatch": "图特摩斯三世"
+  },
+  {
+    "folder": "太阳城",
+    "original": "增殖的甲虫.png",
+    "renamed": "增殖的甲虫.png",
+    "name": "增殖的甲虫",
+    "code": "S02-0201",
+    "type": "军团",
+    "legacyMatch": "增殖的甲虫"
+  },
+  {
+    "folder": "太阳城",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S01-02C1A",
+    "type": "士气卡",
+    "legacyMatch": "太阳城服务"
+  },
+  {
+    "folder": "太阳城",
+    "original": "复苏的奥西里斯.png",
+    "renamed": "复苏的奥西里斯.png",
+    "name": "复苏的奥西里斯",
+    "code": "S01-02M2",
+    "type": "主宰",
+    "legacyMatch": "复苏的奥西里斯"
+  },
+  {
+    "folder": "太阳城",
+    "original": "太阳城 众神之乡.png",
+    "renamed": "太阳城 众神之乡.png",
+    "name": "太阳城 众神之乡",
+    "code": "S01-02D1",
+    "type": "主城",
+    "legacyMatch": "太阳城众神之乡"
+  },
+  {
+    "folder": "太阳城",
+    "original": "奈芙蒂斯.png",
+    "renamed": "奈芙蒂斯.png",
+    "name": "奈芙蒂斯",
+    "code": "S02-02M1",
+    "type": "主宰",
+    "legacyMatch": "奈芙蒂斯"
+  },
+  {
+    "folder": "太阳城",
+    "original": "安卡神碑.png",
+    "renamed": "安卡神碑.png",
+    "name": "安卡神碑",
+    "code": "S01-0215",
+    "type": "圣物",
+    "legacyMatch": "安卡神碑"
+  },
+  {
+    "folder": "太阳城",
+    "original": "尼托克丽丝.png",
+    "renamed": "尼托克丽丝.png",
+    "name": "尼托克丽丝",
+    "code": "S01-0210",
+    "type": "军团",
+    "legacyMatch": "尼托克丽丝"
+  },
+  {
+    "folder": "太阳城",
+    "original": "托勒密十三世.png",
+    "renamed": "托勒密十三世.png",
+    "name": "托勒密十三世",
+    "code": "S01-0211",
+    "type": "军团",
+    "legacyMatch": "托勒密十三世"
+  },
+  {
+    "folder": "太阳城",
+    "original": "拉美西斯二世.png",
+    "renamed": "拉美西斯二世.png",
+    "name": "拉美西斯二世",
+    "code": "S01-0202",
+    "type": "军团",
+    "legacyMatch": "太阳城"
+  },
+  {
+    "folder": "太阳城",
+    "original": "无畏的刺杀.png",
+    "renamed": "无畏的刺杀.png",
+    "name": "无畏的刺杀",
+    "code": "S02-0206",
+    "type": "战术",
+    "legacyMatch": "无畏的刺杀"
+  },
+  {
+    "folder": "太阳城",
+    "original": "智慧法典 卷一.png",
+    "renamed": "智慧法典 卷一.png",
+    "name": "智慧法典 卷一",
+    "code": "S01-0224",
+    "type": "战术",
+    "legacyMatch": "智慧法典"
+  },
+  {
+    "folder": "太阳城",
+    "original": "杜阿特之门.png",
+    "renamed": "杜阿特之门.png",
+    "name": "杜阿特之门",
+    "code": "S01-0221",
+    "type": "战术",
+    "legacyMatch": "杜阿特之门"
+  },
+  {
+    "folder": "太阳城",
+    "original": "梅杰德-2.png",
+    "renamed": "梅杰德-2.png",
+    "name": "梅杰德",
+    "code": "S01-02M3",
+    "type": "主宰",
+    "legacyMatch": "梅杰德"
+  },
+  {
+    "folder": "太阳城",
+    "original": "梅杰德.png",
+    "renamed": "梅杰德.png",
+    "name": "梅杰德",
+    "code": "S01-02M3A",
+    "type": "主宰",
+    "legacyMatch": "梅杰德"
+  },
+  {
+    "folder": "太阳城",
+    "original": "沙漠君临.png",
+    "renamed": "沙漠君临.png",
+    "name": "沙漠君临",
+    "code": "S02-0207",
+    "type": "战术",
+    "legacyMatch": "沙漠君临"
+  },
+  {
+    "folder": "太阳城",
+    "original": "法老王的庆典.png",
+    "renamed": "法老王的庆典.png",
+    "name": "法老王的庆典",
+    "code": "S01-0222",
+    "type": "战术",
+    "legacyMatch": "法老王的庆典"
+  },
+  {
+    "folder": "太阳城",
+    "original": "纳芙蒂蒂.png",
+    "renamed": "纳芙蒂蒂.png",
+    "name": "纳芙蒂蒂",
+    "code": "S01-0209",
+    "type": "军团",
+    "legacyMatch": "纳芙蒂蒂"
+  },
+  {
+    "folder": "太阳城",
+    "original": "美尼斯.png",
+    "renamed": "美尼斯.png",
+    "name": "美尼斯",
+    "code": "S01-0203",
+    "type": "军团",
+    "legacyMatch": "太阳城"
+  },
+  {
+    "folder": "太阳城",
+    "original": "萨拉丁.png",
+    "renamed": "萨拉丁.png",
+    "name": "萨拉丁",
+    "code": "S01-0206",
+    "type": "军团",
+    "legacyMatch": "萨拉丁"
+  },
+  {
+    "folder": "太阳城",
+    "original": "锡瓦的卡巴（以.png",
+    "renamed": "锡瓦的卡巴（以.png",
+    "name": "锡瓦的卡巴（以",
+    "code": "S01-0213",
+    "type": "军团",
+    "legacyMatch": "锡瓦的卡巴（以"
+  },
+  {
+    "folder": "太阳城",
+    "original": "阿伊.png",
+    "renamed": "阿伊.png",
+    "name": "阿伊",
+    "code": "S01-0208",
+    "type": "军团",
+    "legacyMatch": "阿伊"
+  },
+  {
+    "folder": "太阳城",
+    "original": "陵墓圣武士.png",
+    "renamed": "陵墓圣武士.png",
+    "name": "陵墓圣武士",
+    "code": "S02-0202",
+    "type": "军团",
+    "legacyMatch": "陵墓圣武士"
+  },
+  {
+    "folder": "太阳城",
+    "original": "陵墓守卫.png",
+    "renamed": "陵墓守卫.png",
+    "name": "陵墓守卫",
+    "code": "S01-0212",
+    "type": "军团",
+    "legacyMatch": "陵墓守卫"
+  },
+  {
+    "folder": "太阳城",
+    "original": "陵墓构造体.png",
+    "renamed": "陵墓构造体.png",
+    "name": "陵墓构造体",
+    "code": "S01-0204",
+    "type": "军团",
+    "legacyMatch": "武者桃"
+  },
+  {
+    "folder": "太阳城",
+    "original": "霍列姆赫布.png",
+    "renamed": "霍列姆赫布.png",
+    "name": "霍列姆赫布",
+    "code": "S01-0205",
+    "type": "军团",
+    "legacyMatch": "霍列姆赫布"
+  },
+  {
+    "folder": "太阳城",
+    "original": "黄金圣甲虫.png",
+    "renamed": "黄金圣甲虫.png",
+    "name": "黄金圣甲虫",
+    "code": "S02-0205",
+    "type": "圣物",
+    "legacyMatch": "黄金圣甲虫一"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "亚里士多德.png",
+    "renamed": "亚里士多德.png",
+    "name": "亚里士多德",
+    "code": "S02-0513",
+    "type": "军团",
+    "legacyMatch": "亚里士多德"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "倪克斯的陨星.png",
+    "renamed": "倪克斯的陨星.png",
+    "name": "倪克斯的陨星",
+    "code": "S02-0522",
+    "type": "战术",
+    "legacyMatch": "倪克斯的陨星"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "匠神锻造炉.png",
+    "renamed": "匠神锻造炉.png",
+    "name": "匠神锻造炉",
+    "code": "S02-0520",
+    "type": "圣物",
+    "legacyMatch": "匠神锻造炉"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "埃涅阿斯.png",
+    "renamed": "埃涅阿斯.png",
+    "name": "埃涅阿斯",
+    "code": "S02-0512",
+    "type": "军团",
+    "legacyMatch": "埃涅阿斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S02-05C1A",
+    "type": "主城",
+    "legacyMatch": "奥林匹斯/士气卡"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "奥德修斯.png",
+    "renamed": "奥德修斯.png",
+    "name": "奥德修斯",
+    "code": "S02-0509",
+    "type": "军团",
+    "legacyMatch": "奥德修斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "奥林匹斯 诸神巅.png",
+    "renamed": "奥林匹斯 诸神巅.png",
+    "name": "奥林匹斯 诸神巅",
+    "code": "S02-05D1",
+    "type": "主城",
+    "legacyMatch": "奥林匹斯主城 诸神巅"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "希波吕忒.png",
+    "renamed": "希波吕忒.png",
+    "name": "希波吕忒",
+    "code": "S02-0510",
+    "type": "军团",
+    "legacyMatch": "希波吕忒"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "帕尔修斯·晋升.png",
+    "renamed": "帕尔修斯·晋升.png",
+    "name": "帕尔修斯·晋升",
+    "code": "S02-0505",
+    "type": "",
+    "legacyMatch": null
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "帕洛特埃.png",
+    "renamed": "帕洛特埃.png",
+    "name": "帕洛特埃",
+    "code": "S02-0511",
+    "type": "",
+    "legacyMatch": null
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "彭忒西勒亚.png",
+    "renamed": "彭忒西勒亚.png",
+    "name": "彭忒西勒亚",
+    "code": "S02-0517",
+    "type": "军团",
+    "legacyMatch": "彭忒西勒亚"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "忒修斯.png",
+    "renamed": "忒修斯.png",
+    "name": "忒修斯",
+    "code": "S02-0518",
+    "type": "军团",
+    "legacyMatch": "忒修斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "斯巴达勇士.png",
+    "renamed": "斯巴达勇士.png",
+    "name": "斯巴达勇士",
+    "code": "S02-0519",
+    "type": "军团",
+    "legacyMatch": "斯巴达勇士"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "普罗米修斯.png",
+    "renamed": "普罗米修斯.png",
+    "name": "普罗米修斯",
+    "code": "S02-05M2",
+    "type": "主宰",
+    "legacyMatch": "普罗米修斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "柏拉图.png",
+    "renamed": "柏拉图.png",
+    "name": "柏拉图",
+    "code": "S02-0514",
+    "type": "军团",
+    "legacyMatch": "柏拉图"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "汉尼拔.png",
+    "renamed": "汉尼拔.png",
+    "name": "汉尼拔",
+    "code": "S02-0516",
+    "type": "军团",
+    "legacyMatch": "汉尼拔"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "海伦.png",
+    "renamed": "海伦.png",
+    "name": "海伦",
+    "code": "S02-0515",
+    "type": "军团",
+    "legacyMatch": "海伦"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "特洛伊木马.png",
+    "renamed": "特洛伊木马.png",
+    "name": "特洛伊木马",
+    "code": "S02-0523",
+    "type": "反击战术",
+    "legacyMatch": "特洛伊木马"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "珀尔修斯.png",
+    "renamed": "珀尔修斯.png",
+    "name": "珀尔修斯",
+    "code": "S02-0506",
+    "type": "军团",
+    "legacyMatch": "珀尔修斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "神力.png",
+    "renamed": "神力.png",
+    "name": "神力",
+    "code": "S02-05C1",
+    "type": "待识别",
+    "legacyMatch": "奥林匹斯/神力卡"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "荣耀之路.png",
+    "renamed": "荣耀之路.png",
+    "name": "荣耀之路",
+    "code": "S02-0521",
+    "type": "战术",
+    "legacyMatch": "荣耀之路"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "赫拉克勒斯.png",
+    "renamed": "赫拉克勒斯.png",
+    "name": "赫拉克勒斯",
+    "code": "S02-0502",
+    "type": "军团",
+    "legacyMatch": "赫拉克勒斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "赫拉克勒斯·晋升.png",
+    "renamed": "赫拉克勒斯·晋升.png",
+    "name": "赫拉克勒斯·晋升",
+    "code": "S02-0501",
+    "type": "军团",
+    "legacyMatch": "赫拉克勒斯·晋升"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "阿喀琉斯.png",
+    "renamed": "阿喀琉斯.png",
+    "name": "阿喀琉斯",
+    "code": "S02-0504",
+    "type": "军团",
+    "legacyMatch": "阿喀琉斯"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "阿喀琉斯·晋升.png",
+    "renamed": "阿喀琉斯·晋升.png",
+    "name": "阿喀琉斯·晋升",
+    "code": "S02-0503",
+    "type": "军团",
+    "legacyMatch": "阿喀琉斯·晋升"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "阿塔兰忒.png",
+    "renamed": "阿塔兰忒.png",
+    "name": "阿塔兰忒",
+    "code": "S02-0508",
+    "type": "军团",
+    "legacyMatch": "阿塔兰忒"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "阿塔兰忒·晋升.png",
+    "renamed": "阿塔兰忒·晋升.png",
+    "name": "阿塔兰忒·晋升",
+    "code": "S02-0507",
+    "type": "军团",
+    "legacyMatch": "阿塔兰忒· 晋升"
+  },
+  {
+    "folder": "奥林匹斯",
+    "original": "阿尔忒弥斯.png",
+    "renamed": "阿尔忒弥斯.png",
+    "name": "阿尔忒弥斯",
+    "code": "S02-05M1",
+    "type": "主宰",
+    "legacyMatch": "阿尔忒弥斯"
+  },
+  {
+    "folder": "彼界",
+    "original": "亚瑟王.png",
+    "renamed": "亚瑟王.png",
+    "name": "亚瑟王",
+    "code": "S02-0601",
+    "type": "军团",
+    "legacyMatch": "亚瑟王"
+  },
+  {
+    "folder": "彼界",
+    "original": "伊丽莎白·都铎.png",
+    "renamed": "伊丽莎白·都铎.png",
+    "name": "伊丽莎白·都铎",
+    "code": "S02-0618",
+    "type": "军团",
+    "legacyMatch": "伊丽莎白·都铎"
+  },
+  {
+    "folder": "彼界",
+    "original": "侍从骑士.png",
+    "renamed": "侍从骑士.png",
+    "name": "侍从骑士",
+    "code": "S02-0609",
+    "type": "军团",
+    "legacyMatch": "侍从骑士"
+  },
+  {
+    "folder": "彼界",
+    "original": "克劳迪娅.png",
+    "renamed": "克劳迪娅.png",
+    "name": "克劳迪娅",
+    "code": "S02-0619",
+    "type": "军团",
+    "legacyMatch": "克劳迪娅"
+  },
+  {
+    "folder": "彼界",
+    "original": "兰斯洛特.png",
+    "renamed": "兰斯洛特.png",
+    "name": "兰斯洛特",
+    "code": "S02-0602",
+    "type": "军团",
+    "legacyMatch": "兰斯洛特"
+  },
+  {
+    "folder": "彼界",
+    "original": "加拉哈德.png",
+    "renamed": "加拉哈德.png",
+    "name": "加拉哈德",
+    "code": "S02-0604",
+    "type": "军团",
+    "legacyMatch": "加拉哈德"
+  },
+  {
+    "folder": "彼界",
+    "original": "十字军东征.png",
+    "renamed": "十字军东征.png",
+    "name": "十字军东征",
+    "code": "",
+    "type": "试炼卡",
+    "legacyMatch": "十字军东征"
+  },
+  {
+    "folder": "彼界",
+    "original": "圆桌领域.png",
+    "renamed": "圆桌领域.png",
+    "name": "圆桌领域",
+    "code": "S02-0621",
+    "type": "战术",
+    "legacyMatch": "圆桌领域"
+  },
+  {
+    "folder": "彼界",
+    "original": "圣女贞德.png",
+    "renamed": "圣女贞德.png",
+    "name": "圣女贞德",
+    "code": "S02-0613",
+    "type": "军团",
+    "legacyMatch": "圣女贞德"
+  },
+  {
+    "folder": "彼界",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S02-06C1A",
+    "type": "待识别",
+    "legacyMatch": "彼界士气卡"
+  },
+  {
+    "folder": "彼界",
+    "original": "安格斯·麦·奥格.png",
+    "renamed": "安格斯·麦·奥格.png",
+    "name": "安格斯·麦·奥格",
+    "code": "S02-06M2",
+    "type": "主宰",
+    "legacyMatch": "安格斯·麦·奥格"
+  },
+  {
+    "folder": "彼界",
+    "original": "寻找圣杯之旅.png",
+    "renamed": "寻找圣杯之旅.png",
+    "name": "寻找圣杯之旅",
+    "code": "",
+    "type": "试炼卡",
+    "legacyMatch": "寻找圣杯之旅"
+  },
+  {
+    "folder": "彼界",
+    "original": "帕西瓦尔.png",
+    "renamed": "帕西瓦尔.png",
+    "name": "帕西瓦尔",
+    "code": "S02-0606",
+    "type": "军团",
+    "legacyMatch": "帕西瓦尔"
+  },
+  {
+    "folder": "彼界",
+    "original": "库丘林.png",
+    "renamed": "库丘林.png",
+    "name": "库丘林",
+    "code": "S02-0611",
+    "type": "军团",
+    "legacyMatch": "库丘林"
+  },
+  {
+    "folder": "彼界",
+    "original": "康斯坦丝.png",
+    "renamed": "康斯坦丝.png",
+    "name": "康斯坦丝",
+    "code": "S02-0614",
+    "type": "军团",
+    "legacyMatch": "康斯坦丝"
+  },
+  {
+    "folder": "彼界",
+    "original": "彼界 阿瓦隆.png",
+    "renamed": "彼界 阿瓦隆.png",
+    "name": "彼界 阿瓦隆",
+    "code": "S02-06D1",
+    "type": "主城",
+    "legacyMatch": "彼界主城 阿瓦隆"
+  },
+  {
+    "folder": "彼界",
+    "original": "斯卡哈.png",
+    "renamed": "斯卡哈.png",
+    "name": "斯卡哈",
+    "code": "S02-0612",
+    "type": "军团",
+    "legacyMatch": "斯卡哈"
+  },
+  {
+    "folder": "彼界",
+    "original": "格温莉安.png",
+    "renamed": "格温莉安.png",
+    "name": "格温莉安",
+    "code": "S02-0615",
+    "type": "军团",
+    "legacyMatch": "格温莉安"
+  },
+  {
+    "folder": "彼界",
+    "original": "梅林.png",
+    "renamed": "梅林.png",
+    "name": "梅林",
+    "code": "S02-0603",
+    "type": "军团",
+    "legacyMatch": "梅林"
+  },
+  {
+    "folder": "彼界",
+    "original": "槲寄生符咒.png",
+    "renamed": "槲寄生符咒.png",
+    "name": "槲寄生符咒",
+    "code": "S02-0622",
+    "type": "战术",
+    "legacyMatch": "槲寄生符咒"
+  },
+  {
+    "folder": "彼界",
+    "original": "湖中仙女的馈赠.png",
+    "renamed": "湖中仙女的馈赠.png",
+    "name": "湖中仙女的馈赠",
+    "code": "",
+    "type": "试炼卡",
+    "legacyMatch": "湖中仙女的馈赠"
+  },
+  {
+    "folder": "彼界",
+    "original": "狮心王理查一世.png",
+    "renamed": "狮心王理查一世.png",
+    "name": "狮心王理查一世",
+    "code": "S02-0608",
+    "type": "军团",
+    "legacyMatch": "狮心王理查一世"
+  },
+  {
+    "folder": "彼界",
+    "original": "王者之剑.png",
+    "renamed": "王者之剑.png",
+    "name": "王者之剑",
+    "code": "S02-06S2",
+    "type": "衍生卡",
+    "legacyMatch": "王者之剑"
+  },
+  {
+    "folder": "彼界",
+    "original": "符文.png",
+    "renamed": "符文.png",
+    "name": "符文",
+    "code": "S02-06S1",
+    "type": "待识别",
+    "legacyMatch": "彼界符文卡"
+  },
+  {
+    "folder": "彼界",
+    "original": "符文之力.png",
+    "renamed": "符文之力.png",
+    "name": "符文之力",
+    "code": "S02-0620",
+    "type": "战术",
+    "legacyMatch": "符文之力"
+  },
+  {
+    "folder": "彼界",
+    "original": "罗宾汉.png",
+    "renamed": "罗宾汉.png",
+    "name": "罗宾汉",
+    "code": "S02-0617",
+    "type": "军团",
+    "legacyMatch": "罗宾汉"
+  },
+  {
+    "folder": "彼界",
+    "original": "芬尼亚传奇.png",
+    "renamed": "芬尼亚传奇.png",
+    "name": "芬尼亚传奇",
+    "code": "",
+    "type": "试炼卡",
+    "legacyMatch": "芬尼亚传奇"
+  },
+  {
+    "folder": "彼界",
+    "original": "芬恩.png",
+    "renamed": "芬恩.png",
+    "name": "芬恩",
+    "code": "S02-0610",
+    "type": "军团",
+    "legacyMatch": "芬恩"
+  },
+  {
+    "folder": "彼界",
+    "original": "莫瑞甘.png",
+    "renamed": "莫瑞甘.png",
+    "name": "莫瑞甘",
+    "code": "S02-06M1",
+    "type": "主宰",
+    "legacyMatch": "莫瑞甘"
+  },
+  {
+    "folder": "彼界",
+    "original": "阿麦金.png",
+    "renamed": "阿麦金.png",
+    "name": "阿麦金",
+    "code": "S02-0616",
+    "type": "军团",
+    "legacyMatch": "阿麦金"
+  },
+  {
+    "folder": "彼界",
+    "original": "高文.png",
+    "renamed": "高文.png",
+    "name": "高文",
+    "code": "S02-0607",
+    "type": "军团",
+    "legacyMatch": "高文"
+  },
+  {
+    "folder": "彼界",
+    "original": "鲍斯.png",
+    "renamed": "鲍斯.png",
+    "name": "鲍斯",
+    "code": "S02-0605",
+    "type": "军团",
+    "legacyMatch": "鲍斯"
+  },
+  {
+    "folder": "通用",
+    "original": "万物统御之戒.png",
+    "renamed": "万物统御之戒.png",
+    "name": "万物统御之戒",
+    "code": "S02-0008",
+    "type": "圣物",
+    "legacyMatch": "万物统御之戒"
+  },
+  {
+    "folder": "通用",
+    "original": "万箭齐发.png",
+    "renamed": "万箭齐发.png",
+    "name": "万箭齐发",
+    "code": "S01-0005",
+    "type": "战术",
+    "legacyMatch": "万箭齐发"
+  },
+  {
+    "folder": "通用",
+    "original": "伏击.png",
+    "renamed": "伏击.png",
+    "name": "伏击",
+    "code": "S01-0019",
+    "type": "战术",
+    "legacyMatch": "伏击"
+  },
+  {
+    "folder": "通用",
+    "original": "伪造密令.png",
+    "renamed": "伪造密令.png",
+    "name": "伪造密令",
+    "code": "S01-0010",
+    "type": "战术",
+    "legacyMatch": "伪造密令"
+  },
+  {
+    "folder": "通用",
+    "original": "佣兵部队.png",
+    "renamed": "佣兵部队.png",
+    "name": "佣兵部队",
+    "code": "S01-0002",
+    "type": "军团",
+    "legacyMatch": "佣兵部队"
+  },
+  {
+    "folder": "通用",
+    "original": "信仰狂热者.png",
+    "renamed": "信仰狂热者.png",
+    "name": "信仰狂热者",
+    "code": "S02-0006",
+    "type": "军团",
+    "legacyMatch": "信仰狂热者"
+  },
+  {
+    "folder": "通用",
+    "original": "全军出击.png",
+    "renamed": "全军出击.png",
+    "name": "全军出击",
+    "code": "S01-0012",
+    "type": "战术",
+    "legacyMatch": "全军出击"
+  },
+  {
+    "folder": "通用",
+    "original": "兵临城下.png",
+    "renamed": "兵临城下.png",
+    "name": "兵临城下",
+    "code": "S01-0008",
+    "type": "战术",
+    "legacyMatch": "兵临城下"
+  },
+  {
+    "folder": "通用",
+    "original": "前线侦查.png",
+    "renamed": "前线侦查.png",
+    "name": "前线侦查",
+    "code": "S01-0013",
+    "type": "战术",
+    "legacyMatch": "前线侦查"
+  },
+  {
+    "folder": "通用",
+    "original": "地主的胁迫.png",
+    "renamed": "地主的胁迫.png",
+    "name": "地主的胁迫",
+    "code": "S02-0015",
+    "type": "战术",
+    "legacyMatch": "地主的胁迫"
+  },
+  {
+    "folder": "通用",
+    "original": "宫廷魔术师.png",
+    "renamed": "宫廷魔术师.png",
+    "name": "宫廷魔术师",
+    "code": "S02-0003",
+    "type": "军团",
+    "legacyMatch": "宫廷魔术师"
+  },
+  {
+    "folder": "通用",
+    "original": "戏法师的傀儡.png",
+    "renamed": "戏法师的傀儡.png",
+    "name": "戏法师的傀儡",
+    "code": "S02-0005",
+    "type": "军团",
+    "legacyMatch": "戏法师的倪圖"
+  },
+  {
+    "folder": "通用",
+    "original": "战斗至黎明.png",
+    "renamed": "战斗至黎明.png",
+    "name": "战斗至黎明",
+    "code": "S01-0020",
+    "type": "战术",
+    "legacyMatch": "战斗至黎明"
+  },
+  {
+    "folder": "通用",
+    "original": "战略转移.png",
+    "renamed": "战略转移.png",
+    "name": "战略转移",
+    "code": "S01-0009",
+    "type": "战术",
+    "legacyMatch": "战略转移"
+  },
+  {
+    "folder": "通用",
+    "original": "拼死反抗.png",
+    "renamed": "拼死反抗.png",
+    "name": "拼死反抗",
+    "code": "S01-0017",
+    "type": "战术",
+    "legacyMatch": "拼死反抗"
+  },
+  {
+    "folder": "通用",
+    "original": "摄政皇权.png",
+    "renamed": "摄政皇权.png",
+    "name": "摄政皇权",
+    "code": "S01-0021",
+    "type": "战术",
+    "legacyMatch": "摄政皇权"
+  },
+  {
+    "folder": "通用",
+    "original": "攻城投石车.png",
+    "renamed": "攻城投石车.png",
+    "name": "攻城投石车",
+    "code": "S01-0003",
+    "type": "军团",
+    "legacyMatch": "攻城投石车"
+  },
+  {
+    "folder": "通用",
+    "original": "无名的渗透者.png",
+    "renamed": "无名的渗透者.png",
+    "name": "无名的渗透者",
+    "code": "S01-0004",
+    "type": "军团",
+    "legacyMatch": "无名的渗透者"
+  },
+  {
+    "folder": "通用",
+    "original": "毒药发作.png",
+    "renamed": "毒药发作.png",
+    "name": "毒药发作",
+    "code": "S02-0018",
+    "type": "战术",
+    "legacyMatch": "毒药发作"
+  },
+  {
+    "folder": "通用",
+    "original": "疯狂的爱丽丝.png",
+    "renamed": "疯狂的爱丽丝.png",
+    "name": "疯狂的爱丽丝",
+    "code": "S02-0002",
+    "type": "军团",
+    "legacyMatch": "疯狂的爱丽丝"
+  },
+  {
+    "folder": "通用",
+    "original": "瘟疫感染.png",
+    "renamed": "瘟疫感染.png",
+    "name": "瘟疫感染",
+    "code": "S01-0011",
+    "type": "战术",
+    "legacyMatch": "瘟疫感染"
+  },
+  {
+    "folder": "通用",
+    "original": "瞬间的思路.png",
+    "renamed": "瞬间的思路.png",
+    "name": "瞬间的思路",
+    "code": "S02-0014",
+    "type": "战术",
+    "legacyMatch": "瞬间的思路"
+  },
+  {
+    "folder": "通用",
+    "original": "破败仪式.png",
+    "renamed": "破败仪式.png",
+    "name": "破败仪式",
+    "code": "S02-0016",
+    "type": "战术",
+    "legacyMatch": "破败仪式"
+  },
+  {
+    "folder": "通用",
+    "original": "神圣伽锁.png",
+    "renamed": "神圣伽锁.png",
+    "name": "神圣伽锁",
+    "code": "S02-0013",
+    "type": "战术",
+    "legacyMatch": "神圣伽锁"
+  },
+  {
+    "folder": "通用",
+    "original": "祭天仪式.png",
+    "renamed": "祭天仪式.png",
+    "name": "祭天仪式",
+    "code": "S01-0014",
+    "type": "战术",
+    "legacyMatch": "祭天仪式"
+  },
+  {
+    "folder": "通用",
+    "original": "祷告仪式.png",
+    "renamed": "祷告仪式.png",
+    "name": "祷告仪式",
+    "code": "S02-0012",
+    "type": "战术",
+    "legacyMatch": "祷告仪式"
+  },
+  {
+    "folder": "通用",
+    "original": "粮草掠夺.png",
+    "renamed": "粮草掠夺.png",
+    "name": "粮草掠夺",
+    "code": "S02-0017",
+    "type": "战术",
+    "legacyMatch": "粮草掠夺"
+  },
+  {
+    "folder": "通用",
+    "original": "纷乱箭.png",
+    "renamed": "纷乱箭.png",
+    "name": "纷乱箭",
+    "code": "S02-0011",
+    "type": "战术",
+    "legacyMatch": "纷乱箭"
+  },
+  {
+    "folder": "通用",
+    "original": "绝对防御.png",
+    "renamed": "绝对防御.png",
+    "name": "绝对防御",
+    "code": "S01-0016",
+    "type": "战术",
+    "legacyMatch": "绝对防御"
+  },
+  {
+    "folder": "通用",
+    "original": "落穴陷阱.png",
+    "renamed": "落穴陷阱.png",
+    "name": "落穴陷阱",
+    "code": "S01-0018",
+    "type": "战术",
+    "legacyMatch": "落穴陷"
+  },
+  {
+    "folder": "通用",
+    "original": "议和谈判.png",
+    "renamed": "议和谈判.png",
+    "name": "议和谈判",
+    "code": "S01-0015",
+    "type": "战术",
+    "legacyMatch": "议和谈判"
+  },
+  {
+    "folder": "通用",
+    "original": "路易芒德兰.png",
+    "renamed": "路易芒德兰.png",
+    "name": "路易芒德兰",
+    "code": "S02-0004",
+    "type": "军团",
+    "legacyMatch": "路易芒德兰"
+  },
+  {
+    "folder": "通用",
+    "original": "邪恶仪式.png",
+    "renamed": "邪恶仪式.png",
+    "name": "邪恶仪式",
+    "code": "S01-0006",
+    "type": "战术",
+    "legacyMatch": "邪恶仪式"
+  },
+  {
+    "folder": "通用",
+    "original": "重装士兵.png",
+    "renamed": "重装士兵.png",
+    "name": "重装士兵",
+    "code": "S02-0007",
+    "type": "军团",
+    "legacyMatch": "重装王兵"
+  },
+  {
+    "folder": "通用",
+    "original": "野外扎营.png",
+    "renamed": "野外扎营.png",
+    "name": "野外扎营",
+    "code": "S01-0007",
+    "type": "待识别",
+    "legacyMatch": "野外扎营"
+  },
+  {
+    "folder": "通用",
+    "original": "防御部署.png",
+    "renamed": "防御部署.png",
+    "name": "防御部署",
+    "code": "S02-0009",
+    "type": "战术",
+    "legacyMatch": "防御部署"
+  },
+  {
+    "folder": "通用",
+    "original": "驱魔道士 陆瑛.png",
+    "renamed": "驱魔道士 陆瑛.png",
+    "name": "驱魔道士 陆瑛",
+    "code": "S02-0001",
+    "type": "军团",
+    "legacyMatch": "陆瑛"
+  },
+  {
+    "folder": "通用",
+    "original": "黑胡子蒂奇.png",
+    "renamed": "黑胡子蒂奇.png",
+    "name": "黑胡子蒂奇",
+    "code": "S01-0001",
+    "type": "军团",
+    "legacyMatch": "黑胡子蒂奇"
+  },
+  {
+    "folder": "通用",
+    "original": "黑色莲花.png",
+    "renamed": "黑色莲花.png",
+    "name": "黑色莲花",
+    "code": "S02-0010",
+    "type": "战术",
+    "legacyMatch": "黑色莲花"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "传奇的拉格纳.png",
+    "renamed": "传奇的拉格纳.png",
+    "name": "传奇的拉格纳",
+    "code": "S01-0303",
+    "type": "军团",
+    "legacyMatch": "传奇的拉格纳"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "勇士比约恩.png",
+    "renamed": "勇士比约恩.png",
+    "name": "勇士比约恩",
+    "code": "S01-0305",
+    "type": "军团",
+    "legacyMatch": "勇士比约恩"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "卡纽特大帝.png",
+    "renamed": "卡纽特大帝.png",
+    "name": "卡纽特大帝",
+    "code": "S02-0303",
+    "type": "军团",
+    "legacyMatch": "领军加"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "古斯塔夫一世.png",
+    "renamed": "古斯塔夫一世.png",
+    "name": "古斯塔夫一世",
+    "code": "S01-0311",
+    "type": "军团",
+    "legacyMatch": "舌斯塔夫一世"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S01-03C1A",
+    "type": "士气卡",
+    "legacyMatch": "阿斯加德服务"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "复仇血鹰.png",
+    "renamed": "复仇血鹰.png",
+    "name": "复仇血鹰",
+    "code": "S01-0320",
+    "type": "战术",
+    "legacyMatch": "复仇血鹰"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "夺命诗人埃吉尔.png",
+    "renamed": "夺命诗人埃吉尔.png",
+    "name": "夺命诗人埃吉尔",
+    "code": "S01-0316",
+    "type": "军团",
+    "legacyMatch": "夺命诗人埃吉尔"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "奥尔加.png",
+    "renamed": "奥尔加.png",
+    "name": "奥尔加",
+    "code": "S01-0314",
+    "type": "军团",
+    "legacyMatch": "奥尔加"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "奥拉夫二世.png",
+    "renamed": "奥拉夫二世.png",
+    "name": "奥拉夫二世",
+    "code": "S01-0306",
+    "type": "军团",
+    "legacyMatch": "奥拉夫三世"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "女武神的召唤.png",
+    "renamed": "女武神的召唤.png",
+    "name": "女武神的召唤",
+    "code": "S01-0318",
+    "type": "战术",
+    "legacyMatch": "女武神的召唤"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "安德华拉诺特.png",
+    "renamed": "安德华拉诺特.png",
+    "name": "安德华拉诺特",
+    "code": "S02-0305",
+    "type": "圣物",
+    "legacyMatch": "安德华拉诺特"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "密米尔之泉.png",
+    "renamed": "密米尔之泉.png",
+    "name": "密米尔之泉",
+    "code": "S02-0306",
+    "type": "战术",
+    "legacyMatch": "密米尔之泉"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "布伦希尔德.png",
+    "renamed": "布伦希尔德.png",
+    "name": "布伦希尔德",
+    "code": "S01-0309",
+    "type": "军团",
+    "legacyMatch": "布伦希尔德"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "无情者哈拉尔.png",
+    "renamed": "无情者哈拉尔.png",
+    "name": "无情者哈拉尔",
+    "code": "S01-0304",
+    "type": "军团",
+    "legacyMatch": "无情者哈拉尔"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "无骨者伊瓦尔.png",
+    "renamed": "无骨者伊瓦尔.png",
+    "name": "无骨者伊瓦尔",
+    "code": "S01-0315",
+    "type": "军团",
+    "legacyMatch": "无骨者伊瓦尔"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "步行者罗洛.png",
+    "renamed": "步行者罗洛.png",
+    "name": "步行者罗洛",
+    "code": "S02-0302",
+    "type": "军团",
+    "legacyMatch": "步行者罗洛"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "洛基-2.png",
+    "renamed": "洛基-2.png",
+    "name": "洛基",
+    "code": "S01-03M2",
+    "type": "主宰",
+    "legacyMatch": "洛基"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "洛基.png",
+    "renamed": "洛基.png",
+    "name": "洛基",
+    "code": "S01-03M2A",
+    "type": "主宰",
+    "legacyMatch": "洛基"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "海拉的凝视.png",
+    "renamed": "海拉的凝视.png",
+    "name": "海拉的凝视",
+    "code": "S02-0307",
+    "type": "战术",
+    "legacyMatch": "海拉的凝视"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "猎杀时刻.png",
+    "renamed": "猎杀时刻.png",
+    "name": "猎杀时刻",
+    "code": "S01-0319",
+    "type": "战术",
+    "legacyMatch": "猎杀时刻"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "玛格丽特一世.png",
+    "renamed": "玛格丽特一世.png",
+    "name": "玛格丽特一世",
+    "code": "S02-0304",
+    "type": "军团",
+    "legacyMatch": "玛格丽特一世"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "瓦尔基里.png",
+    "renamed": "瓦尔基里.png",
+    "name": "瓦尔基里",
+    "code": "S01-03M1",
+    "type": "主宰",
+    "legacyMatch": "瓦尔基里"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "神剑格拉墨.png",
+    "renamed": "神剑格拉墨.png",
+    "name": "神剑格拉墨",
+    "code": "S01-0317",
+    "type": "圣物",
+    "legacyMatch": "神剑格拉墨"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "神箭奥德尔.png",
+    "renamed": "神箭奥德尔.png",
+    "name": "神箭奥德尔",
+    "code": "S01-0313",
+    "type": "军团",
+    "legacyMatch": "神箭奥德尔"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "血斧艾瑞克.png",
+    "renamed": "血斧艾瑞克.png",
+    "name": "血斧艾瑞克",
+    "code": "S01-0308",
+    "type": "军团",
+    "legacyMatch": "血斧艾瑞克"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "贝奥武夫.png",
+    "renamed": "贝奥武夫.png",
+    "name": "贝奥武夫",
+    "code": "S01-0301",
+    "type": "军团",
+    "legacyMatch": "贝奥武夫"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "金发哈拉尔.png",
+    "renamed": "金发哈拉尔.png",
+    "name": "金发哈拉尔",
+    "code": "S01-0302",
+    "type": "军团",
+    "legacyMatch": "MP"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "铁盾拉葛莎.png",
+    "renamed": "铁盾拉葛莎.png",
+    "name": "铁盾拉葛莎",
+    "code": "S01-0312",
+    "type": "军团",
+    "legacyMatch": "铁盾拉葛莎"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "阿尔维达.png",
+    "renamed": "阿尔维达.png",
+    "name": "阿尔维达",
+    "code": "S01-0307",
+    "type": "军团",
+    "legacyMatch": "MPLE"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "阿斯加德英灵殿.png",
+    "renamed": "阿斯加德英灵殿.png",
+    "name": "阿斯加德英灵殿",
+    "code": "S01-03D1",
+    "type": "主城",
+    "legacyMatch": "阿斯加德英灵殿"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "雷神之锤.png",
+    "renamed": "雷神之锤.png",
+    "name": "雷神之锤",
+    "code": "S02-0301",
+    "type": "军团",
+    "legacyMatch": "雷神之锤"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "雷神索尔.png",
+    "renamed": "雷神索尔.png",
+    "name": "雷神索尔",
+    "code": "S02-03M1",
+    "type": "主宰",
+    "legacyMatch": "雷神索尔"
+  },
+  {
+    "folder": "阿斯加德",
+    "original": "齐格鲁德.png",
+    "renamed": "齐格鲁德.png",
+    "name": "齐格鲁德",
+    "code": "S01-0310",
+    "type": "军团",
+    "legacyMatch": "齐格鲁德"
+  },
+  {
+    "folder": "高天原",
+    "original": "上杉谦信.png",
+    "renamed": "上杉谦信.png",
+    "name": "上杉谦信",
+    "code": "S01-0403",
+    "type": "军团",
+    "legacyMatch": "上杉谦信"
+  },
+  {
+    "folder": "高天原",
+    "original": "井伊直虎.png",
+    "renamed": "井伊直虎.png",
+    "name": "井伊直虎",
+    "code": "S02-0402",
+    "type": "军团",
+    "legacyMatch": "高天原"
+  },
+  {
+    "folder": "高天原",
+    "original": "八尺琼勾玉.png",
+    "renamed": "八尺琼勾玉.png",
+    "name": "八尺琼勾玉",
+    "code": "S02-0404",
+    "type": "圣物",
+    "legacyMatch": "八尺琼勾玉"
+  },
+  {
+    "folder": "高天原",
+    "original": "冲由总司.png",
+    "renamed": "冲由总司.png",
+    "name": "冲由总司",
+    "code": "S02-0403",
+    "type": "军团",
+    "legacyMatch": "冲由总司"
+  },
+  {
+    "folder": "高天原",
+    "original": "切腹仪式.png",
+    "renamed": "切腹仪式.png",
+    "name": "切腹仪式",
+    "code": "S01-0420",
+    "type": "战术",
+    "legacyMatch": "切腹仪式"
+  },
+  {
+    "folder": "高天原",
+    "original": "土方岁三.png",
+    "renamed": "土方岁三.png",
+    "name": "土方岁三",
+    "code": "S01-0406",
+    "type": "军团",
+    "legacyMatch": "土方岁三"
+  },
+  {
+    "folder": "高天原",
+    "original": "坂本龙马.png",
+    "renamed": "坂本龙马.png",
+    "name": "坂本龙马",
+    "code": "S01-0407",
+    "type": "军团",
+    "legacyMatch": "坂本龙马"
+  },
+  {
+    "folder": "高天原",
+    "original": "士气.png",
+    "renamed": "士气.png",
+    "name": "士气",
+    "code": "S01-04C1A",
+    "type": "士气卡",
+    "legacyMatch": "高天原CYNA"
+  },
+  {
+    "folder": "高天原",
+    "original": "天下布武.png",
+    "renamed": "天下布武.png",
+    "name": "天下布武",
+    "code": "S02-0406",
+    "type": "战术",
+    "legacyMatch": "天下布武"
+  },
+  {
+    "folder": "高天原",
+    "original": "天照大神.png",
+    "renamed": "天照大神.png",
+    "name": "天照大神",
+    "code": "S01-04M1",
+    "type": "主宰",
+    "legacyMatch": "天照大神"
+  },
+  {
+    "folder": "高天原",
+    "original": "天诛.png",
+    "renamed": "天诛.png",
+    "name": "天诛",
+    "code": "S01-0418",
+    "type": "战术",
+    "legacyMatch": "天诛"
+  },
+  {
+    "folder": "高天原",
+    "original": "安倍晴明.png",
+    "renamed": "安倍晴明.png",
+    "name": "安倍晴明",
+    "code": "S01-0411",
+    "type": "军团",
+    "legacyMatch": "安倍晴明"
+  },
+  {
+    "folder": "高天原",
+    "original": "宫本武藏.png",
+    "renamed": "宫本武藏.png",
+    "name": "宫本武藏",
+    "code": "S01-0405",
+    "type": "军团",
+    "legacyMatch": "宫本武藏"
+  },
+  {
+    "folder": "高天原",
+    "original": "巴御前.png",
+    "renamed": "巴御前.png",
+    "name": "巴御前",
+    "code": "S01-0410",
+    "type": "军团",
+    "legacyMatch": "巴御前"
+  },
+  {
+    "folder": "高天原",
+    "original": "月读.png",
+    "renamed": "月读.png",
+    "name": "月读",
+    "code": "S02-04M1",
+    "type": "主宰",
+    "legacyMatch": "月读"
+  },
+  {
+    "folder": "高天原",
+    "original": "服部半藏.png",
+    "renamed": "服部半藏.png",
+    "name": "服部半藏",
+    "code": "S01-0415",
+    "type": "军团",
+    "legacyMatch": "服部半藏"
+  },
+  {
+    "folder": "高天原",
+    "original": "本多忠胜.png",
+    "renamed": "本多忠胜.png",
+    "name": "本多忠胜",
+    "code": "S01-0401",
+    "type": "军团",
+    "legacyMatch": "武者桃"
+  },
+  {
+    "folder": "高天原",
+    "original": "桂小五郎.png",
+    "renamed": "桂小五郎.png",
+    "name": "桂小五郎",
+    "code": "S01-0414",
+    "type": "军团",
+    "legacyMatch": "桂小五郎"
+  },
+  {
+    "folder": "高天原",
+    "original": "武田信玄.png",
+    "renamed": "武田信玄.png",
+    "name": "武田信玄",
+    "code": "S02-0401",
+    "type": "军团",
+    "legacyMatch": "高天原"
+  },
+  {
+    "folder": "高天原",
+    "original": "武运在天 铠甲在前.png",
+    "renamed": "武运在天 铠甲在前.png",
+    "name": "武运在天 铠甲在前",
+    "code": "S02-0405",
+    "type": "战术",
+    "legacyMatch": "铠甲在前"
+  },
+  {
+    "folder": "高天原",
+    "original": "源义经.png",
+    "renamed": "源义经.png",
+    "name": "源义经",
+    "code": "S01-0409",
+    "type": "军团",
+    "legacyMatch": "源义经"
+  },
+  {
+    "folder": "高天原",
+    "original": "源博雅.png",
+    "renamed": "源博雅.png",
+    "name": "源博雅",
+    "code": "S01-0413",
+    "type": "军团",
+    "legacyMatch": "源博雅"
+  },
+  {
+    "folder": "高天原",
+    "original": "真田幸村.png",
+    "renamed": "真田幸村.png",
+    "name": "真田幸村",
+    "code": "S01-0404",
+    "type": "军团",
+    "legacyMatch": "真由幸村"
+  },
+  {
+    "folder": "高天原",
+    "original": "真由幸村.png",
+    "renamed": "真由幸村.png",
+    "name": "真由幸村",
+    "code": "S01-0404",
+    "type": "军团",
+    "legacyMatch": "真由幸村"
+  },
+  {
+    "folder": "高天原",
+    "original": "稻姬本多小松.png",
+    "renamed": "稻姬本多小松.png",
+    "name": "稻姬本多小松",
+    "code": "S01-0416",
+    "type": "军团",
+    "legacyMatch": "稻姬本多小松"
+  },
+  {
+    "folder": "高天原",
+    "original": "立花誾千代.png",
+    "renamed": "立花誾千代.png",
+    "name": "立花誾千代",
+    "code": "S01-0412",
+    "type": "军团",
+    "legacyMatch": "立花間千代"
+  },
+  {
+    "folder": "高天原",
+    "original": "织田信长.png",
+    "renamed": "织田信长.png",
+    "name": "织田信长",
+    "code": "S01-0402",
+    "type": "军团",
+    "legacyMatch": "领军机"
+  },
+  {
+    "folder": "高天原",
+    "original": "花魁的馈赠.png",
+    "renamed": "花魁的馈赠.png",
+    "name": "花魁的馈赠",
+    "code": "S01-0419",
+    "type": "战术",
+    "legacyMatch": "花魁的馈赠"
+  },
+  {
+    "folder": "高天原",
+    "original": "草薙剑.png",
+    "renamed": "草薙剑.png",
+    "name": "草薙剑",
+    "code": "S01-0417",
+    "type": "圣物",
+    "legacyMatch": "草剑"
+  },
+  {
+    "folder": "高天原",
+    "original": "须佐之男-2.png",
+    "renamed": "须佐之男-2.png",
+    "name": "须佐之男",
+    "code": "S01-04M2A",
+    "type": "主宰",
+    "legacyMatch": "须佐之男"
+  },
+  {
+    "folder": "高天原",
+    "original": "须佐之男.png",
+    "renamed": "须佐之男.png",
+    "name": "须佐之男",
+    "code": "S01-04M2",
+    "type": "主宰",
+    "legacyMatch": "须佐之男"
+  },
+  {
+    "folder": "高天原",
+    "original": "高天原 黄泉之门.png",
+    "renamed": "高天原 黄泉之门.png",
+    "name": "高天原 黄泉之门",
+    "code": "S01-04D1",
+    "type": "主城",
+    "legacyMatch": "高天原黄泉之门"
+  },
+  {
+    "folder": "高天原",
+    "original": "高杉晋作.png",
+    "renamed": "高杉晋作.png",
+    "name": "高杉晋作",
+    "code": "S01-0408",
+    "type": "军团",
+    "legacyMatch": "高杉晋作"
+  }
+]

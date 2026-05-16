@@ -1,0 +1,1332 @@
+[
+  {
+    "id": "asgard_s01_0303",
+    "name": "传奇的拉格纳",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 6,
+    "calamity_level": 2,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ragnar_desperate_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "若我方主宰血量不高于7，获得冲锋",
+        "condition": {
+          "own_master_hp_at_most": 7
+        },
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "ragnar_last_roar",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可抽取1张牌，并弃置1张手牌",
+        "resolution": {
+          "action": "master_draw_then_discard",
+          "draw_count": 1,
+          "discard_count": 1
+        }
+      }
+    ],
+    "text": "可对\n我方主宰造成1点伤害：此军团登场费用-1\n冲锋\n若我方主宰血量不高于7，获得\n登场时\n(可在登场回合进攻)\n阵亡时\n可抽取1张牌，并弃置1张手牌。",
+    "image_path": "res://规则/牌面/阿斯加德/传奇的拉格纳.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 9,
+      "card_code": "S01-0303",
+      "ocr_name": "传奇的拉格纳",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 6000,
+    "hp": 6000,
+    "play_options": [
+      {
+        "id": "ragnar_blood_price",
+        "label": "对我方主宰造成1点伤害：此军团登场费用-1",
+        "self_master_damage": 1,
+        "play_cost_modifier": -1
+      }
+    ],
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0304",
+    "name": "无情者哈拉尔",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 6,
+    "calamity_level": 2,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "harald_ruthless_entry",
+        "kind": "triggered",
+        "event": "CardEnteredBattlefield",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，若对方主宰血量高于我方，可对其造成1点伤害",
+        "condition": {
+          "controller_master_hp_less_than_opponent": true
+        },
+        "resolution": {
+          "action": "deal_master_damage",
+          "player_scope": "opponent",
+          "amount": 1
+        }
+      },
+      {
+        "id": "harald_last_strike",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时击杀对方1张兵力不高于2000的军团",
+        "resolution": {
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_power": 2000
+        }
+      }
+    ],
+    "text": "可对我方主宰造成1点伤害：此军团登场费用-1。\n登场时，若对方主宰血量高于我方，可对其造成1点伤害。\n阵亡时击杀对方1张兵力不高于2000的军团。",
+    "image_path": "res://规则/牌面/阿斯加德/无情者哈拉尔.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 10,
+      "card_code": "S01-0304",
+      "ocr_name": "无情者哈拉尔",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 5000,
+    "hp": 5000,
+    "play_options": [
+      {
+        "id": "harald_blood_price",
+        "label": "对我方主宰造成1点伤害：此军团登场费用-1",
+        "self_master_damage": 1,
+        "play_cost_modifier": -1
+      }
+    ],
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0305",
+    "name": "勇士比约恩",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 5,
+    "calamity_level": 1,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "bjorn_low_hp_discount",
+        "kind": "continuous",
+        "text": "若我方主宰血量不高于6，此军团登场费用-1",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "own_master_hp_at_most": 6
+        }
+      },
+      {
+        "id": "bjorn_falls_and_returns",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可对我方主宰造成1点伤害，并将墓地4张卡牌自选顺序返回牌库底部：此军团可重新休整登场",
+        "resolution": {
+          "action": "bjorn_recycle_and_maybe_rested_revive",
+          "count": 4
+        }
+      }
+    ],
+    "text": "若我方主宰血量不高于6，此军团登场费用-1。\n阵亡时)\n可对我方主宰造成1点伤害，并将墓地4张卡牌自\n选顺序返回我方牌库底部：此军团可重新休整登场\nCGAMES",
+    "image_path": "res://规则/牌面/阿斯加德/勇士比约恩.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 11,
+      "card_code": "S01-0305",
+      "ocr_name": "勇士比约恩",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 5000,
+    "hp": 5000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0306",
+    "name": "奥拉夫二世",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 5,
+    "calamity_level": 1,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "olaf_low_hp_discount",
+        "kind": "continuous",
+        "text": "若我方主宰血量不高于6，此军团登场费用-1",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "own_master_hp_at_most": 6
+        }
+      },
+      {
+        "id": "olaf_attack_raid",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时可将墓地1张卡牌置入我方牌库底部：此军团本回合获得强攻",
+        "resolution": {
+          "action": "recycle_grave_to_deck",
+          "count": 1,
+          "follow_up_action": {
+            "action": "grant_master_damage_bonus",
+            "target_scope": "self",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "olaf_last_stand",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可抽取2张牌，并弃置1张手牌",
+        "resolution": {
+          "action": "master_draw_then_discard",
+          "draw_count": 2,
+          "discard_count": 1
+        }
+      }
+    ],
+    "text": "若我方主宰血量不高于6，此军团登场费用-1。\n进攻时可将墓地1张卡牌置入我方牌库底部：此军团在\n强攻\n本回合获得\n(进攻对主宰造成额外1点伤害)\n阵亡时可抽取2张牌，并弃置1张手牌。",
+    "image_path": "res://规则/牌面/阿斯加德/奥拉夫二世.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 12,
+      "card_code": "S01-0306",
+      "ocr_name": "奥拉夫二世",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 5000,
+    "hp": 5000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0307",
+    "name": "阿尔维达",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 5,
+    "calamity_level": 1,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "alvilda_blood_summon",
+        "kind": "activated",
+        "text": "我方回合可弃置此军团：对我方主宰造成1点伤害，将手牌中1张天灾等级2的军团活跃登场",
+        "resolution": {
+          "action": "sacrifice_source_and_deploy_from_hand",
+          "self_master_damage": 1,
+          "type": "legion",
+          "calamity_level": 2
+        }
+      },
+      {
+        "id": "alvilda_falls_salvages_card",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时将墓地1张费用不高于3的【阿斯加德】卡牌加入手牌",
+        "resolution": {
+          "action": "return_from_grave_to_hand",
+          "count": 1,
+          "always_request_choice": true,
+          "faction": "asgard",
+          "max_target_cost": 3
+        }
+      }
+    ],
+    "text": "我方回合\n可弃置此军团：对我方主宰造成1点伤害，将\n手牌中1张天灾等级2的军团活跃登场。\n阵亡时\n将墓地1张费用不高于3的【阿斯加德】卡牌加入\n手牌。",
+    "image_path": "res://规则/牌面/阿斯加德/阿尔维达.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 13,
+      "card_code": "S01-0307",
+      "ocr_name": "阿尔维达",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 4000,
+    "hp": 4000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0308",
+    "name": "血斧艾瑞克",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 5,
+    "calamity_level": 1,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "erik_master_hit_discard",
+        "kind": "triggered",
+        "event": "MasterDamaged",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "此军团对主宰造成伤害时：对方弃置1张手牌",
+        "condition": {
+          "source_kind_is": "attack"
+        },
+        "resolution": {
+          "action": "discard_cards",
+          "player_scope": "event_player",
+          "count": 1,
+          "title": "血斧艾瑞克：选择1张手牌弃置",
+          "requires_confirm": true,
+          "hint_text": "血斧艾瑞克造成主宰伤害后：请从手牌中选择 1 张并确认弃置。",
+          "top_hint_text": "血斧艾瑞克：请对方从高亮手牌中选择 1 张并确认弃置。"
+        }
+      },
+      {
+        "id": "erik_falls_revives_raider",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时将墓地1张费用不高于3的【阿斯加德】军团活跃登场",
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "type": "legion",
+          "faction": "asgard",
+          "max_target_cost": 3
+        }
+      }
+    ],
+    "text": "我方主宰造成1点伤害：\n此军团登场费用-1。\n可对\n主宰造成伤害时：对方弃置1张手牌\n此军团对对方\n阵亡时将墓地1张费用不高于3的【阿斯加德】军团活跃\n登场。",
+    "image_path": "res://规则/牌面/阿斯加德/血斧艾瑞克.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 14,
+      "card_code": "S01-0308",
+      "ocr_name": "血斧艾瑞克",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 4000,
+    "hp": 4000,
+    "play_options": [
+      {
+        "id": "erik_blood_price",
+        "label": "对我方主宰造成1点伤害：此军团登场费用-1",
+        "self_master_damage": 1,
+        "play_cost_modifier": -1
+      }
+    ],
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0311",
+    "name": "古斯塔夫一世",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 4,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "gustav_attack_rally",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时可将墓地2张卡牌返回牌库底部：此军团本回合兵力+2000",
+        "resolution": {
+          "optional": true,
+          "action": "recycle_grave_to_deck",
+          "count": 2,
+          "require_exact_count": true,
+          "always_request_choice": true,
+          "follow_up_action": {
+            "action": "modify_source_power_until_turn_end",
+            "amount": 2000
+          }
+        }
+      },
+      {
+        "id": "gustav_second_wind",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "once_per_turn_key": "gustav_second_wind",
+        "text": "回合1次，此军团进攻后可将墓地2张卡牌返回牌库底部：将此军团转为活跃",
+        "resolution": {
+          "optional": true,
+          "action": "recycle_grave_to_deck",
+          "count": 2,
+          "require_exact_count": true,
+          "always_request_choice": true,
+          "follow_up_action": {
+            "action": "ready_source_card"
+          }
+        }
+      }
+    ],
+    "text": "进攻时\n可将墓地2张卡牌自选顺序返回我方牌库底部\n此军团本回合兵力+2000。\n回合1次此军团进攻后，可将墓地2张卡牌自选顺序\n我方\n返回我方牌库底部：将此军团转为活跃。",
+    "image_path": "res://规则/牌面/阿斯加德/古斯塔夫一世.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 17,
+      "card_code": "S01-0311",
+      "ocr_name": "古斯塔夫一世",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 4000,
+    "hp": 4000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0312",
+    "name": "铁盾拉葛莎",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "lagertha_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "taunt"
+        }
+      },
+      {
+        "id": "lagertha_front_guard",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅，且在对方回合兵力+1000",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "front",
+          "only_during_opponent_turn": true,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "位于前排」获得挑,且在对方回合此军团兵力+1000。\n(对方只可进攻带有此效果的军团)",
+    "image_path": "res://规则/牌面/阿斯加德/铁盾拉葛莎.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 18,
+      "card_code": "S01-0312",
+      "ocr_name": "铁盾拉葛莎",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 3000,
+    "hp": 3000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0316",
+    "name": "夺命诗人埃吉尔",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 2,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "egil_blood_verse",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可对我方主宰造成1点伤害，弃置我方牌库顶部2张牌：选择对方1张军团，本回合兵力-2000",
+        "resolution": {
+          "action": "deal_master_damage",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "mill_cards",
+            "count": 2,
+            "follow_up_action": {
+              "action": "choose_and_modify_power_until_turn_end",
+              "target_scope": "enemy_battlefield",
+              "type": "legion",
+              "amount": -2000
+            }
+          }
+        }
+      }
+    ],
+    "text": "位于前排]\n进攻距离+1，远程进攻无损\n登场时\n可对我方主宰造成1点伤害，弃置我方牌库顶部2\n张牌：选择对方1张军团，本回合兵力-2000。",
+    "image_path": "res://规则/牌面/阿斯加德/夺命诗人埃吉尔.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 22,
+      "card_code": "S01-0316",
+      "ocr_name": "夺命诗人埃吉尔",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 2000,
+    "hp": 2000,
+    "troop_type": "刺客"
+  },
+  {
+    "id": "asgard_s01_0318",
+    "name": "女武神的召唤",
+    "faction": "asgard",
+    "type": "tactic",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "valkyrie_call",
+        "kind": "activated",
+        "text": "可对我方主宰造成1点伤害：选择墓地1张费用不高于5的阿斯加德军团活跃登场；若我方主宰血量不高于5，则其血量不会因此效果而减少",
+        "resolution": {
+          "action": "deal_master_damage",
+          "amount": 1,
+          "waive_if_own_master_hp_at_most": 5,
+          "follow_up_action": {
+            "action": "revive_from_grave",
+            "count": 1,
+            "faction": "asgard",
+            "type": "legion",
+            "max_target_cost": 5
+          }
+        }
+      }
+    ],
+    "text": "可对我方主宰造成1点伤害：\n选择墓地1张费用不高于5的\n【阿斯加德】军团活跃登场\n若我方主宰血量不高于5，则其血量不会因此效果而减少。\n主动",
+    "image_path": "res://规则/牌面/阿斯加德/女武神的召唤.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 24,
+      "card_code": "S01-0318",
+      "ocr_name": "女武神的召唤",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "asgard_s01_0319",
+    "name": "猎杀时刻",
+    "faction": "asgard",
+    "type": "tactic",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hunt_execute",
+        "kind": "activated",
+        "text": "击杀对方1张兵力不高于6000的军团",
+        "target_mode": "card",
+        "additional_stack_effect_ids": [
+          "hunt_recycle"
+        ],
+        "resolution": {
+          "action": "destroy_target_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_power": 6000
+        }
+      },
+      {
+        "id": "hunt_recycle",
+        "kind": "triggered",
+        "hidden_from_actions": true,
+        "text": "将墓地4张牌返回牌库底部",
+        "resolution": {
+          "action": "recycle_grave_to_deck",
+          "count": 4,
+          "require_exact_count": true
+        }
+      }
+    ],
+    "text": "击杀对方1\n将墓地4张卡牌自选顺序返回我方牌库底部，\n张兵力不高于6000的军团。\n主动",
+    "image_path": "res://规则/牌面/阿斯加德/猎杀时刻.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 25,
+      "card_code": "S01-0319",
+      "ocr_name": "猎杀时刻",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0001",
+    "name": "黑胡子蒂奇",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 7,
+    "calamity_level": 2,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "teach_enters_loot",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时双方各弃置2张手牌。随后，我方抽2张牌，对方抽1张牌。",
+        "resolution": {
+          "action": "both_players_discard_then_draw",
+          "controller_discard": 2,
+          "opponent_discard": 2,
+          "controller_draw": 2,
+          "opponent_draw": 1
+        }
+      },
+      {
+        "id": "teach_falls_refills",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可抽取2张牌，并弃置1张手牌。",
+        "resolution": {
+          "action": "master_draw_then_discard",
+          "draw_count": 2,
+          "discard_count": 1
+        }
+      }
+    ],
+    "text": "登场时双方各弃置2张手牌。随后，我方抽取2\n张牌，\n对方抽1张牌。\n阵亡时\n可抽取2张牌，并弃置1张手牌。",
+    "image_path": "res://规则/牌面/通用/黑胡子蒂奇.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 1,
+      "card_code": "S01-0001",
+      "ocr_name": "黑胡子蒂奇",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 6000,
+    "hp": 6000,
+    "troop_type": "领军"
+  },
+  {
+    "id": "neutral_s01_0002",
+    "name": "佣兵部队",
+    "faction": "neutral",
+    "type": "legion",
+    "troop_type": "骑兵",
+    "cost": 4,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "mercenary_reposition",
+        "kind": "activated",
+        "text": "我方回合1次，可进行1次位移。",
+        "once_per_turn_key": "mercenary_reposition",
+        "resolution": {
+          "action": "move_source_one_step"
+        }
+      },
+      {
+        "id": "mercenary_hand_guard",
+        "kind": "activated",
+        "hand_response": true,
+        "hidden_from_actions": true,
+        "text": "对方进攻我方军团时，可从手牌中弃置此军团：抵挡本次进攻。",
+        "resolution": {
+          "action": "counter_pending_attack"
+        }
+      }
+    ],
+    "text": "我方\n可进行1次位移\n回合1次\n对方\n进攻我方军团时，可从手牌中弃置此军团：抵挡本\n次进攻。",
+    "image_path": "res://规则/牌面/通用/佣兵部队.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 2,
+      "card_code": "S01-0002",
+      "ocr_name": "佣兵部队",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 5000,
+    "hp": 5000
+  },
+  {
+    "id": "neutral_s01_0015",
+    "name": "议和谈判",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 0,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "truce_offer",
+        "kind": "activated",
+        "text": "抽1张牌，然后由对手决定双方是否各抽1张牌",
+        "resolution": {
+          "action": "offer_truce_draw"
+        }
+      }
+    ],
+    "text": "抽取1张牌。随后询问对方是否议和谈判。\n。若对方同意，则双方各抽取1张牌。\n。若对方不同意，则双方不抽牌。",
+    "image_path": "res://规则/牌面/通用/议和谈判.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 15,
+      "card_code": "S01-0015",
+      "ocr_name": "议和谈判",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0016",
+    "name": "绝对防御",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "absolute_defense",
+        "kind": "activated",
+        "text": "弃1张手牌：抵挡本次进攻或无效该效果",
+        "resolution": {
+          "action": "choose_discard_from_hand_then_follow_up",
+          "discard_count": 1,
+          "title": "绝对防御：选择1张手牌弃置",
+          "hint_text": "绝对防御：请先选择1张手牌并确认弃置，再抵挡本次进攻或无效该效果。",
+          "top_hint_text": "绝对防御：请选择1张手牌并确认弃置。",
+          "follow_up_action": {
+            "action": "counter_target_stack"
+          }
+        }
+      }
+    ],
+    "text": "对方\n进攻或发动效果时，\n弃置1张手牌：抵挡本次进攻或\n无效该效果",
+    "image_path": "res://规则/牌面/通用/绝对防御.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 16,
+      "card_code": "S01-0016",
+      "ocr_name": "绝对防御",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "takamagahara_s01_0401",
+    "name": "本多忠胜",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 8,
+    "calamity_level": 3,
+    "status": "tested",
+    "keywords": [
+      "charge"
+    ],
+    "effects": [
+      {
+        "id": "honda_crush_costs",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时：对方所有军团本回合费用-1。随后击杀对方1张费用为0的军团",
+        "resolution": {
+          "action": "modify_matching_cost",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -1,
+          "follow_up_action": {
+            "action": "choose_and_destroy_unit",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "max_target_cost": 0
+          }
+        }
+      }
+    ],
+    "text": "获得冲锋\n登场时\n(可在登场回合进攻)\n进攻时\n对方所有军团本回合费用-1。随后击杀对方1张费\n用为0的军团",
+    "image_path": "res://规则/牌面/高天原/本多忠胜.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 7,
+      "card_code": "S01-0401",
+      "ocr_name": "本多忠胜",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 8000,
+    "hp": 8000,
+    "troop_type": "武者"
+  },
+  {
+    "id": "takamagahara_s01_0405",
+    "name": "宫本武藏",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 5,
+    "calamity_level": 1,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "musashi_lone_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，若我方前排没有其他军团，此军团获得冲锋",
+        "condition": {
+          "allied_front_other_count_at_most": 0
+        },
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "musashi_attack_draw",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，若我方手牌数量不高于对方，可抽取1张牌",
+        "condition": {
+          "controller_hand_size_at_most_opponent": true
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "登场时)\n冲锋\n此军团获得\n若我方前排没有其他军团，\n(可在登场回合进攻)\n进攻时\n若我方手牌数量不高于对方，可抽取1张牌",
+    "image_path": "res://规则/牌面/高天原/宫本武藏.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 11,
+      "card_code": "S01-0405",
+      "ocr_name": "宫本武藏",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 5000,
+    "hp": 5000,
+    "troop_type": "斗士"
+  },
+  {
+    "id": "takamagahara_s01_0409",
+    "name": "源义经",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 4,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "yoshitsune_backline_power_shift",
+        "kind": "continuous",
+        "text": "位于后排时，此军团兵力视为2000",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "back",
+          "only_when_attacking": true,
+          "amount": -2000
+        }
+      },
+      {
+        "id": "yoshitsune_backline_ranged",
+        "kind": "continuous",
+        "text": "位于后排时，进攻距离+1，远程进攻无损",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "back",
+          "keyword": "ranged"
+        }
+      },
+      {
+        "id": "yoshitsune_backline_safe_shot",
+        "kind": "continuous",
+        "text": "位于后排时，进攻距离+1，远程进攻无损",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "back",
+          "keyword": "attack_no_loss"
+        }
+      },
+      {
+        "id": "yoshitsune_reposition",
+        "kind": "activated",
+        "text": "我方回合1次，可进行1次位移",
+        "once_per_turn_key": "yoshitsune_reposition",
+        "resolution": {
+          "action": "move_source_one_step"
+        }
+      },
+      {
+        "id": "yoshitsune_kill_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "击杀时可抽取1张牌",
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "此军团兵力视为2000，进攻距离+1，\n【位于后排\n进攻时\n远程进攻无损\n我方\n回合1次\n可进行1次位移。\n可抽取1张牌\n击杀时",
+    "image_path": "res://规则/牌面/高天原/源义经.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 15,
+      "card_code": "S01-0409",
+      "ocr_name": "源义经",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 4000,
+    "hp": 4000,
+    "troop_type": "骑兵"
+  },
+  {
+    "id": "takamagahara_s01_0410",
+    "name": "巴御前",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [
+      "charge",
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [],
+    "text": "进攻距离+1，\n远程进攻无损\n冲锋\n登场时)\n获得\n(可在登场回合进攻)",
+    "image_path": "res://规则/牌面/高天原/巴御前.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 16,
+      "card_code": "S01-0410",
+      "ocr_name": "巴御前",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 2000,
+    "hp": 2000,
+    "troop_type": "弓手"
+  },
+  {
+    "id": "takamagahara_s01_0413",
+    "name": "源博雅",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "hiromasa_enter_draw",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，若我方手牌不高于5张，可抽取1张牌",
+        "condition": {
+          "own_hand_size_at_most": 5
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      },
+      {
+        "id": "hiromasa_attack_silence_counter",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时：选择对方场上1张伏置的反击战术，本回合无法发动",
+        "resolution": {
+          "action": "disable_enemy_hand_counter_tactic_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "counter_tactic",
+          "required_face": "face_down"
+        }
+      }
+    ],
+    "text": "进攻距离+1，\n远程进攻无损\n登场时\n若我方手牌不高于5张，可抽取1张牌。\n进攻时\n选择对方1张<反击战术>，本回合无法发动。",
+    "image_path": "res://规则/牌面/高天原/源博雅.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 19,
+      "card_code": "S01-0413",
+      "ocr_name": "源博雅",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 2000,
+    "hp": 2000,
+    "troop_type": "弓手"
+  },
+  {
+    "id": "takamagahara_s01_0414",
+    "name": "桂小五郎",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "kogoro_tactical_withdrawal",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "此军团进攻后，可返回牌库顶部。此军团返回牌库顶部时：将我方最多2张士气转为活跃",
+        "resolution": {
+          "action": "return_source_to_deck_top",
+          "follow_up_action": {
+            "action": "ready_spent_morale",
+            "count": 2
+          }
+        }
+      }
+    ],
+    "text": "此军团进攻后，\n可返回牌库顶部\n此军团返回牌库顶部时：将我方最多2张士气转为活跃。",
+    "image_path": "res://规则/牌面/高天原/桂小五郎.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 20,
+      "card_code": "S01-0414",
+      "ocr_name": "桂小五郎",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 4000,
+    "hp": 4000,
+    "troop_type": "武者"
+  },
+  {
+    "id": "takamagahara_s01_0415",
+    "name": "服部半藏",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 2,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hanzo_frontline_ranged",
+        "kind": "continuous",
+        "text": "位于前排时，进攻距离+1，远程进攻无损。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "ranged"
+        }
+      },
+      {
+        "id": "hanzo_frontline_safe_shot",
+        "kind": "continuous",
+        "text": "位于前排时，进攻距离+1，远程进攻无损。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "attack_no_loss"
+        }
+      },
+      {
+        "id": "hanzo_conceal_on_play",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，发动隐匿。",
+        "resolution": {
+          "action": "conceal_source"
+        }
+      },
+      {
+        "id": "hanzo_reveal",
+        "kind": "activated",
+        "text": "主动翻回正面",
+        "target_mode": "none",
+        "resolution": {
+          "action": "reveal_source_face_up"
+        }
+      }
+    ],
+    "text": "位于前排」进攻距离+1，远程进攻无损。\n登场时 发动隐匿\n(翻转此牌，覆盖时无法被选为效果或攻击的目标，直\n到主动翻回正面。)",
+    "image_path": "res://规则/牌面/高天原/服部半藏.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 21,
+      "card_code": "S01-0415",
+      "ocr_name": "服部半藏",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 2000,
+    "hp": 2000,
+    "troop_type": "刺客"
+  },
+  {
+    "id": "takamagahara_s01_0416",
+    "name": "稻姬本多小松",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 1,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "komatsu_enter_supporting_shot",
+        "kind": "triggered",
+        "event": "CardEnteredBattlefield",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时：选择我方前排1张稻姬本多小松以外兵力不高于5000的高天原军团，本回合兵力+1000",
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "allied_battlefield",
+          "exclude_self": true,
+          "required_row": "front",
+          "faction": "takamagahara",
+          "type": "legion",
+          "max_target_power": 5000,
+          "amount": 1000
+        }
+      },
+      {
+        "id": "komatsu_supporting_shot",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时：选择我方前排1张稻姬本多小松以外兵力不高于5000的高天原军团，本回合兵力+1000",
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "allied_battlefield",
+          "exclude_self": true,
+          "required_row": "front",
+          "faction": "takamagahara",
+          "type": "legion",
+          "max_target_power": 5000,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损\n登场时\n进攻时\n选择我方前排1张<稻姬本多小松>以外兵\n力不高于5000的【高天原】军团，本回合兵力+1000。",
+    "image_path": "res://规则/牌面/高天原/稻姬本多小松.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 22,
+      "card_code": "S01-0416",
+      "ocr_name": "稻姬本多小松",
+      "import_stage": "raw_rule_book_import"
+    },
+    "power": 1000,
+    "hp": 1000,
+    "troop_type": "弓手"
+  },
+  {
+    "id": "takamagahara_s01_0417",
+    "name": "草薙剑",
+    "faction": "takamagahara",
+    "type": "artifact",
+    "cost": 3,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "kusanagi_enter_destroy",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时：击杀对方1张费用不高于2的军团",
+        "resolution": {
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_cost": 2
+        }
+      },
+      {
+        "id": "kusanagi_weaken",
+        "once_per_turn_key": "kusanagi_active",
+        "kind": "activated",
+        "text": "选择对方1张军团，本回合费用-1",
+        "target_mode": "card",
+        "cost": {
+          "morale": 1
+        },
+        "resolution": {
+          "action": "modify_target_cost",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -1
+        }
+      },
+      {
+        "id": "kusanagi_assault",
+        "once_per_turn_key": "kusanagi_active",
+        "kind": "activated",
+        "text": "选择我方1张高天原军团，本回合获得强攻",
+        "target_mode": "card",
+        "cost": {
+          "morale": 1
+        },
+        "resolution": {
+          "action": "grant_master_damage_bonus",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "faction": "takamagahara",
+          "amount": 1
+        }
+      }
+    ],
+    "text": "圣物函\nSAN\n降魔\n天之丛云\n草剑\n登场时)\n击杀对方1张费用不高于2的军团。\n回合1次可消耗1士气：选择以下一项。\n选择对方1张军团，本回合费用-1。\n强攻\n选择我方1张【高天原】军团，本回合获得\n(进攻对主宰造成额外1点伤害)",
+    "image_path": "res://规则/牌面/高天原/草薙剑.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 23,
+      "card_code": "S01-0417",
+      "ocr_name": "草薙剑",
+      "import_stage": "raw_rule_book_import",
+      "ocr_alias": "草剑"
+    }
+  },
+  {
+    "id": "takamagahara_s01_0418",
+    "name": "天诛",
+    "faction": "takamagahara",
+    "type": "tactic",
+    "cost": 4,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tenchu",
+        "kind": "activated",
+        "text": "击杀对方1张费用不高于7的军团",
+        "target_mode": "card",
+        "resolution": {
+          "action": "destroy_target_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_cost": 7
+        }
+      }
+    ],
+    "text": "击杀对方1张费用不高于7的军团\n主动",
+    "image_path": "res://规则/牌面/高天原/天诛.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 24,
+      "card_code": "S01-0418",
+      "ocr_name": "天诛",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "takamagahara_s01_0419",
+    "name": "花魁的馈赠",
+    "faction": "takamagahara",
+    "type": "tactic",
+    "cost": 1,
+    "calamity_level": 0,
+    "status": "tested",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "oiran_search",
+        "kind": "activated",
+        "text": "查看牌库顶部3张牌，选择其中1张高天原卡加入手牌，其余返回牌库底部",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 3,
+          "count": 1,
+          "match": {
+            "faction": "takamagahara",
+            "exclude_definition_id": "takamagahara_s01_0419"
+          },
+          "reorder_remaining_to_bottom": true,
+          "follow_up_action": {
+            "action": "ready_spent_morale",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "text": "查看牌库顶部3张牌，\n选择其中1张<花魁的馈赠>以外的\n【高天原】卡牌，展示并加入手牌，其余卡牌自选顺序\n返回牌库底部。随后，\n将最多1张士气转为活跃。\n主动",
+    "image_path": "res://规则/牌面/高天原/花魁的馈赠.png",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 25,
+      "card_code": "S01-0419",
+      "ocr_name": "花魁的馈赠",
+      "import_stage": "raw_rule_book_import"
+    }
+  }
+]

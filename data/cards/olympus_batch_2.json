@@ -1,0 +1,249 @@
+[
+  {
+    "id": "olympus_s02_0513",
+    "name": "亚里士多德",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "aristotle_entry_flip_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，可翻转1张士气。",
+        "resolution": {
+          "action": "olympus_flip_morale",
+          "count": 1,
+          "include_active": true,
+          "include_spent": true
+        }
+      },
+      {
+        "id": "aristotle_prepare_olympus_discount",
+        "kind": "activated",
+        "rest_source": true,
+        "required_orientation": "active",
+        "text": "主动休整：本回合我方下1张奥林匹斯军团登场费用-1。",
+        "resolution": {
+          "action": "prepare_next_played_legion_cost_modifier",
+          "amount": -1,
+          "faction": "olympus"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可翻转1张士气。\n主动休整 本回合我方下1张【奥林匹斯】军团登场费用-1。",
+    "image_path": "res://规则/牌面/奥林匹斯/亚里士多德.png",
+    "troop_type": "术师",
+    "source": {
+      "card_code": "S02-0513"
+    }
+  },
+  {
+    "id": "olympus_s02_0518",
+    "name": "忒修斯",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "theseus_no_divine_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "own_divine_equals": 0
+        }
+      },
+      {
+        "id": "theseus_entry_flip_rested_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，可翻转1张休整的士气。",
+        "resolution": {
+          "action": "olympus_flip_morale",
+          "count": 1,
+          "include_active": false,
+          "include_spent": true
+        }
+      },
+      {
+        "id": "theseus_died_return_promoted",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时，可选择墓地1张晋升者军团加入手牌。",
+        "resolution": {
+          "action": "return_from_grave_to_hand",
+          "count": 1,
+          "type": "legion",
+          "faction": "olympus",
+          "name_contains": "晋升",
+          "always_request_choice": true
+        }
+      }
+    ],
+    "text": "若我方神力为0张，此军团登场费用-1。\n登场时 可翻转1张休整的士气。\n阵亡时 可选择墓地1张【晋升者】军团加入手牌。",
+    "image_path": "res://规则/牌面/奥林匹斯/忒修斯.png",
+    "troop_type": "武者",
+    "source": {
+      "card_code": "S02-0518"
+    }
+  },
+  {
+    "id": "olympus_s02_0512",
+    "name": "埃涅阿斯",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "aeneas_no_divine_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "own_divine_equals": 0
+        }
+      },
+      {
+        "id": "aeneas_front_taunt",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "taunt",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "aeneas_died_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时，可抽取1张牌。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "若我方神力为0张，此军团登场费用-1。\n「位于前排」获得挑衅。\n阵亡时 可抽取1张牌。",
+    "image_path": "res://规则/牌面/奥林匹斯/埃涅阿斯.png",
+    "troop_type": "武者",
+    "source": {
+      "card_code": "S02-0512"
+    }
+  },
+  {
+    "id": "olympus_s02_0507",
+    "name": "阿塔兰忒·晋升",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "promoted"
+    ],
+    "play_options": [
+      {
+        "id": "promotion",
+        "label": "晋升登场",
+        "olympus_promotion": true,
+        "promotion_base_definition_id": "olympus_s02_0507",
+        "promotion_divine_flip_cost": 1
+      }
+    ],
+    "effects": [
+      {
+        "id": "atalanta_promotion_entry_draw",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "晋升登场时，可抽取1张牌。",
+        "condition": {
+          "played_with_play_option_id": "promotion"
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      },
+      {
+        "id": "atalanta_promoted_entry_draw",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，可抽取1张牌。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      },
+      {
+        "id": "atalanta_promoted_back_ranged",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged",
+          "required_row": "back"
+        }
+      },
+      {
+        "id": "atalanta_promoted_back_ranged_no_loss",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged_no_loss",
+          "required_row": "back"
+        }
+      },
+      {
+        "id": "atalanta_promoted_back_attack_power",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "amount": -1000,
+          "required_row": "back",
+          "only_when_attacking": true
+        }
+      }
+    ],
+    "text": "晋升 消耗并翻转1神力，叠放至我方同名非【晋升者】军团上方登场。\n晋升登场 可抽取1张牌。\n登场时 可抽取1张牌。\n「位于后排」此军团视为【弓手】，进攻时 兵力视为3000，进攻距离+1，远程进攻无损。",
+    "image_path": "res://规则/牌面/奥林匹斯/阿塔兰忒·晋升.png",
+    "troop_type": "武者",
+    "source": {
+      "card_code": "S02-0507"
+    }
+  }
+]

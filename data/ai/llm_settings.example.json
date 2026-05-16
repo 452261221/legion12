@@ -1,0 +1,57 @@
+{
+  "default_provider": "deepseek",
+  "providers": {
+    "deepseek": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "runtime_mode": "stable",
+      "timeout_seconds": 20.0,
+      "use_external_helper": false,
+      "enable_thinking": false,
+      "response_max_tokens": 512,
+      "max_retries": 2,
+      "retry_delay_ms": 1200
+    },
+    "qwen": {
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "model": "qwen-plus",
+      "api_key_env": "QWEN_API_KEY",
+      "runtime_mode": "stable",
+      "timeout_seconds": 20.0,
+      "use_external_helper": true,
+      "enable_thinking": false,
+      "response_max_tokens": 512
+    },
+    "glm": {
+      "base_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+      "model": "glm-4-plus",
+      "api_key_env": "GLM_API_KEY",
+      "runtime_mode": "stable",
+      "timeout_seconds": 20.0,
+      "use_external_helper": true,
+      "enable_thinking": false,
+      "response_max_tokens": 512
+    },
+    "openai": {
+      "base_url": "https://api.openai.com/v1/chat/completions",
+      "model": "gpt-4.1-mini",
+      "api_key_env": "OPENAI_API_KEY",
+      "runtime_mode": "stable",
+      "timeout_seconds": 20.0,
+      "use_external_helper": true,
+      "enable_thinking": false,
+      "response_max_tokens": 512
+    },
+    "kimi": {
+      "base_url": "https://api.moonshot.cn/v1/chat/completions",
+      "model": "moonshot-v1-8k",
+      "api_key_env": "MOONSHOT_API_KEY",
+      "runtime_mode": "stable",
+      "timeout_seconds": 20.0,
+      "use_external_helper": true,
+      "enable_thinking": false,
+      "response_max_tokens": 512
+    }
+  }
+}

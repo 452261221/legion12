@@ -1,0 +1,1627 @@
+{
+  "asgard_s01_0314": {
+    "face_path": "res://client/assets/cards/asgard_s01_0314.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/奥尔加.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0302": {
+    "face_path": "res://client/assets/cards/asgard_s02_0302.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/步行者罗洛.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0304": {
+    "face_path": "res://client/assets/cards/asgard_s02_0304.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/玛格丽特一世.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0303": {
+    "face_path": "res://client/assets/cards/asgard_s02_0303.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/卡纽特大帝.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0301": {
+    "face_path": "res://client/assets/cards/asgard_s02_0301.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/雷神之锤.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0305": {
+    "face_path": "res://client/assets/cards/asgard_s02_0305.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/安德华拉诺特.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0306": {
+    "face_path": "res://client/assets/cards/asgard_s02_0306.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/密米尔之泉.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "calamity_s01_ds01": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds01.jpg",
+    "source_path": "res://规则/牌面/天灾/黯陨晨星.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s02_ds01": {
+    "face_path": "res://client/assets/cards/calamity_s02_ds01.jpg",
+    "source_path": "res://规则/牌面/天灾/天地异变.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "sys_calamity_embers": {
+    "face_path": "res://client/assets/cards/sys_calamity_embers.jpg",
+    "source_path": "res://规则/牌面/天灾/暴怒之罪.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "sys_calamity_silence": {
+    "face_path": "res://client/assets/cards/sys_calamity_silence.jpg",
+    "source_path": "res://规则/牌面/天灾/腐秽大地.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "sys_calamity_annihilation": {
+    "face_path": "res://client/assets/cards/sys_calamity_annihilation.jpg",
+    "source_path": "res://规则/牌面/天灾/最终天灾 湮灭.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds02": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds02.jpg",
+    "source_path": "res://规则/牌面/天灾/百鬼夜行.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds04": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds04.jpg",
+    "source_path": "res://规则/牌面/天灾/雷霆天怒.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds05": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds05.jpg",
+    "source_path": "res://规则/牌面/天灾/魔龙降世.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds06": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds06.jpg",
+    "source_path": "res://规则/牌面/天灾/神之天平.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds07": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds07.jpg",
+    "source_path": "res://规则/牌面/天灾/天启默示录.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds08": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds08.jpg",
+    "source_path": "res://规则/牌面/天灾/虚构的圣杯.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s01_ds09": {
+    "face_path": "res://client/assets/cards/calamity_s01_ds09.jpg",
+    "source_path": "res://规则/牌面/天灾/诸神黄昏.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s02_ds04": {
+    "face_path": "res://client/assets/cards/calamity_s02_ds04.jpg",
+    "source_path": "res://规则/牌面/天灾/风暴乱象.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s02_ds02": {
+    "face_path": "res://client/assets/cards/calamity_s02_ds02.jpg",
+    "source_path": "res://规则/牌面/天灾/迷雾绝境.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s02_ds06": {
+    "face_path": "res://client/assets/cards/calamity_s02_ds06.jpg",
+    "source_path": "res://规则/牌面/天灾/傲慢之罪.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "calamity_s02_ds03": {
+    "face_path": "res://client/assets/cards/calamity_s02_ds03.jpg",
+    "source_path": "res://规则/牌面/天灾/无眠之夜.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 773
+    },
+    "output_width": 720,
+    "output_height": 515,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0404": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0404.jpg",
+    "source_path": "res://规则/牌面/高天原/真田幸村.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0005": {
+    "face_path": "res://client/assets/cards/neutral_s01_0005.jpg",
+    "source_path": "res://规则/牌面/通用/万箭齐发.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0302": {
+    "face_path": "res://client/assets/cards/asgard_s01_0302.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/金发哈拉尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0313": {
+    "face_path": "res://client/assets/cards/asgard_s01_0313.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/神箭奥德尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0315": {
+    "face_path": "res://client/assets/cards/asgard_s01_0315.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/无骨者伊瓦尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0006": {
+    "face_path": "res://client/assets/cards/neutral_s01_0006.jpg",
+    "source_path": "res://规则/牌面/通用/邪恶仪式.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0007": {
+    "face_path": "res://client/assets/cards/neutral_s01_0007.jpg",
+    "source_path": "res://规则/牌面/通用/野外扎营.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0008": {
+    "face_path": "res://client/assets/cards/neutral_s01_0008.jpg",
+    "source_path": "res://规则/牌面/通用/兵临城下.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0009": {
+    "face_path": "res://client/assets/cards/neutral_s01_0009.jpg",
+    "source_path": "res://规则/牌面/通用/战略转移.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0014": {
+    "face_path": "res://client/assets/cards/neutral_s01_0014.jpg",
+    "source_path": "res://规则/牌面/通用/祭天仪式.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0012": {
+    "face_path": "res://client/assets/cards/neutral_s01_0012.jpg",
+    "source_path": "res://规则/牌面/通用/全军出击.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0019": {
+    "face_path": "res://client/assets/cards/neutral_s01_0019.jpg",
+    "source_path": "res://规则/牌面/通用/伏击.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0020": {
+    "face_path": "res://client/assets/cards/neutral_s01_0020.jpg",
+    "source_path": "res://规则/牌面/通用/战斗至黎明.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0014": {
+    "face_path": "res://client/assets/cards/neutral_s02_0014.jpg",
+    "source_path": "res://规则/牌面/通用/瞬间的思路.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0002": {
+    "face_path": "res://client/assets/cards/neutral_s02_0002.jpg",
+    "source_path": "res://规则/牌面/通用/疯狂的爱丽丝.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0012": {
+    "face_path": "res://client/assets/cards/neutral_s02_0012.jpg",
+    "source_path": "res://规则/牌面/通用/祷告仪式.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0004": {
+    "face_path": "res://client/assets/cards/neutral_s02_0004.jpg",
+    "source_path": "res://规则/牌面/通用/路易芒德兰.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0018": {
+    "face_path": "res://client/assets/cards/neutral_s01_0018.jpg",
+    "source_path": "res://规则/牌面/通用/落穴陷阱.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0003": {
+    "face_path": "res://client/assets/cards/neutral_s02_0003.jpg",
+    "source_path": "res://规则/牌面/通用/宫廷魔术师.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0005": {
+    "face_path": "res://client/assets/cards/neutral_s02_0005.jpg",
+    "source_path": "res://规则/牌面/通用/戏法师的傀儡.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s02_0011": {
+    "face_path": "res://client/assets/cards/neutral_s02_0011.jpg",
+    "source_path": "res://规则/牌面/通用/纷乱箭.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0303": {
+    "face_path": "res://client/assets/cards/asgard_s01_0303.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/传奇的拉格纳.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0304": {
+    "face_path": "res://client/assets/cards/asgard_s01_0304.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/无情者哈拉尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0305": {
+    "face_path": "res://client/assets/cards/asgard_s01_0305.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/勇士比约恩.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0306": {
+    "face_path": "res://client/assets/cards/asgard_s01_0306.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/奥拉夫二世.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0307": {
+    "face_path": "res://client/assets/cards/asgard_s01_0307.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/阿尔维达.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0308": {
+    "face_path": "res://client/assets/cards/asgard_s01_0308.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/血斧艾瑞克.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0311": {
+    "face_path": "res://client/assets/cards/asgard_s01_0311.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/古斯塔夫一世.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0312": {
+    "face_path": "res://client/assets/cards/asgard_s01_0312.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/铁盾拉葛莎.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0316": {
+    "face_path": "res://client/assets/cards/asgard_s01_0316.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/夺命诗人埃吉尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0318": {
+    "face_path": "res://client/assets/cards/asgard_s01_0318.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/女武神的召唤.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0319": {
+    "face_path": "res://client/assets/cards/asgard_s01_0319.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/猎杀时刻.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0001": {
+    "face_path": "res://client/assets/cards/neutral_s01_0001.jpg",
+    "source_path": "res://规则/牌面/通用/黑胡子蒂奇.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0002": {
+    "face_path": "res://client/assets/cards/neutral_s01_0002.jpg",
+    "source_path": "res://规则/牌面/通用/佣兵部队.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0015": {
+    "face_path": "res://client/assets/cards/neutral_s01_0015.jpg",
+    "source_path": "res://规则/牌面/通用/议和谈判.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "neutral_s01_0016": {
+    "face_path": "res://client/assets/cards/neutral_s01_0016.jpg",
+    "source_path": "res://规则/牌面/通用/绝对防御.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0401": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0401.jpg",
+    "source_path": "res://规则/牌面/高天原/本多忠胜.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0405": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0405.jpg",
+    "source_path": "res://规则/牌面/高天原/宫本武藏.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0409": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0409.jpg",
+    "source_path": "res://规则/牌面/高天原/源义经.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0410": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0410.jpg",
+    "source_path": "res://规则/牌面/高天原/巴御前.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0413": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0413.jpg",
+    "source_path": "res://规则/牌面/高天原/源博雅.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0414": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0414.jpg",
+    "source_path": "res://规则/牌面/高天原/桂小五郎.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0415": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0415.jpg",
+    "source_path": "res://规则/牌面/高天原/服部半藏.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0416": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0416.jpg",
+    "source_path": "res://规则/牌面/高天原/稻姬本多小松.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0417": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0417.jpg",
+    "source_path": "res://规则/牌面/高天原/草薙剑.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0418": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0418.jpg",
+    "source_path": "res://规则/牌面/高天原/天诛.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0419": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0419.jpg",
+    "source_path": "res://规则/牌面/高天原/花魁的馈赠.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0402": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0402.jpg",
+    "source_path": "res://规则/牌面/高天原/织田信长.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0412": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0412.jpg",
+    "source_path": "res://规则/牌面/高天原/立花誾千代.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0301": {
+    "face_path": "res://client/assets/cards/asgard_s01_0301.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/贝奥武夫.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0317": {
+    "face_path": "res://client/assets/cards/asgard_s01_0317.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/神剑格拉墨.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_0307": {
+    "face_path": "res://client/assets/cards/asgard_s02_0307.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/海拉的凝视.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0320": {
+    "face_path": "res://client/assets/cards/asgard_s01_0320.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/复仇血鹰.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0420": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0420.jpg",
+    "source_path": "res://规则/牌面/高天原/切腹仪式.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0408": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0408.jpg",
+    "source_path": "res://规则/牌面/高天原/高杉晋作.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0310": {
+    "face_path": "res://client/assets/cards/asgard_s01_0310.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/齐格鲁德.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0403": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0403.jpg",
+    "source_path": "res://规则/牌面/高天原/上杉谦信.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_0309": {
+    "face_path": "res://client/assets/cards/asgard_s01_0309.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/布伦希尔德.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0405": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0405.jpg",
+    "source_path": "res://规则/牌面/高天原/武运在天 铠甲在前.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0406": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0406.jpg",
+    "source_path": "res://规则/牌面/高天原/土方岁三.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0402": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0402.jpg",
+    "source_path": "res://规则/牌面/高天原/井伊直虎.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0406": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0406.jpg",
+    "source_path": "res://规则/牌面/高天原/天下布武.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0401": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0401.jpg",
+    "source_path": "res://规则/牌面/高天原/武田信玄.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0407": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0407.jpg",
+    "source_path": "res://规则/牌面/高天原/坂本龙马.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0403": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0403.jpg",
+    "source_path": "res://规则/牌面/高天原/冲由总司.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_0404": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_0404.jpg",
+    "source_path": "res://规则/牌面/高天原/八尺琼勾玉.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_0411": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_0411.jpg",
+    "source_path": "res://规则/牌面/高天原/安倍晴明.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0105": {
+    "face_path": "res://client/assets/cards/tianting_s02_0105.jpg",
+    "source_path": "res://规则/牌面/天廷/乾坤 阳.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0106": {
+    "face_path": "res://client/assets/cards/tianting_s02_0106.jpg",
+    "source_path": "res://规则/牌面/天廷/乾坤 阴.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0106": {
+    "face_path": "res://client/assets/cards/tianting_s01_0106.jpg",
+    "source_path": "res://规则/牌面/天廷/关羽.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0113": {
+    "face_path": "res://client/assets/cards/tianting_s01_0113.jpg",
+    "source_path": "res://规则/牌面/天廷/养由基.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0105": {
+    "face_path": "res://client/assets/cards/tianting_s01_0105.jpg",
+    "source_path": "res://规则/牌面/天廷/刘备.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0101": {
+    "face_path": "res://client/assets/cards/tianting_s01_0101.jpg",
+    "source_path": "res://规则/牌面/天廷/吕布.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0110": {
+    "face_path": "res://client/assets/cards/tianting_s01_0110.jpg",
+    "source_path": "res://规则/牌面/天廷/墨子.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0101": {
+    "face_path": "res://client/assets/cards/tianting_s02_0101.jpg",
+    "source_path": "res://规则/牌面/天廷/始皇帝 嬴政.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0112": {
+    "face_path": "res://client/assets/cards/tianting_s01_0112.jpg",
+    "source_path": "res://规则/牌面/天廷/孙武.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0117": {
+    "face_path": "res://client/assets/cards/tianting_s01_0117.jpg",
+    "source_path": "res://规则/牌面/天廷/山河社稷图.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0103": {
+    "face_path": "res://client/assets/cards/tianting_s02_0103.jpg",
+    "source_path": "res://规则/牌面/天廷/平阳昭公主.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0107": {
+    "face_path": "res://client/assets/cards/tianting_s01_0107.jpg",
+    "source_path": "res://规则/牌面/天廷/张飞.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0102": {
+    "face_path": "res://client/assets/cards/tianting_s02_0102.jpg",
+    "source_path": "res://规则/牌面/天廷/李牧.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0103": {
+    "face_path": "res://client/assets/cards/tianting_s01_0103.jpg",
+    "source_path": "res://规则/牌面/天廷/李靖.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0102": {
+    "face_path": "res://client/assets/cards/tianting_s01_0102.jpg",
+    "source_path": "res://规则/牌面/天廷/武则天.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0109": {
+    "face_path": "res://client/assets/cards/tianting_s01_0109.jpg",
+    "source_path": "res://规则/牌面/天廷/白起.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_0104": {
+    "face_path": "res://client/assets/cards/tianting_s02_0104.jpg",
+    "source_path": "res://规则/牌面/天廷/神农鼎.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0118": {
+    "face_path": "res://client/assets/cards/tianting_s01_0118.jpg",
+    "source_path": "res://规则/牌面/天廷/神妙行军.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0114": {
+    "face_path": "res://client/assets/cards/tianting_s01_0114.jpg",
+    "source_path": "res://规则/牌面/天廷/秦良玉.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0120": {
+    "face_path": "res://client/assets/cards/tianting_s01_0120.jpg",
+    "source_path": "res://规则/牌面/天廷/空城计.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0108": {
+    "face_path": "res://client/assets/cards/tianting_s01_0108.jpg",
+    "source_path": "res://规则/牌面/天廷/花木兰.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0115": {
+    "face_path": "res://client/assets/cards/tianting_s01_0115.jpg",
+    "source_path": "res://规则/牌面/天廷/荆轲.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0116": {
+    "face_path": "res://client/assets/cards/tianting_s01_0116.jpg",
+    "source_path": "res://规则/牌面/天廷/西施.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0119": {
+    "face_path": "res://client/assets/cards/tianting_s01_0119.jpg",
+    "source_path": "res://规则/牌面/天廷/观星.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0111": {
+    "face_path": "res://client/assets/cards/tianting_s01_0111.jpg",
+    "source_path": "res://规则/牌面/天廷/诸葛亮.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_0104": {
+    "face_path": "res://client/assets/cards/tianting_s01_0104.jpg",
+    "source_path": "res://规则/牌面/天廷/韩信.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_03m2a": {
+    "face_path": "res://client/assets/cards/asgard_s01_03m2a.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/洛基.png",
+    "crop": {
+      "x": 0,
+      "y": 1,
+      "width": 1080,
+      "height": 1508
+    },
+    "output_width": 720,
+    "output_height": 1005,
+    "format": "jpg"
+  },
+  "takamagahara_s01_04m2": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_04m2.jpg",
+    "source_path": "res://规则/牌面/高天原/须佐之男.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s01_04m1": {
+    "face_path": "res://client/assets/cards/takamagahara_s01_04m1.jpg",
+    "source_path": "res://规则/牌面/高天原/天照大神.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "takamagahara_s02_04m1": {
+    "face_path": "res://client/assets/cards/takamagahara_s02_04m1.jpg",
+    "source_path": "res://规则/牌面/高天原/月读.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s01_03m1": {
+    "face_path": "res://client/assets/cards/asgard_s01_03m1.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/瓦尔基里.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "asgard_s02_03m1": {
+    "face_path": "res://client/assets/cards/asgard_s02_03m1.jpg",
+    "source_path": "res://规则/牌面/阿斯加德/雷神索尔.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_01m1": {
+    "face_path": "res://client/assets/cards/tianting_s01_01m1.jpg",
+    "source_path": "res://规则/牌面/天廷/杨戬.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s01_01m2": {
+    "face_path": "res://client/assets/cards/tianting_s01_01m2.jpg",
+    "source_path": "res://规则/牌面/天廷/孟婆.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  },
+  "tianting_s02_01m1": {
+    "face_path": "res://client/assets/cards/tianting_s02_01m1.jpg",
+    "source_path": "res://规则/牌面/天廷/孙悟空.png",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1509
+    },
+    "output_width": 720,
+    "output_height": 1006,
+    "format": "jpg"
+  }
+}

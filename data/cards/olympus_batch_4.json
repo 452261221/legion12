@@ -1,0 +1,142 @@
+[
+  {
+    "id": "olympus_s02_0520",
+    "name": "匠神锻造炉",
+    "faction": "olympus",
+    "type": "artifact",
+    "cost": 3,
+    "status": "implemented",
+    "effects": [
+      {
+        "id": "forge_entry_flip_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "optional": true,
+        "text": "登场时，可翻转1张士气。",
+        "resolution": {
+          "action": "olympus_flip_morale",
+          "count": 1,
+          "include_active": true,
+          "include_spent": true
+        }
+      },
+      {
+        "id": "forge_prepare_choice",
+        "kind": "activated",
+        "rest_source": true,
+        "required_orientation": "active",
+        "cost": {
+          "morale": 1
+        },
+        "text": "主动休整 消耗1士气：选择以下一项。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "options": [
+            {
+              "id": "discount",
+              "label": "本回合下1张军团晋升登场神力-1",
+              "resolution": {
+                "action": "olympus_prepare_promotion_divine_flip_discount",
+                "amount": 1
+              }
+            },
+            {
+              "id": "ready_after_kill",
+              "label": "本回合下一次击杀后转为活跃",
+              "resolution": {
+                "action": "olympus_prepare_ready_after_kill"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "登场时 可翻转1张士气。\n主动休整 消耗1士气：选择以下一项。\n·本回合我方下1张军团「晋升登场」消耗并翻转的神力-1。\n·选择我方1张【晋升者】以外的【奥林匹斯】军团，在本回合其下一次击杀对方军团后转为活跃。",
+    "image_path": "res://规则/牌面/奥林匹斯/匠神锻造炉.png",
+    "source": {
+      "card_code": "S02-0520"
+    }
+  },
+  {
+    "id": "olympus_s02_0504",
+    "name": "阿喀琉斯",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "「位于前排」我方主宰无法被兵力不高于2000的军团进攻。\n「位于前排」回合1次 即将阵亡时，可消耗并翻转1神力：代替承受本次致命进攻或效果。",
+    "image_path": "res://规则/牌面/奥林匹斯/阿喀琉斯.png",
+    "troop_type": "武者",
+    "source": {
+      "card_code": "S02-0504"
+    }
+  },
+  {
+    "id": "olympus_s02_0503",
+    "name": "阿喀琉斯·晋升",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "status": "implemented",
+    "keywords": [
+      "attack_no_loss",
+      "reduce_ranged_attack_power_1000"
+    ],
+    "traits": [
+      "promoted"
+    ],
+    "play_options": [
+      {
+        "id": "promotion",
+        "label": "晋升登场",
+        "olympus_promotion": true,
+        "promotion_base_definition_id": "olympus_s02_0519",
+        "promotion_divine_flip_cost": 2
+      }
+    ],
+    "effects": [
+      {
+        "id": "achilles_promotion_can_attack_legions",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "晋升登场：本回合可进攻对方军团。",
+        "condition": {
+          "played_with_play_option_id": "promotion"
+        },
+        "resolution": {
+          "action": "olympus_grant_source_can_attack_legions_until_turn_end"
+        }
+      },
+      {
+        "id": "achilles_kill_grant_front_taunt",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "text": "击杀时：直到我方下个回合开始前，此军团位于前排获得挑衅。",
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "resolution": {
+          "action": "olympus_grant_source_front_taunt_until_next_own_turn_start"
+        }
+      }
+    ],
+    "text": "晋升 消耗并翻转2神力，叠放至我方同名非【晋升者】军团上方登场。\n进攻无损，此军团受到远程进攻兵力额外-1000。\n晋升登场 本回合可进攻对方军团。\n击杀时 直到我方下个回合开始前，此军团「位于前排」获得 挑衅。",
+    "image_path": "res://规则/牌面/奥林匹斯/阿喀琉斯·晋升.png",
+    "troop_type": "武者",
+    "source": {
+      "card_code": "S02-0503"
+    }
+  }
+]

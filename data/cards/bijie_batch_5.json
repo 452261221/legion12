@@ -1,0 +1,132 @@
+[
+  {
+    "id": "bijie_s02_039",
+    "name": "罗宾汉",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "traits": [],
+    "effects": [
+      {
+        "id": "robin_hood_entry_deploy_squire",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可从我方手牌/牌库/墓地将1张侍从骑士活跃登场。",
+        "resolution": {
+          "optional": true,
+          "action": "deploy_matching_legion_from_hand_deck_or_grave",
+          "type": "legion",
+          "id": "bijie_s02_033"
+        }
+      },
+      {
+        "id": "robin_hood_attack_add_rune",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时 获得1符文。",
+        "resolution": {
+          "action": "add_rune",
+          "count": 1
+        }
+      },
+      {
+        "id": "robin_hood_attack_draw_with_richard",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_has_battlefield_definition": "bijie_s02_053"
+        },
+        "text": "若我方战场上存在狮心王理查一世，进攻时再抽取1张牌。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可从我方手牌/牌库/墓地将1张<侍从骑士>活跃登场。\n进攻时 获得1符文。若我方战场上存在<狮心王理查一世>，可抽取1张牌。",
+    "troop_type": "弓手"
+  },
+  {
+    "id": "bijie_s02_054",
+    "name": "兰斯洛特",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "lancelot_entry_gain_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "rune": 1
+        },
+        "text": "登场时 可消耗1符文：获得冲锋。",
+        "resolution": {
+          "optional": true,
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "lancelot_kill_choice",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "text": "击杀时 选择以下一项：试炼+1，或获得1符文。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "兰斯洛特：选择以下一项",
+          "options": [
+            {
+              "id": "advance_trial",
+              "label": "试炼+1",
+              "resolution": {
+                "action": "advance_trial_progress",
+                "target": "first_trial",
+                "skip_completed": true,
+                "count": 1,
+                "complete_at": 2
+              }
+            },
+            {
+              "id": "gain_rune",
+              "label": "获得1符文",
+              "resolution": {
+                "action": "add_rune",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "登场时 可消耗1符文：获得冲锋。\n击杀时 选择以下一项。\n试炼+1。\n获得1符文。",
+    "troop_type": "斗士"
+  }
+]

@@ -1,0 +1,23 @@
+{
+	"name": "real_eval_opening_fast_suite",
+	"trace_root": "user://battle_logs/fixed_eval/real_eval_opening_fast_suite",
+	"cases": [
+		{
+			"name": "debug_opening_fast_real_helper",
+			"intent": "验证开局快速 JSON 模式是否能压掉首步 invalid_content_json。",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 13000,
+			"ai_policy_mode": "llm",
+			"max_steps": 4,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"llm_provider": "deepseek",
+			"llm_runtime_options": {
+				"llm_enable_thinking": true,
+				"llm_response_max_tokens": 1024,
+				"llm_use_external_helper": true
+			}
+		}
+	]
+}

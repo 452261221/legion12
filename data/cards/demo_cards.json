@@ -1,0 +1,382 @@
+[
+  {
+    "id": "demo_vanguard_raider",
+    "name": "先锋袭击兵",
+    "faction": "legion_dawn",
+    "type": "legion",
+    "cost": 1,
+    "power": 3000,
+    "hp": 3000,
+    "keywords": [],
+    "effects": [],
+    "text": "稳定的前线单位。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_bastion_guard",
+    "name": "壁垒守卫",
+    "faction": "legion_dawn",
+    "type": "legion",
+    "cost": 1,
+    "power": 2000,
+    "hp": 2000,
+    "keywords": ["taunt"],
+    "effects": [],
+    "text": "挑衅。迫使敌军优先处理前线防守。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_breakthrough_knight",
+    "name": "破阵骑士",
+    "faction": "legion_dawn",
+    "type": "legion",
+    "cost": 1,
+    "power": 3000,
+    "hp": 3000,
+    "keywords": ["charge"],
+    "effects": [],
+    "text": "冲锋。入场回合即可发动进攻。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_banner_captain",
+    "name": "军旗统领",
+    "faction": "legion_dawn",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "banner_aura",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "amount": 1000,
+          "target_scope": "allied_other_battlefield",
+          "exclude_self": true
+        },
+        "text": "other allied units get +1000 power"
+      }
+    ],
+    "text": "为其他友军提供持续火力加成。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_linebreaker_archer",
+    "name": "裂阵弓手",
+    "faction": "legion_dawn",
+    "type": "legion",
+    "cost": 1,
+    "power": 3000,
+    "hp": 3000,
+    "keywords": ["ranged"],
+    "effects": [],
+    "text": "远程。可跨排射击。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_lens_relay",
+    "name": "棱镜继电器",
+    "faction": "neutral",
+    "type": "artifact",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "relay_draw",
+        "kind": "activated",
+        "cost": { "morale": 1 },
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "pay 1 morale: draw 1 card"
+      }
+    ],
+    "text": "圣物。支付 1 士气，抽 1 张牌。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_rally_signal",
+    "name": "集结号令",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "rally_draw",
+        "kind": "activated",
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "draw 1 card"
+      }
+    ],
+    "text": "战术。补充手牌并保持推进节奏。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_shock_barrage",
+    "name": "震击齐射",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "barrage_damage",
+        "kind": "activated",
+        "resolution": { "action": "deal_legion_damage", "amount": 2000 },
+        "text": "deal 2000 damage to target unit"
+      }
+    ],
+    "text": "战术。对目标军团造成 2000 伤害。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_final_decree",
+    "name": "终末裁令",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "decree_master",
+        "kind": "activated",
+        "resolution": { "action": "deal_master_damage", "amount": 2, "target": "enemy_master" },
+        "text": "deal 2 damage to enemy master"
+      }
+    ],
+    "text": "战术。直接压低敌方主宰生命。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_twin_command",
+    "name": "双重军令",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "command_draw",
+        "kind": "activated",
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "draw 1 card"
+      },
+      {
+        "id": "command_bolt",
+        "kind": "activated",
+        "resolution": { "action": "deal_legion_damage", "amount": 2000 },
+        "text": "deal 2000 damage to target unit"
+      }
+    ],
+    "text": "战术。施放时在补牌与点伤之间选择一种模式。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_pathfinder_orders",
+    "name": "先遣调度",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "pathfinder_search",
+        "kind": "activated",
+        "resolution": {
+          "action": "search_deck",
+          "count": 1,
+          "max_look": 4,
+          "match": { "type": "legion", "faction": "legion_dawn" }
+        },
+        "text": "look at the top 4 cards, put a Legion Dawn legion into your hand"
+      }
+    ],
+    "text": "战术。从牌库顶部 4 张中检索一张晨锋军团加入手牌。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_sunmarch_decree",
+    "name": "日征军议",
+    "faction": "legion_dawn",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "sunmarch_search",
+        "kind": "activated",
+        "resolution": {
+          "action": "search_deck",
+          "count": 1,
+          "max_look": 4,
+          "match": { "type": "legion", "faction": "legion_dawn" }
+        },
+        "text": "look at the top 4 cards, put a Legion Dawn legion into your hand"
+      },
+      {
+        "id": "sunmarch_strike",
+        "kind": "activated",
+        "resolution": { "action": "deal_master_damage", "amount": 2, "target": "enemy_master" },
+        "text": "deal 2 damage to enemy master"
+      }
+    ],
+    "text": "战术。施放时在检索晨锋军团与直击敌方主宰之间选择一种模式。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_recon_order",
+    "name": "侦察军令",
+    "faction": "legion_veil",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "recon_search",
+        "kind": "activated",
+        "resolution": {
+          "action": "search_deck",
+          "count": 1,
+          "max_look": 4,
+          "match": { "type": "legion", "faction": "legion_veil" }
+        },
+        "text": "look at the top 4 cards, put a Legion Veil legion into your hand"
+      }
+    ],
+    "text": "战术。从牌库顶部 4 张中检索一张暮纱军团加入手牌。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_veil_doctrine",
+    "name": "暮纱兵棋",
+    "faction": "legion_veil",
+    "type": "tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "doctrine_search",
+        "kind": "activated",
+        "resolution": {
+          "action": "search_deck",
+          "count": 1,
+          "max_look": 4,
+          "match": { "type": "legion", "faction": "legion_veil" }
+        },
+        "text": "look at the top 4 cards, put a Legion Veil legion into your hand"
+      },
+      {
+        "id": "doctrine_bounce",
+        "kind": "activated",
+        "resolution": { "action": "return_target_unit_to_hand" },
+        "text": "return target unit to its owner's hand"
+      }
+    ],
+    "text": "战术。施放时在检索暮纱军团与弹回目标军团之间选择一种模式。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_null_field",
+    "name": "零域封止",
+    "faction": "legion_veil",
+    "type": "counter_tactic",
+    "cost": 1,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "nullify_stack",
+        "kind": "activated",
+        "can_activate_on_stack": true,
+        "response_only": true,
+        "resolution": { "action": "counter_target_stack" },
+        "text": "counter target stack item"
+      }
+    ],
+    "text": "反击战术。反制一个堆叠项。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_warden_of_ashes",
+    "name": "灰烬司库",
+    "faction": "legion_veil",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "mill_two",
+        "kind": "activated",
+        "resolution": { "action": "mill_cards", "count": 2 },
+        "text": "put the top 2 cards of your deck into your grave"
+      }
+    ],
+    "text": "磨掉己方牌库顶部 2 张，换取墓地资源节奏。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_exile_magus",
+    "name": "放逐术师",
+    "faction": "legion_veil",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "bounce_unit",
+        "kind": "activated",
+        "resolution": { "action": "return_target_unit_to_hand" },
+        "text": "return target unit to its owner's hand"
+      }
+    ],
+    "text": "将目标军团弹回手牌，打乱前线布局。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_sanctioner",
+    "name": "裁罪执行官",
+    "faction": "legion_veil",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "destroy_unit",
+        "kind": "activated",
+        "cost": { "morale": 1 },
+        "resolution": { "action": "destroy_target_unit" },
+        "text": "pay 1 morale: destroy target unit"
+      }
+    ],
+    "text": "以士气为代价直接处决目标军团。",
+    "status": "tested"
+  },
+  {
+    "id": "demo_field_scholar",
+    "name": "阵地学者",
+    "faction": "legion_veil",
+    "type": "legion",
+    "cost": 1,
+    "power": 1000,
+    "hp": 1000,
+    "keywords": [],
+    "effects": [
+      {
+        "id": "draw_one",
+        "kind": "activated",
+        "cost": { "morale": 1 },
+        "resolution": { "action": "draw_cards", "count": 1 },
+        "text": "pay 1 morale: draw 1"
+      }
+    ],
+    "text": "稳定的补牌单位。",
+    "status": "tested"
+  }
+]

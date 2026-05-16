@@ -1,0 +1,154 @@
+[
+  {
+    "id": "bijie_s02_035",
+    "name": "克劳迪娅",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "claudia_entry_optional_weaken",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "rune": 1
+        },
+        "text": "登场时 可消耗1符文：选择1张敌方军团，本回合兵力-2000。",
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -2000
+        }
+      }
+    ],
+    "text": "进攻距离+1。\n登场时 可消耗1符文：选择1张敌方军团，本回合兵力-2000。",
+    "troop_type": "刺客"
+  },
+  {
+    "id": "bijie_s02_036",
+    "name": "圆桌领域",
+    "faction": "bijie",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "round_table_domain_cast",
+        "kind": "activated",
+        "text": "查看我方牌库，选择1张【圆桌骑士】军团展示并加入手牌。随后重洗牌库。\n可消耗1士气：选择我方1张【圆桌骑士】军团，本回合兵力+2000。",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 40,
+          "count": 1,
+          "match": {
+            "type": "legion",
+            "faction": "bijie",
+            "keyword": "round_table"
+          },
+          "follow_up_action": {
+            "action": "shuffle_deck",
+            "follow_up_action": {
+              "action": "choose_option_with_cost",
+              "title": "可消耗1士气：选择是否强化圆桌骑士",
+              "optional": true,
+              "options": [
+                {
+                  "id": "buff_round_table",
+                  "label": "强化圆桌骑士",
+                  "cost": {
+                    "morale": 1
+                  },
+                  "resolution": {
+                    "action": "choose_and_modify_power_until_turn_end",
+                    "target_scope": "allied_battlefield",
+                    "type": "legion",
+                    "keyword": "round_table",
+                    "amount": 2000
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "text": "查看我方牌库，选择1张【圆桌骑士】军团展示并加入手牌。随后重洗牌库。\n可消耗1士气：选择我方1张【圆桌骑士】军团，本回合兵力+2000。"
+  },
+  {
+    "id": "bijie_s02_044",
+    "name": "帕西瓦尔",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [
+      "ranged_attack",
+      "ranged_no_loss"
+    ],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "percival_entry_add_rune",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 获得1符文。",
+        "resolution": {
+          "action": "add_rune",
+          "count": 1
+        }
+      },
+      {
+        "id": "percival_attack_discard_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "discard_cards": 1
+        },
+        "text": "进攻时 可弃置1张手牌：本次进攻兵力+2000。",
+        "resolution": {
+          "optional": true,
+          "action": "modify_source_power_until_turn_end",
+          "amount": 2000
+        }
+      },
+      {
+        "id": "percival_kill_gain_pierce",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "text": "击杀时 本回合获得贯穿。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "pierce"
+        }
+      }
+    ],
+    "text": "远程进攻无损。\n登场时 获得1符文。\n进攻时 可弃置1张手牌：本次进攻兵力+2000。\n击杀时 本回合获得贯穿。",
+    "troop_type": "武者"
+  }
+]

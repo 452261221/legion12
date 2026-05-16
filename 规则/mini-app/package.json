@@ -1,0 +1,29 @@
+{
+  "name": "legion-card-mini-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev:mp-weixin": "node ./node_modules/@dcloudio/vite-plugin-uni/bin/uni.js -p mp-weixin",
+    "build:mp-weixin": "node ./node_modules/@dcloudio/vite-plugin-uni/bin/uni.js build -p mp-weixin",
+    "dev:h5": "node ./node_modules/@dcloudio/vite-plugin-uni/bin/uni.js -p h5",
+    "build:h5": "node ./node_modules/@dcloudio/vite-plugin-uni/bin/uni.js build -p h5",
+    "type-check": "node ./node_modules/vue-tsc/index.js --noEmit -p tsconfig.json",
+    "sync:cloud-assets": "powershell -ExecutionPolicy Bypass -File ./cloud-hosting/sync-assets.ps1"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-4080720251210001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-4080720251210001",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "3.4.19",
+    "@dcloudio/uni-cli-shared": "^3.0.0-4080720251210001",
+    "@dcloudio/uni-shared": "^3.0.0-4080720251210001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-4080720251210001",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "5.2.8",
+    "vue-tsc": "^2.2.0"
+  }
+}

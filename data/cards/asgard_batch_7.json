@@ -1,0 +1,153 @@
+[
+  {
+    "id": "asgard_s02_0301",
+    "name": "雷神之锤",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 3,
+    "limit": 1,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hammer_entry_attack_master",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，本回合可进攻对方主宰。",
+        "resolution": {
+          "action": "grant_source_can_attack_master_until_turn_end"
+        },
+        "resolve_immediately_on_entry_without_stack": true
+      },
+      {
+        "id": "hammer_died_draw_discard",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时，可抽取1张牌，并弃置1张手牌。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true,
+          "follow_up_action": {
+            "action": "discard_cards",
+            "count": 1,
+            "requires_confirm": true,
+            "title": "雷神之锤：选择1张手牌弃置",
+            "hint_text": "雷神之锤：请选择并确认弃置1张手牌。",
+            "top_hint_text": "雷神之锤：请从高亮手牌中选择1张并确认弃置。"
+          }
+        }
+      },
+      {
+        "id": "hammer_grave_revive",
+        "kind": "activated",
+        "text": "我方回合1次，当此军团在墓地时，可将墓地3张卡牌自选顺序返回我方牌库底部：将此军团活跃登场。",
+        "allow_grave_source": true,
+        "required_controller_master_definition_id": "asgard_s02_03m1",
+        "once_per_turn_key": "hammer_grave_revive",
+        "player_once_per_turn": true,
+        "min_own_grave_cards": 4,
+        "resolution": {
+          "action": "recycle_grave_then_revive_source_from_grave",
+          "count": 3,
+          "requires_confirm": true,
+          "drag_reorder_all_candidates": false,
+          "title": "雷神之锤：选择3张墓地卡牌返回牌库底部",
+          "hint_text": "雷神之锤：请选择3张其他墓地卡牌，并按返回牌库底部的顺序排列。",
+          "top_hint_text": "雷神之锤：请按顺序选择3张将返回牌库底部的卡牌。"
+        }
+      }
+    ],
+    "text": "登场时 本回合可进攻对方主宰。\n阵亡时 可抽取1张牌，并弃置1张手牌。\n规则上，当我方主宰为【雷神索尔】，可使用以下效果：\n我方 回合1次 当此军团在墓地时，可将墓地3张卡牌自选顺序返回我方牌库底部：将此军团活跃登场。",
+    "image_path": "res://规则/牌面/阿斯加德/雷神之锤.png",
+    "source": {
+      "card_code": "S02-0301",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "特殊"
+  },
+  {
+    "id": "asgard_s02_0305",
+    "name": "安德华拉诺特",
+    "faction": "asgard",
+    "type": "artifact",
+    "cost": 0,
+    "limit": 1,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "andvaranot_master_damaged_draw",
+        "kind": "triggered",
+        "event": "MasterDamaged",
+        "condition": {
+          "controller_turn_only": true,
+          "event_player_is_controller": true
+        },
+        "once_per_turn_key": "andvaranot_master_damaged_draw",
+        "text": "我方回合1次，我方主宰受到伤害时，可抽取1张牌。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "规则上，在游戏开始时可将此圣物从牌库置入圣物区，起始手牌数量为4张，且我方回合结束时弃置手牌，直至手牌数量不高于6张。我方无法从手牌打出圣物。\n我方 回合1次 我方主宰受到伤害时，可抽取1张牌。\n对方回合 我方主宰受到的第一次伤害变为2。",
+    "image_path": "res://规则/牌面/阿斯加德/安德华拉诺特.png",
+    "source": {
+      "card_code": "S02-0305",
+      "import_stage": "manual_from_card_faces"
+    }
+  },
+  {
+    "id": "asgard_s02_0306",
+    "name": "密米尔之泉",
+    "faction": "asgard",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "mimir_well_turn_heal_draw_mill",
+        "kind": "activated",
+        "text": "若本回合我方主宰受到累计2点及以上伤害：我方主宰可增加1点血量，抽取1张牌。随后可弃置我方牌库顶部2张牌。",
+        "once_per_turn_key": "mimir_well_once",
+        "player_once_per_turn": true,
+        "own_master_damage_taken_this_turn_at_least": 2,
+        "resolution": {
+          "action": "heal_master",
+          "player_scope": "controller",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1,
+            "follow_up_action": {
+              "action": "mill_cards",
+              "count": 2,
+              "optional": true
+            }
+          }
+        }
+      }
+    ],
+    "text": "<密米尔之泉>每回合只可使用1次。\n若本回合我方主宰受到累计2点及更多伤害：我方主宰可增加1点血量，抽取1张牌。随后可弃置我方牌库顶部2张牌。",
+    "image_path": "res://规则/牌面/阿斯加德/密米尔之泉.png",
+    "source": {
+      "card_code": "S02-0306",
+      "import_stage": "manual_from_card_faces"
+    }
+  }
+]

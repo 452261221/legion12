@@ -1,0 +1,803 @@
+[
+  {
+    "id": "neutral_s01_0003",
+    "name": "攻城投石车",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "effects_stubbed",
+    "keywords": ["ranged", "ranged_no_loss"],
+    "effects": [
+      {
+        "id": "siege_catapult_backline_breach",
+        "kind": "activated",
+        "required_row": "back",
+        "text": "位于后排 可消耗2士气：此军团本回合可进攻对方后排和主宰。",
+        "cost": {
+          "morale": 2
+        },
+        "resolution": {
+          "action": "tianting_yangyouji_enable_back_attack",
+          "follow_up_action": {
+            "action": "grant_source_can_attack_master_until_turn_end"
+          }
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n位于后排 可消耗2士气：此军团本回合可进攻对方后排和主宰。",
+    "image_path": "res://规则/牌面/通用/攻城投石车.png",
+    "source": {
+      "card_code": "S01-0003",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "器械"
+  },
+  {
+    "id": "neutral_s01_0004",
+    "name": "无名的渗透者",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 1000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": ["cannot_attack", "cannot_support"],
+    "play_options": [
+      {
+        "id": "rested_anywhere",
+        "label": "休整登场",
+        "allowed_rows": ["front", "back"],
+        "deployment_orientation": "rested",
+        "allow_foreign_battlefield": true,
+        "replace_default_play_option": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "nameless_infiltrator_suicide",
+        "kind": "activated",
+        "text": "我方/对方 可消耗2士气：击杀此军团。",
+        "any_player_can_activate": true,
+        "cost": {
+          "morale": 2
+        },
+        "resolution": {
+          "action": "send_source_to_grave"
+        }
+      },
+      {
+        "id": "nameless_infiltrator_death_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时 此军团的所有者抽取1张牌。",
+        "resolution": {
+          "action": "draw_source_owner_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "此军团可在战场任意位置休整登场，不可进行支援和进攻。\n我方/对方 可消耗2士气：击杀此军团。\n阵亡时 此军团的所有者抽取1张牌。",
+    "image_path": "res://规则/牌面/通用/无名的渗透者.png",
+    "source": {
+      "card_code": "S01-0004",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "特殊"
+  },
+  {
+    "id": "neutral_s01_0010",
+    "name": "伪造密令",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "forged_order_move_enemy_units",
+        "kind": "activated",
+        "text": "对方场上所有可前后位移的军团高亮；本回合内你可令其中最多2张各前后位移1次。",
+        "resolution": {
+          "action": "forged_order_prepare_enemy_moves",
+          "count": 2
+        }
+      }
+    ],
+    "text": "对方场上所有可前后位移的军团高亮；本回合内你可令其中最多2张各前后位移1次。",
+    "image_path": "res://规则/牌面/通用/伪造密令.png",
+    "source": {
+      "card_code": "S01-0010",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0011",
+    "name": "瘟疫感染",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "plague_infection_choose",
+        "kind": "activated",
+        "text": "选择对方1张军团或士气，在下个对方重置阶段无法转为活跃。",
+        "resolution": {
+          "action": "plague_infection_apply"
+        }
+      }
+    ],
+    "text": "选择对方1张军团或士气，在下个对方重置阶段无法转为活跃。",
+    "image_path": "res://规则/牌面/通用/瘟疫感染.png",
+    "source": {
+      "card_code": "S01-0011",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0013",
+    "name": "前线侦查",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "frontline_scout_reveal",
+        "kind": "activated",
+        "text": "查看对方所有手牌。可消耗1士气：对方选择其1张手牌洗回牌库。",
+        "resolution": {
+          "action": "frontline_scout_view_enemy_hand",
+          "title": "前线侦查",
+          "follow_up_action": {
+            "action": "choose_option_with_cost",
+            "title": "是否消耗1士气：令对方选择1张手牌洗回牌库？",
+            "optional": true,
+            "skip_label": "不消耗",
+            "options": [
+              {
+                "id": "pay_and_shuffle",
+                "label": "消耗1士气洗回1张手牌",
+                "cost": {
+                  "morale": 1
+                },
+                "resolution": {
+                  "action": "return_enemy_hand_to_deck_and_shuffle",
+                  "count": 1,
+                  "title": "前线侦查：选择1张手牌洗回牌库"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "text": "查看对方所有手牌。\n可消耗1士气：对方选择其1张手牌洗回牌库。",
+    "image_path": "res://规则/牌面/通用/前线侦查.png",
+    "source": {
+      "card_code": "S01-0013",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0017",
+    "name": "拼死反抗",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "desperate_resistance",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "hidden_from_actions": true,
+        "only_during_opponent_turn": true,
+        "text": "对方进攻后：选择以下一项。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "拼死反抗：选择以下一项",
+          "options": [
+            {
+              "id": "single_rested_minus_2000",
+              "label": "选择对方1张休整的军团，直到下个我方回合结束前兵力-2000",
+              "resolution": {
+                "action": "choose_and_modify_power_until_next_own_turn_end",
+                "target_scope": "enemy_battlefield",
+                "type": "legion",
+                "required_orientation": "rested",
+                "amount": -2000
+              }
+            },
+            {
+              "id": "all_rested_minus_1000",
+              "label": "对方所有休整的军团，直到下个我方回合结束前兵力-1000",
+              "resolution": {
+                "action": "modify_matching_power_until_next_own_turn_end",
+                "target_scope": "enemy_battlefield",
+                "type": "legion",
+                "required_orientation": "rested",
+                "amount": -1000
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "对方进攻后：选择以下一项。\n·选择对方1张休整的军团，直到下个我方回合结束前兵力-2000。\n·对方所有休整的军团，直到下个我方回合结束前兵力-1000。",
+    "image_path": "res://规则/牌面/通用/拼死反抗.png",
+    "source": {
+      "card_code": "S01-0017",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0021",
+    "name": "摄政皇权",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "regency_authority",
+        "kind": "triggered",
+        "event": "MasterDamaged",
+        "condition": {
+          "event_player_is_controller": true
+        },
+        "text": "我方主宰因对方进攻或效果受到伤害时：从我方手牌中将1张费用不高于3的军团活跃登场。",
+        "resolution": {
+          "action": "deploy_matching_legion_from_hand",
+                "type": "legion",
+          "max_cost": 3,
+          "deployment_orientation": "active"
+        }
+      }
+    ],
+    "text": "我方主宰因对方进攻或效果受到伤害时：从我方手牌中将1张费用不高于3的军团活跃登场。",
+    "image_path": "res://规则/牌面/通用/摄政皇权.png",
+    "source": {
+      "card_code": "S01-0021",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0001",
+    "name": "驱魔道士 陆瑛",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "luying_return_self",
+        "kind": "triggered",
+        "event": "EffectResolved",
+        "condition": {
+          "event_player_is_opponent": true,
+          "event_source_type_is": "tactic"
+        },
+        "text": "对方1个战术效果结算后：你可以将此军团从战场返回手牌。",
+        "resolution": {
+          "action": "return_source_to_hand",
+          "optional": true
+        }
+      },
+      {
+        "id": "luying_tax_enemy_tactics",
+        "kind": "triggered",
+        "event": "CardEnteredBattlefield",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolve_immediately_on_entry_without_stack": true,
+        "text": "登场时 对方下个回合手牌中战术打出的费用+1。",
+        "resolution": {
+          "action": "modify_matching_cost_until_next_own_turn_end",
+          "target_scope": "enemy_hand",
+          "type": "tactic",
+          "amount": 1
+        }
+      }
+    ],
+    "text": "对方1个战术效果结算后：你可以将此军团从战场返回手牌。\n登场时 对方下个回合手牌中主动战术打出的费用+1。",
+    "image_path": "res://规则/牌面/通用/驱魔道士 陆瑛.png",
+    "source": {
+      "card_code": "S02-0001",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "术师"
+  },
+  {
+    "id": "neutral_s02_0006",
+    "name": "信仰狂热者",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "fanatic_milled_free_master_effect",
+        "kind": "triggered",
+        "event": "CardMilled",
+        "self_only": true,
+        "allow_grave_source": true,
+        "once_per_turn_key": "fanatic_free_master_effect",
+        "text": "我方回合 此军团从牌库弃置时：可无视消耗触发1次我方需要消耗士气的主宰效果，且不计入主宰效果使用次数。",
+        "resolution": {
+          "action": "prepare_free_master_morale_effect_activation",
+          "optional": true
+        }
+      },
+      {
+        "id": "fanatic_discarded_free_master_effect",
+        "kind": "triggered",
+        "event": "CardDiscarded",
+        "self_only": true,
+        "allow_grave_source": true,
+        "once_per_turn_key": "fanatic_free_master_effect",
+        "condition": {
+          "source_kind_is": "effect"
+        },
+        "text": "此军团因效果从手牌弃置时：可无视消耗触发1次我方需要消耗士气的主宰效果，且不计入主宰效果使用次数。",
+        "resolution": {
+          "action": "prepare_free_master_morale_effect_activation",
+          "optional": true
+        }
+      }
+    ],
+    "text": "此效果每回合只可使用1次。\n我方回合 此军团从牌库弃置时：可无视消耗触发1次我方需要消耗士气的主宰效果，且不计入主宰效果使用次数。\n此军团因效果从手牌弃置时：可无视消耗触发1次我方需要消耗士气的主宰效果，且不计入主宰效果使用次数。",
+    "image_path": "res://规则/牌面/通用/信仰狂热者.png",
+    "source": {
+      "card_code": "S02-0006",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "信徒"
+  },
+  {
+    "id": "neutral_s02_0007",
+    "name": "重装士兵",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 1,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": ["cannot_attack", "cannot_be_attacked_by_ranged"],
+    "effects": [
+      {
+        "id": "heavy_soldier_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "taunt"
+        }
+      },
+      {
+        "id": "heavy_soldier_front_guard",
+        "kind": "continuous",
+        "text": "位于前排时，且在对方回合此军团兵力+1000。",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "front",
+          "only_during_opponent_turn": true,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "无法进攻，无法被远程进攻。\n位于前排时获得挑衅，且在对方回合此军团兵力+1000。",
+    "image_path": "res://规则/牌面/通用/重装士兵.png",
+    "source": {
+      "card_code": "S02-0007",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "步兵"
+  },
+  {
+    "id": "neutral_s02_0008",
+    "name": "万物统御之戒",
+    "faction": "neutral",
+    "type": "artifact",
+    "cost": 3,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ring_search_neutral",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 可弃置1张手牌：查看我方牌库，选择1张通用卡牌展示并加入手牌。随后重洗牌库。",
+        "resolution": {
+          "action": "discard_cards",
+          "count": 1,
+          "requires_confirm": true,
+          "optional": true,
+          "follow_up_action": {
+            "action": "search_deck",
+            "count": 1,
+            "max_look": 40,
+            "match": {
+              "faction": "neutral"
+            },
+            "follow_up_action": {
+              "action": "reveal_found_cards_to_opponent",
+              "title": "万物统御之戒：向对方展示加入手牌的卡牌",
+              "follow_up_action": {
+                "action": "shuffle_deck"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "text": "规则上，本圣物位于圣物区时，所有通用卡牌都视为与我方主宰阵营相同。\n登场时 可弃置1张手牌：查看我方牌库，选择1张通用卡牌展示并加入手牌。随后重洗牌库。",
+    "image_path": "res://规则/牌面/通用/万物统御之戒.png",
+    "source": {
+      "card_code": "S02-0008",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0009",
+    "name": "防御部署",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "defensive_deployment",
+        "kind": "activated",
+        "text": "将手牌中最多2张反击战术置入战场。若手牌数量不高于4，可抽取1张牌。",
+        "resolution": {
+          "action": "set_counter_tactics_from_hand",
+          "count": 2,
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1,
+            "own_hand_size_at_most": 4
+          }
+        }
+      }
+    ],
+    "text": "将手牌中最多2张反击战术置入战场。若手牌数量不高于4，可抽取1张牌。",
+    "image_path": "res://规则/牌面/通用/防御部署.png",
+    "source": {
+      "card_code": "S02-0009",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0010",
+    "name": "黑色莲花",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "black_lotus_raise_calamity",
+        "kind": "activated",
+        "text": "将天灾值增加1点。",
+        "resolution": {
+          "action": "adjust_calamity_value",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "choose_option_with_cost",
+            "title": "是否消耗3士气：将此战术休整置入士气区？",
+            "optional": true,
+            "skip_label": "不消耗",
+            "options": [
+              {
+                "id": "move_to_morale",
+                "label": "消耗3士气并置入士气区",
+                "cost": {
+                  "morale": 3
+                },
+                "resolution": {
+                  "action": "move_source_tactic_to_spent_morale"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "black_lotus_lower_calamity",
+        "kind": "activated",
+        "text": "将天灾值减少1点。",
+        "resolution": {
+          "action": "adjust_calamity_value",
+          "amount": -1,
+          "follow_up_action": {
+            "action": "choose_option_with_cost",
+            "title": "是否消耗3士气：将此战术休整置入士气区？",
+            "optional": true,
+            "skip_label": "不消耗",
+            "options": [
+              {
+                "id": "move_to_morale",
+                "label": "消耗3士气并置入士气区",
+                "cost": {
+                  "morale": 3
+                },
+                "resolution": {
+                  "action": "move_source_tactic_to_spent_morale"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "text": "选择将天灾值增加或减少1点。随后你可以消耗3士气：将此战术休整置入士气区，此战术视为1张士气。\n当此战术作为士气被返还时，置入所有者墓地。",
+    "image_path": "res://规则/牌面/通用/黑色莲花.png",
+    "source": {
+      "card_code": "S02-0010",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0013",
+    "name": "神圣枷锁",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "sacred_shackle_attach",
+        "kind": "activated",
+        "text": "叠放至对方圣物区的1张圣物之上，对方无法使用此圣物，直到此战术被弃置。",
+        "resolution": {
+          "action": "attach_source_to_enemy_artifact_lock"
+        }
+      },
+      {
+        "id": "sacred_shackle_release",
+        "kind": "activated",
+        "required_zone": "artifact_zone",
+        "text": "对方可消耗3士气：弃置此战术。",
+        "cost": {
+          "morale": 3
+        },
+        "resolution": {
+          "action": "discard_source_to_owner_grave"
+        }
+      }
+    ],
+    "text": "叠放至对方圣物区的1张圣物之上，对方无法使用此圣物，直到此战术被弃置。\n（被叠放的圣物以任何形式离开圣物区时，弃置此战术）\n对方可消耗3士气：弃置此战术。",
+    "image_path": "res://规则/牌面/通用/神圣伽锁.png",
+    "source": {
+      "card_code": "S02-0013",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0015",
+    "name": "地主的胁迫",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "landlord_coercion",
+        "kind": "activated",
+        "response_requires_pending_attack": true,
+        "response_requires_defense_selection": true,
+        "response_pending_attack_controller_scope": "ally",
+        "text": "当对方进行抵挡或支援时：对方需额外弃置1张手牌，否则本次抵挡或支援无效。",
+        "resolution": {
+          "action": "set_pending_attack_extra_discard_requirement"
+        }
+      }
+    ],
+    "text": "当对方进行抵挡或支援时：对方需额外弃置1张手牌，否则本次抵挡或支援无效。",
+    "image_path": "res://规则/牌面/通用/地主的胁迫.png",
+    "source": {
+      "card_code": "S02-0015",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0016",
+    "name": "破败仪式",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ruined_ritual_counter_entry",
+        "kind": "activated",
+        "response_created_from_event_type": "CardEnteredBattlefield",
+        "response_event_from_not": "hand",
+        "response_event_card_type": "legion",
+        "response_event_card_controller_scope": "enemy",
+        "text": "对方军团以手牌以外的方式登场时：选择以下一项。",
+        "resolution": {
+          "action": "ruined_ritual_force_discard_and_blank_entry"
+        }
+      }
+    ],
+    "text": "对方军团以手牌以外的方式登场时：选择以下一项。\n·弃置对方1张手牌。\n·使触发此战术的1张军团本回合登场效果无效，且兵力-3000。",
+    "image_path": "res://规则/牌面/通用/破败仪式.png",
+    "source": {
+      "card_code": "S02-0016",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0017",
+    "name": "粮草掠夺",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "supply_raid",
+        "kind": "activated",
+        "response_only": true,
+        "response_created_from_event_type": "CardDrawn",
+        "response_event_card_controller_scope": "enemy",
+        "response_event_source_kind": "effect",
+        "text": "对方因效果将1张卡牌加入手牌时：选择对方1张手牌，将其返回所有者牌库顶部。随后我方抽取1张牌。",
+        "resolution": {
+          "action": "return_enemy_hand_to_deck_top",
+          "count": 1,
+          "title": "选择要返回牌库顶部的手牌",
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1
+          }
+        }
+      },
+      {
+        "id": "supply_raid_return_to_hand",
+        "kind": "activated",
+        "response_only": true,
+        "response_created_from_event_type": "CardReturnedToHand",
+        "response_event_card_controller_scope": "enemy",
+        "response_event_source_kind": "effect",
+        "text": "对方因效果将1张卡牌加入手牌时：选择对方1张手牌，将其返回所有者牌库顶部。随后我方抽取1张牌。",
+        "resolution": {
+          "action": "return_enemy_hand_to_deck_top",
+          "count": 1,
+          "title": "选择要返回牌库顶部的手牌",
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1
+          }
+        }
+      },
+      {
+        "id": "supply_raid_tutored",
+        "kind": "activated",
+        "response_only": true,
+        "response_created_from_event_type": "CardTutored",
+        "response_event_card_controller_scope": "enemy",
+        "response_event_source_kind": "effect",
+        "text": "对方因效果将1张卡牌加入手牌时：选择对方1张手牌，将其返回所有者牌库顶部。随后我方抽取1张牌。",
+        "resolution": {
+          "action": "return_enemy_hand_to_deck_top",
+          "count": 1,
+          "title": "选择要返回牌库顶部的手牌",
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "text": "对方因效果将1张卡牌加入手牌时：选择对方1张手牌，将其返回所有者牌库顶部。随后我方抽取1张牌。",
+    "image_path": "res://规则/牌面/通用/粮草掠夺.png",
+    "source": {
+      "card_code": "S02-0017",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0018",
+    "name": "毒药发作",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "poison_burst",
+        "kind": "activated",
+        "response_created_from_event_types": [
+          "CardReadied",
+          "MoraleReadied"
+        ],
+        "response_event_source_kind": "effect",
+        "response_event_from_orientation": "rested",
+        "response_event_card_controller_scope": "enemy",
+        "text": "对方休整的卡牌因效果转为活跃时，可无效该效果。随后对方弃置1张手牌。",
+        "resolution": {
+          "action": "undo_ready_event_and_discard_enemy_hand"
+        }
+      }
+    ],
+    "text": "对方休整的卡牌因效果转为活跃时，可无效该效果。随后对方弃置1张手牌。",
+    "image_path": "res://规则/牌面/通用/毒药发作.png",
+    "source": {
+      "card_code": "S02-0018",
+      "import_stage": "direct_face_import"
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bijie_s02_045",
+    "name": "梅林",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 4,
+    "power": 1000,
+    "hp": 1000,
+    "status": "implemented",
+    "keywords": [
+      "cannot_attack"
+    ],
+    "traits": [],
+    "effects": [
+      {
+        "id": "merlin_entry_add_rune",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 获得1符文。",
+        "resolution": {
+          "action": "add_rune",
+          "count": 1
+        }
+      },
+      {
+        "id": "merlin_prepare_choice",
+        "kind": "activated",
+        "rest_source": true,
+        "required_orientation": "active",
+        "cost": {
+          "rune": 1
+        },
+        "text": "主动休整 消耗1符文，可选择以下一项：\n·选择对方1张军团，本回合兵力-3000。\n·查看我方牌库，选择1张费用不高于4的主动战术展示并加入手牌。随后重洗牌库。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "梅林：选择效果",
+          "options": [
+            {
+              "id": "weaken_enemy",
+              "label": "敌方军团-3000",
+              "resolution": {
+                "action": "choose_and_modify_power_until_turn_end",
+                "target_scope": "enemy_battlefield",
+                "type": "legion",
+                "amount": -3000
+              }
+            },
+            {
+              "id": "search_tactic",
+              "label": "检索主动战术",
+              "resolution": {
+                "action": "search_deck",
+                "max_look": 40,
+                "count": 1,
+                "match": {
+                  "type": "tactic",
+                  "max_cost": 4
+                },
+                "follow_up_action": {
+                  "action": "shuffle_deck"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "此军团无法进攻。\n登场时 获得1符文。\n主动休整 消耗1符文，可选择以下一项：\n·选择对方1张军团，本回合兵力-3000。\n·查看我方牌库，选择1张费用不高于4的主动战术展示并加入手牌。随后重洗牌库。",
+    "troop_type": "术师"
+  }
+]

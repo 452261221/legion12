@@ -1,0 +1,117 @@
+[
+  {
+    "id": "bijie_s02_050",
+    "name": "亚瑟王",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [
+      "round_table"
+    ],
+    "effects": [
+      {
+        "id": "arthur_entry_attach_excalibur",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "rune": 1
+        },
+        "text": "登场时 可消耗1符文：将1张<王者之剑>叠放至此军团下方。",
+        "resolution": {
+          "optional": true,
+          "action": "attach_named_token_under_source",
+          "token_definition_id": "bijie_s02_059",
+          "power_bonus": 1000,
+          "keyword": "strong_attack",
+          "enable_substitute_on_lethal": true
+        }
+      },
+      {
+        "id": "arthur_death_deploy_round_table",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时 可将手牌中1张费用不高于4的【圆桌骑士】军团活跃登场。",
+        "resolution": {
+          "optional": true,
+          "action": "deploy_matching_legion_from_hand",
+          "type": "legion",
+          "faction": "bijie",
+          "trait": "round_table",
+          "max_target_cost": 4
+        }
+      }
+    ],
+    "text": "登场时 可消耗1符文：将1张<王者之剑>叠放至此军团下方。\n阵亡时 可将手牌中1张费用不高于4的【圆桌骑士】军团活跃登场。",
+    "troop_type": "领军"
+  },
+  {
+    "id": "bijie_s02_051",
+    "name": "圣女贞德",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "jeanne_entry_protect_master",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "discard_cards": 1
+        },
+        "text": "登场时 可弃置1张手牌：我方主宰直到下个我方回合开始前无法被进攻。",
+        "resolution": {
+          "optional": true,
+          "action": "grant_controller_master_cannot_be_attacked_until_next_own_turn_start"
+        }
+      },
+      {
+        "id": "jeanne_death_heal_both",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时 双方主宰增加1点血量。",
+        "resolution": {
+          "action": "heal_master",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "heal_master",
+            "amount": 1,
+            "player_scope": "opponent"
+          }
+        }
+      }
+    ],
+    "text": "登场时 可弃置1张手牌：我方主宰直到下个我方回合开始前无法被进攻。\n阵亡时 双方主宰增加1点血量。",
+    "troop_type": "领军"
+  },
+  {
+    "id": "bijie_s02_059",
+    "name": "王者之剑",
+    "faction": "bijie",
+    "type": "token",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [],
+    "text": "当<王者之剑>叠放在我方<亚瑟王>下方时，使其原本兵力+1000，并获得强攻。"
+  }
+]

@@ -1,0 +1,10 @@
+# 注意：当前这份配置指向正式 D1。
+# 本地测试请单独复制一份 dev 配置，并改成独立的测试数据库，不要直接写正式库。
+name = "legion-public-decks"
+main = "src/index.ts"
+compatibility_date = "2026-05-06"
+
+[[d1_databases]]
+binding = "PUBLIC_DECKS_DB"
+database_name = "legion-public-decks"
+database_id = "4cca6104-201d-47f7-9314-81c8549e1b7f"

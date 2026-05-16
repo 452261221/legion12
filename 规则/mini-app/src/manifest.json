@@ -1,0 +1,17 @@
+﻿{
+  "name": "十二军团卡牌库",
+  "appid": "__UNI__LEGION_RULES",
+  "description": "十二军团规则卡牌库微信小程序版",
+  "versionName": "0.1.0",
+  "versionCode": 100,
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx458a7cc376323359",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true,
+      "enhance": true
+    }
+  }
+}

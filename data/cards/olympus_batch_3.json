@@ -1,0 +1,174 @@
+[
+  {
+    "id": "olympus_s02_0506",
+    "name": "珀尔修斯",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "perseus_entry_recover_promotion",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，可弃置1张手牌：将墓地1张珀尔修斯·晋升加入手牌。",
+        "resolution": {
+          "action": "discard_cards",
+          "count": 1,
+          "optional": true,
+          "follow_up_action": {
+            "action": "return_from_grave_to_hand",
+            "count": 1,
+            "id": "olympus_s02_0525"
+          }
+        }
+      }
+    ],
+    "text": "登场时 可弃置1张手牌：将墓地1张<珀尔修斯·晋升>加入手牌。",
+    "image_path": "res://规则/牌面/奥林匹斯/珀尔修斯.png"
+  },
+  {
+    "id": "olympus_s02_0525",
+    "name": "珀尔修斯·晋升",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": ["promoted"],
+    "play_options": [
+      {
+        "id": "promotion",
+        "label": "晋升登场",
+        "olympus_promotion": true,
+        "promotion_base_definition_id": "olympus_s02_0517",
+        "promotion_divine_flip_cost": 1
+      }
+    ],
+    "effects": [
+      {
+        "id": "perseus_promotion_freeze_rested",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "晋升登场时，可选择对方1张休整的军团，使其在下个对方重置阶段无法转为活跃。",
+        "condition": {
+          "played_with_play_option_id": "promotion"
+        },
+        "resolution": {
+          "action": "olympus_freeze_target_until_next_ready",
+          "optional": true,
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "required_orientation": "rested"
+        }
+      },
+      {
+        "id": "perseus_free_move_once",
+        "kind": "activated",
+        "once_per_turn_key": "perseus_promoted_free_move",
+        "text": "我方回合1次可进行1次位移。",
+        "resolution": {
+          "action": "olympus_grant_source_free_move_until_turn_end",
+          "effect_id": "perseus_promoted_free_move",
+          "once_per_turn_key": "perseus_promoted_free_move"
+        }
+      },
+      {
+        "id": "perseus_entry_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，获得冲锋。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      }
+    ],
+    "text": "晋升 消耗并翻转1神力，叠放至我方同名非【晋升者】军团上方登场。\n晋升登场 可选择对方1张休整的军团，使其在下个对方重置阶段无法转为活跃。\n我方 回合1次可进行1次位移。\n登场时 获得冲锋。",
+    "image_path": "res://规则/牌面/奥林匹斯/珀尔修斯·晋升.png"
+  },
+  {
+    "id": "olympus_s02_0526",
+    "name": "赫拉克勒斯·晋升",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": ["promoted"],
+    "play_options": [
+      {
+        "id": "promotion",
+        "label": "晋升登场",
+        "olympus_promotion": true,
+        "promotion_base_definition_id": "olympus_s02_0518",
+        "promotion_divine_flip_cost": 2
+      }
+    ],
+    "effects": [
+      {
+        "id": "heracles_promotion_reveal_destroy",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "晋升登场时，可展示手牌中1张军团并将其放回牌库顶：击杀对方1张费用不高于展示军团费用的军团。",
+        "condition": {
+          "played_with_play_option_id": "promotion"
+        },
+        "resolution": {
+          "action": "olympus_reveal_hand_legion_and_destroy",
+          "optional": true
+        }
+      },
+      {
+        "id": "heracles_promoted_entry_self_master_damage",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，可对双方主宰各造成1点非致命伤害。",
+        "resolution": {
+          "action": "deal_master_damage",
+          "optional": true,
+          "player_scope": "controller",
+          "amount": 1,
+          "non_lethal": true,
+          "follow_up_action": {
+            "action": "deal_master_damage",
+            "player_scope": "opponent",
+            "amount": 1,
+            "non_lethal": true
+          }
+        }
+      },
+      {
+        "id": "heracles_promoted_attack_strong",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，本回合获得强攻。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "strong_attack"
+        }
+      }
+    ],
+    "text": "晋升 消耗并翻转2神力，叠放至我方同名非【晋升者】军团上方登场。\n晋升登场 可展示手牌中1张军团并将其放回牌库顶：击杀对方1张费用不高于展示军团其费用的军团。\n登场时 可对双方主宰各造成1点非致命伤害。\n进攻时 本回合获得强攻。",
+    "image_path": "res://规则/牌面/奥林匹斯/赫拉克勒斯·晋升.png"
+  }
+]

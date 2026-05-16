@@ -1,0 +1,133 @@
+[
+  {
+    "file": "9-card-001.png",
+    "match": "黑陨辰星",
+    "score": 1.0,
+    "ocrLines": [
+      "黑陨辰星"
+    ]
+  },
+  {
+    "file": "9-card-002.png",
+    "match": "百鬼夜行",
+    "score": 1.0,
+    "ocrLines": [
+      "百鬼夜行"
+    ]
+  },
+  {
+    "file": "9-card-003.png",
+    "match": "腐秽大地",
+    "score": 1.0,
+    "ocrLines": [
+      "腐秽大地"
+    ]
+  },
+  {
+    "file": "9-card-004.png",
+    "match": "雷霆天怒",
+    "score": 1.0,
+    "ocrLines": [
+      "雷霆天怒"
+    ]
+  },
+  {
+    "file": "9-card-005.png",
+    "match": "魔龙降世",
+    "score": 1.0,
+    "ocrLines": [
+      "魔龙降世"
+    ]
+  },
+  {
+    "file": "9-card-006.png",
+    "match": "神之天平",
+    "score": 1.0,
+    "ocrLines": [
+      "神之天平"
+    ]
+  },
+  {
+    "file": "9-card-007.png",
+    "match": "天启默示录",
+    "score": 1.0,
+    "ocrLines": [
+      "天启默示录"
+    ]
+  },
+  {
+    "file": "9-card-008.png",
+    "match": "虚构的圣杯",
+    "score": 1.0,
+    "ocrLines": [
+      "虚构的圣杯"
+    ]
+  },
+  {
+    "file": "9-card-009.png",
+    "match": "诸神黄昏",
+    "score": 1.0,
+    "ocrLines": [
+      "诸神黄昏",
+      "将所有军团置入所有者墓地",
+      "若为开场触发：所有玩家各抽取2张牌"
+    ]
+  },
+  {
+    "file": "9-card-010.png",
+    "match": "最终天灾 埋灭",
+    "score": 1.0,
+    "ocrLines": [
+      "最终天灾 埋灭",
+      "回合开始时，对所有主宰造成1点非致命伤害"
+    ]
+  },
+  {
+    "file": "9-card-011.png",
+    "match": "天地异变",
+    "score": 1.0,
+    "ocrLines": [
+      "天地异变"
+    ]
+  },
+  {
+    "file": "9-card-012.png",
+    "match": "迷雾绝境",
+    "score": 1.0,
+    "ocrLines": [
+      "迷雾绝境"
+    ]
+  },
+  {
+    "file": "9-card-013.png",
+    "match": "无眠之夜",
+    "score": 1.0,
+    "ocrLines": [
+      "无眠之夜"
+    ]
+  },
+  {
+    "file": "9-card-014.png",
+    "match": "风暴乱象",
+    "score": 1.0,
+    "ocrLines": [
+      "风暴乱象"
+    ]
+  },
+  {
+    "file": "9-card-015.png",
+    "match": "暴怒之罪",
+    "score": 1.0,
+    "ocrLines": [
+      "暴怒之罪"
+    ]
+  },
+  {
+    "file": "9-card-016.png",
+    "match": "傲慢之罪",
+    "score": 1.0,
+    "ocrLines": [
+      "傲慢之罪"
+    ]
+  }
+]

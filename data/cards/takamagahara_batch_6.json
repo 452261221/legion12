@@ -1,0 +1,64 @@
+[
+  {
+    "id": "takamagahara_s02_0403",
+    "name": "冲田总司",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "okita_entry_charge_with_front_kusanagi",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_has_front_battlefield_definition": "takamagahara_s01_0417"
+        },
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "okita_entry_power_with_front_kusanagi",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_has_front_battlefield_definition": "takamagahara_s01_0417"
+        },
+        "resolution": {
+          "action": "modify_source_power_until_turn_end",
+          "amount": 1000
+        }
+      },
+      {
+        "id": "okita_attack_reveal_top",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "title": "冲田总司：展示牌库顶部的卡牌",
+          "action": "reveal_top_card_play_or_hand",
+          "faction": "takamagahara",
+          "max_target_cost": 3
+        }
+      }
+    ],
+    "text": "登场时 若<草薙剑>位于我方前排，此军团获得冲锋，本回合兵力+1000。\n进攻时 展示牌库顶部1张牌，若其为费用不高于3的【高天原】卡牌，可无消耗将其打出；否则加入手牌。",
+    "image_path": "res://规则/牌面/高天原/冲由总司.png",
+    "source": {
+      "card_code": "S02-0403",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "斗士"
+  }
+]

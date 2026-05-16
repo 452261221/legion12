@@ -1,0 +1,791 @@
+[
+  {
+    "id": "takamagahara_s01_0404",
+    "name": "真田幸村",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 5,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 1,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "yukimura_entry_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时获得冲锋。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      }
+    ],
+    "text": "登场时获得冲锋。\n（可在登场回合进攻）",
+    "image_path": "res://规则/牌面/高天原/真田幸村.png",
+    "source": {
+      "card_code": "S01-0404",
+      "import_stage": "direct_face_import"
+    },
+    "troop_type": "武者"
+  },
+  {
+    "id": "neutral_s01_0005",
+    "name": "万箭齐发",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 4,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "arrow_barrage_enemy_front",
+        "kind": "activated",
+        "text": "选择对方前排所有军团，本回合兵力-2000。",
+        "resolution": {
+          "action": "modify_matching_power_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "required_row": "front",
+          "amount": -2000
+        }
+      },
+      {
+        "id": "arrow_barrage_enemy_back",
+        "kind": "activated",
+        "text": "选择对方后排所有军团，本回合兵力-2000。",
+        "resolution": {
+          "action": "modify_matching_power_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "required_row": "back",
+          "amount": -2000
+        }
+      },
+      {
+        "id": "arrow_barrage_focus",
+        "kind": "activated",
+        "text": "选择对方1张军团，本回合兵力-4000。",
+        "target_mode": "card",
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "use_selected_target": true,
+          "amount": -4000
+        }
+      }
+    ],
+    "text": "选择以下一项。\n·选择对方前排或后排所有军团，本回合兵力-2000。\n·选择对方1张军团，本回合兵力-4000。",
+    "image_path": "res://规则/牌面/通用/万箭齐发.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 5,
+      "card_code": "S01-0005",
+      "ocr_name": "万箭齐发",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "asgard_s01_0302",
+    "name": "金发哈拉尔",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 8,
+    "power": 7000,
+    "hp": 7000,
+    "calamity_level": 3,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "golden_harald_army_discount",
+        "kind": "continuous",
+        "text": "我方每存在1张军团，此军团登场费用-1。",
+        "resolution": {
+          "action": "modify_play_cost",
+          "allied_battlefield_count_multiplier": -1
+        }
+      },
+      {
+        "id": "golden_harald_charge_window",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，若我方主宰血量不高于6，此军团本回合获得强攻。",
+        "condition": {
+          "own_master_hp_at_most": 6
+        },
+        "resolution": {
+          "action": "grant_master_damage_bonus",
+          "target_scope": "self",
+          "amount": 1
+        }
+      },
+      {
+        "id": "golden_harald_last_heal",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时，我方主宰增加1点血量。",
+        "resolution": {
+          "action": "heal_master",
+          "player_scope": "controller",
+          "amount": 1
+        }
+      }
+    ],
+    "text": "我方每存在1张军团，此军团登场费用-1。\n进攻时，若我方主宰血量不高于6，此军团在本回合可获得强攻。\n阵亡时，我方主宰增加1点血量。",
+    "image_path": "res://规则/牌面/阿斯加德/金发哈拉尔.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 8,
+      "card_code": "S01-0302",
+      "ocr_name": "金发哈拉尔",
+      "import_stage": "raw_rule_book_import"
+    },
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0313",
+    "name": "神箭奥德尔",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "odell_blood_draw",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可对我方主宰造成1点伤害：抽取1张牌。",
+        "resolution": {
+          "optional": true,
+          "action": "deal_master_damage",
+          "player_scope": "controller",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1
+          }
+        }
+      },
+      {
+        "id": "odell_last_rest",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可选择对方1张活跃军团，将其转为休整。",
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_rest_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "required_orientation": "active"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时可对我方主宰造成1点伤害：抽取1张牌。\n阵亡时可选择对方1张活跃军团，将其转为休整。",
+    "image_path": "res://规则/牌面/阿斯加德/神箭奥德尔.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 19,
+      "card_code": "S01-0313",
+      "ocr_name": "神箭奥德尔",
+      "import_stage": "raw_rule_book_import"
+    },
+    "troop_type": "弓手"
+  },
+  {
+    "id": "asgard_s01_0315",
+    "name": "无骨者伊瓦尔",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ivar_top_three",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可查看牌库顶部3张牌，选择1张无骨者伊瓦尔以外的阿斯加德卡牌，展示并加入手牌，其余卡牌自选顺序返回牌库底部。",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 3,
+          "count": 1,
+          "match": {
+            "faction": "asgard",
+            "exclude_definition_id": "asgard_s01_0315"
+          },
+          "reorder_remaining_to_bottom": true,
+          "follow_up_action": {
+            "action": "reveal_found_cards_to_opponent",
+            "title": "无骨者伊瓦尔：展示加入手牌的卡牌"
+          }
+        }
+      }
+    ],
+    "text": "登场时可查看牌库顶部3张牌，选择1张无骨者伊瓦尔以外的阿斯加德卡牌，展示并加入手牌，其余卡牌自选顺序返回牌库底部。",
+    "image_path": "res://规则/牌面/阿斯加德/无骨者伊瓦尔.png",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 21,
+      "card_code": "S01-0315",
+      "ocr_name": "无骨者伊瓦尔",
+      "import_stage": "raw_rule_book_import"
+    },
+    "troop_type": "领军"
+  },
+  {
+    "id": "neutral_s01_0006",
+    "name": "邪恶仪式",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 3,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "evil_ritual",
+        "kind": "activated",
+        "text": "弃置1张手牌：对对方主宰造成1点非致命伤害。",
+        "cost": {
+          "discard_cards": 1
+        },
+        "resolution": {
+          "action": "deal_master_damage",
+          "player_scope": "opponent",
+          "amount": 1,
+          "waive_if_target_master_hp_at_most": 1
+        }
+      }
+    ],
+    "text": "弃置1张手牌：对对方主宰造成1点非致命伤害。",
+    "image_path": "res://规则/牌面/通用/邪恶仪式.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 6,
+      "card_code": "S01-0006",
+      "ocr_name": "邪恶仪式",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0007",
+    "name": "野外扎营",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "wild_camp_search",
+        "kind": "activated",
+        "text": "查看牌库顶部3张牌，选择1张与我方主宰阵营相同的军团，展示并加入手牌，其余卡牌自选顺序置入我方牌库底部。可消耗1士气：选择以下一项。·我方主宰增加1点血量。·抽取1张牌。",
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 3,
+          "count": 1,
+          "match": {
+            "type": "legion",
+            "same_faction_as_own_master": true
+          },
+          "reorder_remaining_to_bottom": true,
+          "follow_up_action": {
+            "action": "reveal_found_cards_to_opponent",
+            "title": "野外扎营：展示加入手牌的卡牌",
+            "follow_up_action": {
+              "action": "choose_option_with_cost",
+              "title": "可消耗1士气：选择以下一项",
+              "optional": true,
+              "cost": {
+                "morale": 1
+              },
+              "options": [
+                {
+                  "id": "heal_master",
+                  "label": "我方主宰增加1点血量",
+                  "resolution": {
+                    "action": "heal_master",
+                    "player_scope": "controller",
+                    "amount": 1
+                  }
+                },
+                {
+                  "id": "draw_cards",
+                  "label": "抽取1张牌",
+                  "resolution": {
+                    "action": "draw_cards",
+                    "count": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "text": "查看牌库顶部3张牌，选择1张与我方主宰阵营相同的军团，展示并加入手牌，其余卡牌自选顺序置入我方牌库底部。\n可消耗1士气：选择以下一项。\n·我方主宰增加1点血量。\n·抽取1张牌。",
+    "image_path": "res://规则/牌面/通用/野外扎营.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 7,
+      "card_code": "S01-0007",
+      "ocr_name": "野外扎营",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0008",
+    "name": "兵临城下",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "under_siege",
+        "kind": "activated",
+        "text": "本回合，对方前排所有军团兵力-1000，且对方所有后排军团无法进行支援。",
+        "resolution": {
+          "action": "modify_matching_power_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "required_row": "front",
+          "amount": -1000,
+          "follow_up_action": {
+            "action": "disable_matching_support_until_turn_end",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "required_row": "back"
+          }
+        }
+      }
+    ],
+    "text": "本回合，对方前排所有军团兵力-1000，且对方所有后排军团无法进行支援。",
+    "image_path": "res://规则/牌面/通用/兵临城下.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 8,
+      "card_code": "S01-0008",
+      "ocr_name": "兵临城下",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0009",
+    "name": "战略转移",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "strategic_redeployment",
+        "kind": "activated",
+        "text": "选择我方1张军团回到所有者手牌：选择我方1张军团，本回合兵力+2000。",
+        "target_mode": "card",
+        "resolution": {
+          "action": "return_target_unit_to_hand",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "follow_up_action": {
+            "action": "choose_and_modify_power_until_turn_end",
+            "target_scope": "allied_battlefield",
+            "type": "legion",
+            "amount": 2000
+          }
+        }
+      }
+    ],
+    "text": "选择我方1张军团回到所有者手牌：选择我方1张军团，本回合兵力+2000。",
+    "image_path": "res://规则/牌面/通用/战略转移.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 9,
+      "card_code": "S01-0009",
+      "ocr_name": "战略转移",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0014",
+    "name": "祭天仪式",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ritual_of_heaven",
+        "kind": "activated",
+        "text": "抽取1张牌，随后将天灾值增加或减少最多2点。",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "choose_option_with_cost",
+            "title": "选择天灾值变化",
+            "options": [
+              {
+                "id": "raise_two",
+                "label": "增加2点",
+                "resolution": {
+                  "action": "adjust_calamity_value",
+                  "amount": 2
+                }
+              },
+              {
+                "id": "raise_one",
+                "label": "增加1点",
+                "resolution": {
+                  "action": "adjust_calamity_value",
+                  "amount": 1
+                }
+              },
+              {
+                "id": "keep_same",
+                "label": "不变",
+                "resolution": {
+                  "action": "adjust_calamity_value",
+                  "amount": 0
+                }
+              },
+              {
+                "id": "lower_one",
+                "label": "减少1点",
+                "resolution": {
+                  "action": "adjust_calamity_value",
+                  "amount": -1
+                }
+              },
+              {
+                "id": "lower_two",
+                "label": "减少2点",
+                "resolution": {
+                  "action": "adjust_calamity_value",
+                  "amount": -2
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "text": "抽取1张牌，随后将天灾值增加或减少最多2点。",
+    "image_path": "res://规则/牌面/通用/祭天仪式.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 14,
+      "card_code": "S01-0014",
+      "ocr_name": "祭天仪式",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0012",
+    "name": "全军出击",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "all_out_attack",
+        "kind": "activated",
+        "text": "本回合从手牌中打出的下1张费用不高于6的军团获得冲锋。",
+        "resolution": {
+          "action": "prepare_next_played_legion_keyword",
+          "keyword": "charge",
+          "max_cost": 6
+        }
+      }
+    ],
+    "text": "本回合从手牌中打出的下1张费用不高于6的军团获得冲锋。",
+    "image_path": "res://规则/牌面/通用/全军出击.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "card_code": "S01-0012",
+      "ocr_name": "全军出击",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0019",
+    "name": "伏击",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ambush_response",
+        "kind": "activated",
+        "text": "对方进攻或发动效果时：选择我方1张军团，本回合兵力+2000。",
+        "target_mode": "card",
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "use_selected_target": true,
+          "amount": 2000
+        }
+      }
+    ],
+    "text": "对方进攻或发动效果时：选择我方1张军团，本回合兵力+2000。",
+    "image_path": "res://规则/牌面/通用/伏击.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 19,
+      "card_code": "S01-0019",
+      "ocr_name": "伏击",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s01_0020",
+    "name": "战斗至黎明",
+    "faction": "neutral",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "fight_till_dawn",
+        "kind": "activated",
+        "text": "对方进攻时：我方所有军团本回合兵力+1000。若墓地卡牌数量不低于5，可抽取1张牌。",
+        "only_during_opponent_turn": true,
+        "response_requires_pending_attack": true,
+        "resolution": {
+          "action": "modify_matching_power_until_turn_end",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "amount": 1000,
+          "follow_up_action": {
+            "action": "draw_cards",
+            "count": 1,
+            "min_own_grave_cards": 5
+          }
+        }
+      }
+    ],
+    "text": "对方进攻时：我方所有军团本回合兵力+1000。若墓地卡牌数量不低于5，可抽取1张牌。",
+    "image_path": "res://规则/牌面/通用/战斗至黎明.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 20,
+      "card_code": "S01-0020",
+      "ocr_name": "战斗至黎明",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0014",
+    "name": "瞬间的思路",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 3,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "fleeting_insight",
+        "kind": "activated",
+        "text": "我方手牌不高于4张时，抽取2张牌。",
+        "own_hand_size_at_most": 4,
+        "resolution": {
+          "action": "draw_cards",
+          "count": 2
+        }
+      }
+    ],
+    "text": "我方手牌不高于4张时，抽取2张牌。",
+    "image_path": "res://规则/牌面/通用/瞬间的思路.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 35,
+      "card_code": "S02-0014",
+      "ocr_name": "瞬间的思路",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0002",
+    "name": "疯狂的爱丽丝",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 4,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "no_damage_on_attack"
+    ],
+    "effects": [
+      {
+        "id": "alice_kill_ready",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "once_per_turn_key": "alice_kill_ready",
+        "text": "我方回合1次，此军团击杀对方军团后，可转为活跃。",
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "resolution": {
+          "optional": true,
+          "action": "ready_source_card"
+        }
+      }
+    ],
+    "text": "进攻无损。\n我方回合1次，此军团击杀对方军团后，可转为活跃。",
+    "image_path": "res://规则/牌面/通用/疯狂的爱丽丝.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 23,
+      "card_code": "S02-0002",
+      "ocr_name": "疯狂的爱丽丝",
+      "import_stage": "raw_rule_book_import"
+    },
+    "troop_type": "斗士"
+  },
+  {
+    "id": "neutral_s02_0012",
+    "name": "祷告仪式",
+    "faction": "neutral",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "prayer_ritual",
+        "kind": "activated",
+        "text": "询问对方是否同意公开下1张天灾卡。若对方同意，则直接公开下1张天灾卡。若对方不同意，则可消耗1士气查看下1张天灾卡。",
+        "resolution": {
+          "action": "offer_reveal_calamity"
+        }
+      }
+    ],
+    "text": "询问对方是否同意公开下1张天灾卡。\n若对方同意，则直接公开下1张天灾卡。\n若对方不同意，则可消耗1士气查看下1张天灾卡。",
+    "image_path": "res://规则/牌面/通用/祷告仪式.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 33,
+      "card_code": "S02-0012",
+      "ocr_name": "祷告仪式",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "neutral_s02_0004",
+    "name": "路易芒德兰",
+    "faction": "neutral",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "calamity_level": 1,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "mandrin_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "taunt"
+        }
+      },
+      {
+        "id": "mandrin_front_guard",
+        "kind": "continuous",
+        "text": "位于前排时，且在对方回合此军团兵力+1000。",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "front",
+          "only_during_opponent_turn": true,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "「位于前排」获得挑畔，且在对方回合此军团兵力+1000。",
+    "image_path": "res://规则/牌面/通用/路易芒德兰.png",
+    "source": {
+      "rule_pdf": "8.pdf",
+      "page": 25,
+      "card_code": "S02-0004",
+      "ocr_name": "路易芒德兰",
+      "import_stage": "raw_rule_book_import"
+    },
+    "troop_type": "斗士"
+  }
+]

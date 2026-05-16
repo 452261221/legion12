@@ -1,0 +1,67 @@
+[
+  {
+    "id": "asgard_s02_0302",
+    "name": "步行者罗洛",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "rollo_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑衅。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "required_row": "front",
+          "keyword": "taunt"
+        }
+      },
+      {
+        "id": "rollo_front_no_support",
+        "kind": "continuous",
+        "text": "位于前排时无法被后排支援。",
+        "resolution": {
+          "action": "cannot_be_supported",
+          "target_scope": "self",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "rollo_entry_heal_master",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时我方主宰增加1点血量。",
+        "resolution": {
+          "action": "heal_master",
+          "player_scope": "controller",
+          "amount": 1
+        }
+      }
+    ],
+    "play_options": [
+      {
+        "id": "rollo_recycle_up_to_8",
+        "label": "可将墓地最多8张阿斯加德卡牌返回牌库底部：每返回2张，登场费用-1",
+        "play_cost_modifier": -4,
+        "recycle_own_grave_up_to_count": 8,
+        "recycle_own_grave_cost_reduction_step": 2,
+        "recycle_own_grave_faction": "asgard"
+      }
+    ],
+    "text": "可将墓地最多8张【阿斯加德】卡牌自选顺序返回我方牌库底部：每返回2张，此军团登场费用-1。\n「位于前排」获得挑畔，且无法被后排支援。\n登场时 我方主宰增加1点血量。",
+    "image_path": "res://规则/牌面/阿斯加德/步行者罗洛.png",
+    "source": {
+      "card_code": "S02-0302",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "斗士"
+  }
+]

@@ -1,0 +1,55 @@
+{
+	"name": "fixed_llm_reasoning_suite",
+	"trace_root": "user://battle_logs/fixed_eval/fixed_llm_reasoning_suite",
+	"cases": [
+		{
+			"name": "starter_real_reasoning_short",
+			"intent": "短局验证。重点观察 resolve_choice、end_phase/pass_priority、战术响应与站位动作是否更自然。",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 13000,
+			"ai_policy_mode": "llm",
+			"max_steps": 12,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"llm_provider": "deepseek",
+			"llm_runtime_options": {
+				"llm_enable_thinking": true,
+				"llm_response_max_tokens": 1536
+			}
+		},
+		{
+			"name": "starter_real_reasoning_mid",
+			"intent": "中局验证。重点观察更长上下文下的候选理解、历史参考使用和回退率。",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 2,
+			"seed_base": 13100,
+			"ai_policy_mode": "llm",
+			"max_steps": 20,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"llm_provider": "deepseek",
+			"llm_runtime_options": {
+				"llm_enable_thinking": true,
+				"llm_response_max_tokens": 2048
+			}
+		},
+		{
+			"name": "starter_real_reasoning_repair_probe",
+			"intent": "修复链路验证。重点确认 thinking 打开后 repair/fallback 行为仍然稳定。",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 13200,
+			"ai_policy_mode": "llm",
+			"max_steps": 10,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"fake_llm_mode": "repair_probe_real",
+			"llm_provider": "deepseek",
+			"llm_runtime_options": {
+				"llm_enable_thinking": true,
+				"llm_response_max_tokens": 1536
+			}
+		}
+	]
+}

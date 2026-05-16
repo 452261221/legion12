@@ -1,0 +1,306 @@
+[
+  {
+    "id": "calamity_s01_ds01",
+    "name": "黯陨晨星",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "持续：主要阶段开始时，回合玩家掷骰。双数：将我方1张活跃士气转为休整。单数：选择以下1项在本回合中生效。打出主动战术无需消耗费用；或术师/弓手位于后排时可攻击对方主宰。",
+    "image_path": "res://规则/牌面/天灾/黯陨晨星.png",
+    "source": {
+      "card_code": "S01-DS01",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s02_ds01",
+    "name": "天地异变",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "持续：所有玩家将牌库翻转进行游戏，且玩家无法从手牌打出与其牌库顶部相同兵种的军团。",
+    "image_path": "res://规则/牌面/天灾/天地异变.png",
+    "source": {
+      "card_code": "S02-DS01",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "sys_calamity_embers",
+    "name": "暴怒之罪",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：对所有主宰造成1点非致命伤害。持续：双方军团进攻时必须优先选择进攻范围内的对方军团作为进攻目标。",
+    "image_path": "res://规则/牌面/天灾/暴怒之罪.png",
+    "source": {
+      "card_code": "S02-DS05",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "sys_calamity_silence",
+    "name": "腐秽大地",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：将所有后排军团置入所有者墓地。持续：后排无法放置军团。打出反击战术无需消耗费用。",
+    "image_path": "res://规则/牌面/天灾/腐秽大地.png",
+    "source": {
+      "card_code": "S01-DS03",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "sys_calamity_annihilation",
+    "name": "最终天灾 湮灭",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "持续：回合开始时，对所有主宰造成1点非致命伤害。",
+    "image_path": "res://规则/牌面/天灾/最终天灾 湮灭.png",
+    "source": {
+      "card_code": "S01-DS10",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds02",
+    "name": "百鬼夜行",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：对所有主宰造成1点非致命伤害。持续：带有天灾等级的军团进攻主宰时，造成的伤害+1。回合结束时，回合玩家将手牌返回牌库底部，直至手牌数量不高于5。",
+    "image_path": "res://规则/牌面/天灾/百鬼夜行.png",
+    "source": {
+      "card_code": "S01-DS02",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds04",
+    "name": "雷霆天怒",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：所有玩家掷骰，数字最小的玩家选择其1张军团返回所有者手牌。持续：兵力高于2000的军团进攻时需掷骰，若结果为1~2，则该军团转为休整并结束进攻。",
+    "image_path": "res://规则/牌面/天灾/雷霆天怒.png",
+    "source": {
+      "card_code": "S01-DS04",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds05",
+    "name": "魔龙降世",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：回合玩家掷骰。1~2：将最左侧一列双方战场上的卡牌全部置入墓地。3~4：将最右侧一列双方战场上的卡牌全部置入墓地。5~6：将中间一列双方战场上的卡牌全部置入墓地。随后所有玩家各将墓地4张卡牌按自选顺序返回其牌库底部。",
+    "image_path": "res://规则/牌面/天灾/魔龙降世.png",
+    "source": {
+      "card_code": "S01-DS05",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds06",
+    "name": "神之天平",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：所有主宰的血量降至与血量最低主宰相等，血量产生变动的玩家抽取2张牌。若没有主宰血量产生变化，则所有玩家抽取1张牌。随后所有玩家弃置1张手牌并抽取1张牌。",
+    "image_path": "res://规则/牌面/天灾/神之天平.png",
+    "source": {
+      "card_code": "S01-DS06",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds07",
+    "name": "天启默示录",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：所有玩家将其战场上的军团置入所有者墓地，直至不高于2张。随后所有玩家手牌自选顺序返回牌库底部，并抽取4张牌。",
+    "image_path": "res://规则/牌面/天灾/天启默示录.png",
+    "source": {
+      "card_code": "S01-DS07",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds08",
+    "name": "虚构的圣杯",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "持续：当玩家使用<圣物效果>时，对其主宰造成1点非致命伤害。",
+    "image_path": "res://规则/牌面/天灾/虚构的圣杯.png",
+    "source": {
+      "card_code": "S01-DS08",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s01_ds09",
+    "name": "诸神黄昏",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：将所有军团置入所有者墓地。若为开场触发：所有玩家各抽取2张牌。若为主动触发：其余玩家各抽取2张牌，随后立刻结束当前回合，并为回合玩家追加1个新的回合。",
+    "image_path": "res://规则/牌面/天灾/诸神黄昏.png",
+    "source": {
+      "card_code": "S01-DS09",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s02_ds04",
+    "name": "风暴乱象",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：双方后排所有卡牌回到所有者手牌中，随后将双方前排所有军团向后位移1格。持续：军团无法发动远程进攻。",
+    "image_path": "res://规则/牌面/天灾/风暴乱象.png",
+    "source": {
+      "card_code": "S02-DS04",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s02_ds02",
+    "name": "迷雾绝境",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：所有玩家弃置手牌直到手牌数量不高于5张。持续：兵力不高于2000的军团无法进攻主宰。挑衅效果无效。不可进攻处于活跃状态的前排军团。",
+    "image_path": "res://规则/牌面/天灾/迷雾绝境.png",
+    "source": {
+      "card_code": "S02-DS02",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s02_ds06",
+    "name": "傲慢之罪",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：战场军团数量多的玩家选择以下1项。弃置战场军团直到数量一致；或弃置战场军团数量之差的手牌。持续：玩家发动主宰效果需要额外消耗1士气，且手牌所有军团登场费用+1。",
+    "image_path": "res://规则/牌面/天灾/傲慢之罪.png",
+    "source": {
+      "card_code": "S02-DS06",
+      "import_stage": "direct_face_import"
+    }
+  },
+  {
+    "id": "calamity_s02_ds03",
+    "name": "无眠之夜",
+    "faction": "calamity",
+    "type": "calamity",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [],
+    "text": "触发：双方弃置各自战场上所有原本兵力不高于2000的军团。持续：当玩家使用主动休整时，对其主宰造成1点非致命伤害。",
+    "image_path": "res://规则/牌面/天灾/无眠之夜.png",
+    "source": {
+      "card_code": "S02-DS03",
+      "import_stage": "direct_face_import"
+    }
+  }
+]

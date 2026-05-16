@@ -1,0 +1,367 @@
+[
+  {
+    "id": "takamagahara_s01_0402",
+    "name": "织田信长",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "oda_entry_destroy",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时击杀对方1张费用不高于4的军团",
+        "resolution": {
+          "action": "choose_and_destroy_unit",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "max_target_cost": 4
+        }
+      },
+      {
+        "id": "oda_attack_cost_down",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "morale": 1
+        },
+        "text": "进攻时可消耗1士气：对方所有军团本回合费用-1",
+        "resolution": {
+          "action": "modify_matching_cost",
+          "target_scope": "enemy_all_legions",
+          "type": "legion",
+          "amount": -1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "登场时 击杀对方1张费用不高于4的军团。\n进攻时 可消耗1士气：对方所有军团，本回合费用-1。",
+    "image_path": "res://规则/牌面/高天原/织田信长.png",
+    "source": {
+      "card_code": "S01-0402",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "领军"
+  },
+  {
+    "id": "takamagahara_s01_0412",
+    "name": "立花誾千代",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tachibana_entry_cost_down",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时选择对方1张军团，本回合费用-3",
+        "resolution": {
+          "action": "choose_and_modify_cost_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -3
+        }
+      },
+      {
+        "id": "tachibana_died_cost_down",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时直到下个我方回合结束前，对方所有军团费用-1",
+        "resolution": {
+          "action": "modify_matching_cost_until_next_own_turn_end",
+          "target_scope": "enemy_all_legions",
+          "type": "legion",
+          "amount": -1
+        }
+      }
+    ],
+    "text": "登场时 选择对方1张军团，本回合费用-3。\n阵亡时 直到下个我方回合结束前，对方所有军团费用-1。",
+    "image_path": "res://规则/牌面/高天原/立花誾千代.png",
+    "source": {
+      "card_code": "S01-0412",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "武者"
+  },
+  {
+    "id": "asgard_s01_0301",
+    "name": "贝奥武夫",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 8,
+    "power": 6000,
+    "hp": 6000,
+    "calamity_level": 3,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "beowulf_grave_cost_down",
+        "kind": "continuous",
+        "text": "我方墓地每有4张【阿斯加德】军团，此军团登场费用-1",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": 0,
+          "own_grave_matching_faction": "asgard",
+          "own_grave_matching_type": "legion",
+          "own_grave_count_divisor": 4,
+          "own_grave_count_multiplier": -1
+        }
+      },
+      {
+        "id": "beowulf_entry_mill",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时弃置我方牌库顶部2张牌",
+        "resolution": {
+          "action": "mill_cards",
+          "count": 2
+        }
+      },
+      {
+        "id": "beowulf_attack_self_damage_power",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时可对我方主宰造成1点伤害：此军团本回合兵力+2000",
+        "resolution": {
+          "action": "deal_master_damage",
+          "player_scope": "controller",
+          "amount": 1,
+          "optional": true,
+          "follow_up_action": {
+            "action": "modify_source_power_until_turn_end",
+            "amount": 2000
+          }
+        }
+      },
+      {
+        "id": "beowulf_died_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时可抽取1张牌",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "我方墓地每有4张【阿斯加德】军团，此军团登场费用-1。\n登场时 弃置我方牌库顶部2张牌。\n进攻时 可对我方主宰造成1点伤害：此军团本回合兵力+2000。\n阵亡时 可抽取1张牌。",
+    "image_path": "res://规则/牌面/阿斯加德/贝奥武夫.png",
+    "source": {
+      "card_code": "S01-0301",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "领军"
+  },
+  {
+    "id": "asgard_s01_0317",
+    "name": "神剑格拉墨",
+    "faction": "asgard",
+    "type": "artifact",
+    "cost": 4,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "gram_entry_mill_then_return",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可弃置我方牌库顶部2张牌：选择对方1张兵力不高于3000的军团返回所有者牌库底部",
+        "resolution": {
+          "action": "mill_cards",
+          "count": 2,
+          "optional": true,
+          "follow_up_action": {
+            "action": "choose_and_return_unit_to_deck_bottom",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "max_target_power": 3000
+          }
+        }
+      },
+      {
+        "id": "gram_rested_recycle_then_nonlethal",
+        "kind": "activated",
+        "text": "主动休整：将墓地4张【阿斯加德】军团自选顺序返回我方牌库底部：对对方主宰造成1点非致命伤害",
+        "rest_source": true,
+        "resolution": {
+          "action": "recycle_grave_to_deck",
+          "count": 4,
+          "require_exact_count": true,
+          "always_request_choice": true,
+          "requires_confirm": true,
+          "drag_reorder_all_candidates": false,
+          "type": "legion",
+          "faction": "asgard",
+          "follow_up_action": {
+            "action": "deal_master_damage",
+            "player_scope": "opponent",
+            "amount": 1,
+            "non_lethal": true,
+            "waive_if_target_master_hp_at_most": 1
+          }
+        }
+      },
+      {
+        "id": "gram_ready",
+        "kind": "activated",
+        "cost": {
+          "morale": 2
+        },
+        "required_orientation": "rested",
+        "text": "可消耗2士气：将此圣物转为活跃",
+        "resolution": {
+          "action": "ready_source_card"
+        }
+      }
+    ],
+    "text": "登场时 可弃置我方牌库顶部2张牌：选择对方1张兵力不高于3000的军团返回所有者牌库底部。\n主动休整 将墓地4张【阿斯加德】军团自选顺序返回我方牌库底部：对对方主宰造成1点非致命伤害。\n可消耗2士气：将此圣物转为活跃。",
+    "image_path": "res://规则/牌面/阿斯加德/神剑格拉墨.png",
+    "source": {
+      "card_code": "S01-0317",
+      "import_stage": "manual_from_card_faces"
+    }
+  },
+  {
+    "id": "asgard_s02_0307",
+    "name": "海拉的凝视",
+    "faction": "asgard",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "helas_gaze",
+        "kind": "activated",
+        "text": "弃置我方牌库顶部1张牌：选择对方1张军团，本回合兵力-3000",
+        "resolution": {
+          "action": "mill_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "choose_and_modify_power_until_turn_end",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "amount": -3000
+          }
+        }
+      }
+    ],
+    "text": "弃置我方牌库顶部1张牌：选择对方1张军团，本回合兵力-3000。",
+    "image_path": "res://规则/牌面/阿斯加德/海拉的凝视.png",
+    "source": {
+      "card_code": "S02-0307",
+      "import_stage": "manual_from_card_faces"
+    }
+  },
+  {
+    "id": "asgard_s01_0320",
+    "name": "复仇血鹰",
+    "faction": "asgard",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "blood_eagle",
+        "kind": "activated",
+        "response_only": true,
+        "response_created_from_event_type": "CardDied",
+        "response_event_card_type": "legion",
+        "response_event_card_controller_scope": "ally",
+        "text": "我方军团阵亡时：对方所有军团直到下个我方回合结束前兵力-1000。随后选择我方墓地2张【阿斯加德】卡牌，其中1张返回牌库底部，另1张加入手牌",
+        "resolution": {
+          "action": "modify_matching_power_until_next_own_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -1000,
+          "follow_up_action": {
+            "action": "split_grave_two_cards_to_deck_bottom_and_hand",
+            "faction": "asgard"
+          }
+        }
+      }
+    ],
+    "text": "我方军团阵亡时：对方所有军团直到下个我方回合结束前兵力-1000。\n随后选择我方墓地2张【阿斯加德】卡牌，其中1张返回牌库底部，另1张加入手牌。",
+    "image_path": "res://规则/牌面/阿斯加德/复仇血鹰.png",
+    "source": {
+      "card_code": "S01-0320",
+      "import_stage": "manual_from_card_faces"
+    }
+  },
+  {
+    "id": "takamagahara_s01_0420",
+    "name": "切腹仪式",
+    "faction": "takamagahara",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "seppuku",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "hidden_from_actions": true,
+        "only_during_opponent_turn": true,
+        "text": "对方进攻后：抽取1张牌，选择对方1张军团，直到下个我方回合结束前，此军团费用-2",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "choose_and_modify_cost_until_next_own_turn_end",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "amount": -2
+          }
+        }
+      }
+    ],
+    "text": "对方 进攻后：抽取1张牌，选择对方1张军团，直到下个我方回合结束前，此军团费用-2。",
+    "image_path": "res://规则/牌面/高天原/切腹仪式.png",
+    "source": {
+      "card_code": "S01-0420",
+      "import_stage": "manual_from_card_faces"
+    }
+  }
+]

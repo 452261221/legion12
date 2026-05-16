@@ -1,0 +1,151 @@
+[
+  {
+    "id": "takamagahara_s01_0403",
+    "name": "上杉谦信",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "uesugi_entry_destroy_by_counter_count",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时击杀对方1张费用不高于X的军团（X=双方战场反击战术合计数量）",
+        "resolution": {
+          "action": "destroy_unit_by_battlefield_counter_tactic_count",
+          "target_scope": "enemy_battlefield",
+          "type": "legion"
+        }
+      },
+      {
+        "id": "uesugi_died_set_counter_tactics",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时将手牌中最多2张反击战术置入我方后排",
+        "resolution": {
+          "action": "set_counter_tactics_from_hand",
+          "count": 2
+        }
+      }
+    ],
+    "text": "登场时 击杀对方1张费用不高于X的军团。\n（X=双方战场<反击战术>合计数量）\n阵亡时 将手牌中最多2张<反击战术>置入我方后排。",
+    "image_path": "res://规则/牌面/高天原/上杉谦信.png",
+    "source": {
+      "card_code": "S01-0403",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "领军"
+  },
+  {
+    "id": "asgard_s01_0309",
+    "name": "布伦希尔德",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 4,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "brynhildr_entry_deploy_sigurd",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可对我方主宰造成1点伤害：可将手牌或墓地的1张齐格鲁德活跃登场",
+        "resolution": {
+          "action": "deal_master_damage",
+          "player_scope": "controller",
+          "amount": 1,
+          "optional": true,
+          "follow_up_action": {
+            "action": "deploy_sigurd_from_hand_or_grave",
+            "definition_id": "asgard_s01_0310"
+          }
+        }
+      },
+      {
+        "id": "brynhildr_died_draw_if_behind",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_master_hp_at_most_opponent": true
+        },
+        "text": "阵亡时若我方主宰血量不高于对方，可抽取1张牌",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "optional": true
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可对我方主宰造成1点伤害：可将手牌或墓地的1张<齐格鲁德>活跃登场。\n阵亡时 若我方主宰血量不高于对方，可抽取1张牌。",
+    "image_path": "res://规则/牌面/阿斯加德/布伦希尔德.png",
+    "source": {
+      "card_code": "S01-0309",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "术师"
+  },
+  {
+    "id": "takamagahara_s02_0405",
+    "name": "武运在天 铠甲在前",
+    "faction": "takamagahara",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "wuyun_search_and_prepare_uesugi",
+        "kind": "activated",
+        "text": "展示我方牌库顶部5张牌，选择其中1张圣物和1张上杉谦信加入手牌，其余牌自选顺序返回牌库底部。本回合下1张上杉谦信登场费用-2，并获得冲锋",
+        "resolution": {
+          "action": "search_top_for_artifact_and_named_legion",
+          "max_look": 5,
+          "artifact_match": {
+            "type": "artifact"
+          },
+          "legion_match": {
+            "id": "takamagahara_s01_0403"
+          },
+          "follow_up_action": {
+            "action": "prepare_next_played_legion_cost_modifier",
+            "amount": -2,
+            "definition_id": "takamagahara_s01_0403",
+            "follow_up_action": {
+              "action": "prepare_next_played_legion_keyword",
+              "keyword": "charge",
+              "definition_id": "takamagahara_s01_0403"
+            }
+          }
+        }
+      }
+    ],
+    "text": "展示我方牌库顶部5张牌，选择其中1张【圣物】和1张<上杉谦信>加入手牌，其余牌自选顺序返回我方牌库底部。\n本回合我方下1张<上杉谦信>登场费用-2，并获得冲锋。",
+    "image_path": "res://规则/牌面/高天原/武运在天 铠甲在前.png",
+    "source": {
+      "card_code": "S02-0405",
+      "import_stage": "manual_from_card_faces"
+    }
+  }
+]

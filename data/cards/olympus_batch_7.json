@@ -1,0 +1,47 @@
+[
+  {
+    "id": "olympus_s02_0510",
+    "name": "希波吕忒",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hippolyta_divine_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -3,
+          "own_divine_at_least": 5
+        }
+      },
+      {
+        "id": "hippolyta_rest_revive_olympus",
+        "kind": "activated",
+        "rest_source": true,
+        "cost": {
+          "morale": 3,
+          "discard_cards": 1
+        },
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "type": "legion",
+          "faction": "olympus",
+          "max_target_cost": 4
+        },
+        "text": "主动休整 消耗3士气并弃置1张手牌：选择墓地1张费用不高于4的【奥林匹斯】军团活跃登场。"
+      }
+    ],
+    "text": "若我方神力为5张及以上，此军团登场费用-3。\n此军团休整时，我方军团前后位移无需消耗费用。\n主动休整 消耗3士气并弃置1张手牌：选择墓地1张费用不高于4的【奥林匹斯】军团活跃登场。",
+    "image_path": "res://规则/牌面/奥林匹斯/希波吕忒.png",
+    "troop_type": "领军",
+    "source": {
+      "card_code": "S02-0510"
+    }
+  }
+]

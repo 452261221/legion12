@@ -1,0 +1,121 @@
+{
+	"version": 1,
+	"ruleset_id": "dev_ruleset",
+	"seed": 1327,
+	"initial_decks": [
+		[
+			"asgard_s01_0312",
+			"neutral_s01_0002",
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"takamagahara_s01_0419",
+			"takamagahara_s01_0417"
+		],
+		[
+			"takamagahara_s01_0404",
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"asgard_s01_0318",
+			"asgard_s01_0306",
+			"asgard_s01_0312"
+		]
+	],
+	"winner": -1,
+	"loss_reason": "",
+	"commands": [
+		{
+			"player_id": 0,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "add_morale",
+				"player_id": 0,
+				"count": 1
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0001",
+				"row": "front",
+				"col": 0
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "add_morale",
+				"player_id": 1,
+				"count": 3
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0015",
+				"row": "front",
+				"col": 0
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "DeclareAttack",
+			"payload": {
+				"attacker_id": "c_0015",
+				"defender_id": "c_0001"
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0002",
+				"row": "hand_response",
+				"col": -1,
+				"effect_id": "mercenary_hand_guard"
+			}
+		}
+	]
+}

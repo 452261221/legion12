@@ -1,0 +1,59 @@
+[
+  {
+    "id": "takamagahara_s01_0407",
+    "name": "坂本龙马",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 1,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "sakamoto_entry_move_allies",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "choose_and_move_units",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "count": 2,
+          "allow_up_to_count": true,
+          "min_count": 1,
+          "grant_free_move_until_turn_end": true,
+          "effect_id": "sakamoto_entry_move_allies",
+          "once_per_turn_key": "sakamoto_entry_move_allies",
+          "any_slot": true,
+          "swap_with_allied_occupied_slot": true
+        }
+      },
+      {
+        "id": "sakamoto_died_deploy_small_takamagahara",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "deploy_matching_legion_from_hand",
+          "type": "legion",
+          "faction": "takamagahara",
+          "max_target_cost": 3,
+          "count": 1,
+          "allow_up_to_count": true,
+          "deployment_orientation": "rested"
+        }
+      }
+    ],
+    "text": "登场时 可选择我方最多2张军团进行1次任意位移。\n阵亡时 将手牌中最多1张费用不高于3的【高天原】军团休整登场。",
+    "image_path": "res://规则/牌面/高天原/坂本龙马.png",
+    "source": {
+      "card_code": "S01-0407",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "武者"
+  }
+]

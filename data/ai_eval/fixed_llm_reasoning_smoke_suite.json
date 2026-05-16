@@ -1,0 +1,23 @@
+{
+	"name": "fixed_llm_reasoning_smoke_suite",
+	"trace_root": "user://battle_logs/fixed_eval/fixed_llm_reasoning_smoke_suite",
+	"cases": [
+		{
+			"name": "starter_fake_smoke_reasoning_shape",
+			"intent": "验证新的候选结构、request 分层和 fixed-eval llm_runtime_options 通道不会破坏基础流程。",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 12340,
+			"ai_policy_mode": "llm",
+			"max_steps": 10,
+			"allow_turn_limit": true,
+			"use_real_llm": false,
+			"fake_llm_mode": "first_candidate",
+			"llm_provider": "deepseek",
+			"llm_runtime_options": {
+				"llm_enable_thinking": true,
+				"llm_response_max_tokens": 1536
+			}
+		}
+	]
+}

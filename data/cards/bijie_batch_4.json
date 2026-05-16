@@ -1,0 +1,237 @@
+[
+  {
+    "id": "bijie_s02_042",
+    "name": "格温莉安",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "gwenllian_front_taunt",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "taunt",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "gwenllian_enemy_turn_power",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "amount": 1000,
+          "only_during_opponent_turn": true
+        }
+      },
+      {
+        "id": "gwenllian_effect_death_choice",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "source_kind_is": "effect"
+        },
+        "text": "当此军团因效果阵亡时，我方主宰可增加1点血量或抽取1张牌。",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "格温莉安：选择奖励",
+          "options": [
+            {
+              "id": "heal_master",
+              "label": "主宰+1血",
+              "resolution": {
+                "action": "heal_master",
+                "player_scope": "controller",
+                "amount": 1
+              }
+            },
+            {
+              "id": "draw_card",
+              "label": "抽1张牌",
+              "resolution": {
+                "action": "draw_cards",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "「位于前排」获得挑衅，且在对方回合此军团兵力+1000。\n当此军团因效果阵亡时，我方主宰可增加1点血量或抽取1张牌。",
+    "troop_type": "武者"
+  },
+  {
+    "id": "bijie_s02_046",
+    "name": "库丘林",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "cu_chulainn_discount_with_scathach",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -2,
+          "controller_has_battlefield_definition": "bijie_s02_047"
+        }
+      },
+      {
+        "id": "cu_chulainn_entry_front_cannot_die",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 直到下个我方回合开始前，「位于前排」获得免死。",
+        "resolution": {
+          "action": "grant_cannot_die_once_until_next_own_turn_start",
+          "target_scope": "self"
+        }
+      },
+      {
+        "id": "cu_chulainn_kill_gain_pierce",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "condition": {
+          "source_kind_is": "attack",
+          "source_card_id_is_self": true
+        },
+        "text": "击杀时 本回合获得贯穿。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "pierce"
+        }
+      }
+    ],
+    "text": "我方战场上存在<斯卡哈>时，此军团登场费用-2。\n登场时 直到下个我方回合开始前，「位于前排」获得免死。\n击杀时 本回合获得贯穿。",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "bijie_s02_047",
+    "name": "斯卡哈",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 5,
+    "power": 4000,
+    "hp": 4000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "scathach_discount_with_cu_chulainn",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -2,
+          "controller_has_battlefield_definition": "bijie_s02_046"
+        }
+      },
+      {
+        "id": "scathach_entry_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时 获得冲锋。",
+        "resolution": {
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "charge"
+        }
+      },
+      {
+        "id": "scathach_attack_rune_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "rune": 1
+        },
+        "text": "进攻时 可消耗1符文：本回合进攻无损且兵力+2000。",
+        "resolution": {
+          "optional": true,
+          "action": "modify_source_power_until_turn_end",
+          "amount": 2000,
+          "follow_up_action": {
+            "action": "grant_source_keyword_until_turn_end",
+            "keyword": "attack_no_loss"
+          }
+        }
+      }
+    ],
+    "text": "我方战场上存在<库丘林>时，此军团登场费用-2。\n登场时 获得冲锋。\n进攻时 可消耗1符文：本回合进攻无损且兵力+2000。",
+    "troop_type": "武者"
+  },
+  {
+    "id": "bijie_s02_049",
+    "name": "鲍斯",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "bors_discount_per_bijie",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "allied_battlefield_count_multiplier": -1,
+          "allied_battlefield_matching_faction": "bijie",
+          "allied_battlefield_matching_type": "legion"
+        }
+      },
+      {
+        "id": "bors_attack_gain_strong_attack",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "morale": 1
+        },
+        "text": "进攻时 可消耗1士气：本回合获得强攻。",
+        "resolution": {
+          "optional": true,
+          "action": "grant_source_keyword_until_turn_end",
+          "keyword": "strong_attack"
+        }
+      },
+      {
+        "id": "bors_death_opponent_discards",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "阵亡时 对方弃置1张手牌。",
+        "resolution": {
+          "action": "request_hand_discard_choice",
+          "player_scope": "opponent",
+          "discard_count": 1,
+          "requires_confirm": true
+        }
+      }
+    ],
+    "text": "我方战场每存在1张【彼界】军团，此军团登场费用-1。\n进攻时 可消耗1士气：本回合获得强攻。\n阵亡时 对方弃置1张手牌。",
+    "troop_type": "斗士"
+  }
+]

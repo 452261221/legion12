@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "file": "1.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "2.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "3.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "4.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "5.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "6.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "7.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "8.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "9.pdf",
+      "category": "pdf",
+      "steps": [
+        "render_pages",
+        "detect_card_regions",
+        "extract_text_or_ocr"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "Q&A.docx",
+      "category": "docx",
+      "steps": [
+        "parse_document",
+        "split_questions_and_answers"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "Q&A.xlsx",
+      "category": "xlsx",
+      "steps": [
+        "read_sheets",
+        "map_columns",
+        "normalize_fields"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "S2四阵营补强卡效果表.xlsx",
+      "category": "xlsx",
+      "steps": [
+        "read_sheets",
+        "map_columns",
+        "normalize_fields"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "S2彼界&奥林匹斯.xlsx",
+      "category": "xlsx",
+      "steps": [
+        "read_sheets",
+        "map_columns",
+        "normalize_fields"
+      ],
+      "status": "pending"
+    },
+    {
+      "file": "牌桌.png",
+      "category": "image",
+      "steps": [
+        "manual_reference_only"
+      ],
+      "status": "pending"
+    }
+  ]
+}

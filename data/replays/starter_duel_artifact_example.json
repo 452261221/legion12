@@ -1,0 +1,181 @@
+{
+	"version": 1,
+	"ruleset_id": "dev_ruleset",
+	"seed": 1329,
+	"initial_decks": [
+		[
+			"takamagahara_s01_0417",
+			"takamagahara_s01_0416",
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"takamagahara_s01_0418",
+			"takamagahara_s01_0409"
+		],
+		[
+			"takamagahara_s01_0416",
+			"neutral_s01_0015",
+			"neutral_s01_0016",
+			"asgard_s01_0318",
+			"asgard_s01_0303",
+			"asgard_s01_0312"
+		]
+	],
+	"winner": -1,
+	"loss_reason": "",
+	"commands": [
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "add_morale",
+				"player_id": 1,
+				"count": 1
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0015",
+				"row": "front",
+				"col": 0
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 1,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "EndPhase",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "DebugCommand",
+			"payload": {
+				"action": "add_morale",
+				"player_id": 0,
+				"count": 5
+			}
+		},
+		{
+			"player_id": 0,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0002",
+				"row": "front",
+				"col": 0
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "PlayCard",
+			"payload": {
+				"card_id": "c_0001",
+				"row": "artifact",
+				"col": -1
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "ActivateEffect",
+			"payload": {
+				"source_id": "c_0001",
+				"effect_id": "kusanagi_assault",
+				"target_card_id": "c_0002"
+			}
+		},
+		{
+			"player_id": 1,
+			"type": "PassPriority",
+			"payload": {}
+		},
+		{
+			"player_id": 0,
+			"type": "PassPriority",
+			"payload": {}
+		}
+	]
+}

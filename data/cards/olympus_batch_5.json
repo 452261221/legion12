@@ -1,0 +1,216 @@
+[
+  {
+    "id": "olympus_s02_0517",
+    "name": "彭忒西勒亚",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "penthesilea_front_ranged",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "penthesilea_front_ranged_no_loss",
+        "kind": "continuous",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged_no_loss",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "penthesilea_entry_attack_legions",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，本回合可进攻对方军团。",
+        "resolution": {
+          "action": "olympus_grant_source_can_attack_legions_until_turn_end"
+        }
+      },
+      {
+        "id": "penthesilea_attack_divine_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，可消耗并翻转1神力：本回合兵力+2000。",
+        "cost": {
+          "divine_flip": 1
+        },
+        "resolution": {
+          "action": "modify_source_power_until_turn_end",
+          "amount": 2000
+        }
+      }
+    ],
+    "text": "「位于前排」进攻距离+1，远程进攻无损。\n登场时 本回合可进攻对方军团。\n进攻时 可消耗并翻转1神力：本回合兵力+2000。",
+    "image_path": "res://规则/牌面/奥林匹斯/彭忒西勒亚.png",
+    "troop_type": "刺客",
+    "source": {
+      "card_code": "S02-0517"
+    }
+  },
+  {
+    "id": "olympus_s02_0519",
+    "name": "斯巴达勇士",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "spartan_attack_divine_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时，可消耗并翻转1神力：此军团本回合兵力+2000。",
+        "cost": {
+          "divine_flip": 1
+        },
+        "resolution": {
+          "action": "modify_source_power_until_turn_end",
+          "amount": 2000
+        }
+      },
+      {
+        "id": "spartan_opponent_turn_bonus",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "amount": 2000,
+          "only_during_opponent_turn": true
+        }
+      }
+    ],
+    "text": "进攻时 可消耗并翻转1神力：此军团本回合兵力+2000。\n对方回合 此军团兵力+2000。",
+    "image_path": "res://规则/牌面/奥林匹斯/斯巴达勇士.png",
+    "troop_type": "斗士",
+    "source": {
+      "card_code": "S02-0519"
+    }
+  },
+  {
+    "id": "olympus_s02_0511",
+    "name": "珀洛特埃",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "polete_entry_attack_legions",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，本回合可进攻对方军团。",
+        "resolution": {
+          "action": "olympus_grant_source_can_attack_legions_until_turn_end"
+        }
+      },
+      {
+        "id": "polete_attack_vs_legion_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时 若目标为对方军团，可消耗并翻转1神力：本回合兵力+1000，并获得震击。",
+        "condition": {
+          "event_target_kind_is": "card"
+        },
+        "cost": {
+          "divine_flip": 1
+        },
+        "resolution": {
+          "action": "modify_source_power_until_turn_end",
+          "amount": 1000,
+          "follow_up_action": {
+            "action": "grant_source_keyword_until_turn_end",
+            "keyword": "shock"
+          }
+        }
+      }
+    ],
+    "text": "登场时 本回合可进攻对方军团。\n进攻时 若目标为对方军团，可消耗并翻转1神力：本回合兵力+1000，并获得 震击。",
+    "image_path": "res://规则/牌面/奥林匹斯/珀洛特埃.png",
+    "troop_type": "斗士",
+    "source": {
+      "card_code": "S02-0511",
+      "import_stage": "manual_from_card_face"
+    }
+  },
+  {
+    "id": "olympus_s02_0509",
+    "name": "奥德修斯",
+    "faction": "olympus",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "odysseus_no_divine_discount",
+        "kind": "continuous",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": -1,
+          "own_divine_equals": 0
+        }
+      },
+      {
+        "id": "odysseus_entry_next_tactic_free",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时，本回合从手牌中打出的下1张战术卡无需消耗费用。",
+        "resolution": {
+          "action": "olympus_grant_next_tactic_free",
+          "count": 1
+        }
+      },
+      {
+        "id": "odysseus_attack_reveal_tactic",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "进攻时 可展示手牌中的1张战术卡：此军团本回合兵力+1000。",
+        "resolution": {
+          "action": "olympus_reveal_hand_tactic_for_power",
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "若我方神力为0张，此军团登场费用-1。\n登场时 本回合从手牌中打出的下1张战术卡无需消耗费用。\n进攻时 可展示手牌中的1张战术卡：此军团本回合兵力+1000。",
+    "image_path": "res://规则/牌面/奥林匹斯/奥德修斯.png",
+    "troop_type": "领军",
+    "source": {
+      "card_code": "S02-0509"
+    }
+  }
+]

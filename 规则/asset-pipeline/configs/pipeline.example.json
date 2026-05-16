@@ -1,0 +1,18 @@
+{
+  "projectName": "十二军团查卡器",
+  "sourceRoot": "..",
+  "samplePdfs": [
+    "1.pdf",
+    "5.pdf",
+    "9.pdf"
+  ],
+  "sampleTables": [
+    "Q&A.xlsx",
+    "S2四阵营补强卡效果表.xlsx",
+    "S2彼界&奥林匹斯.xlsx"
+  ],
+  "outputs": {
+    "manifest": "data/processed/manifest.json",
+    "plan": "data/processed/extraction-plan.json"
+  }
+}

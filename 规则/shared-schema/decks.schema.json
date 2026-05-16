@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://legion-12.local/decks.schema.json",
+  "title": "Deck",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "format",
+    "heroCardId",
+    "cards",
+    "updatedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "heroCardId": {
+      "type": ["string", "null"]
+    },
+    "legendCardId": {
+      "type": ["string", "null"]
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "cardId",
+          "count"
+        ],
+        "properties": {
+          "cardId": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "default": ""
+    },
+    "updatedAt": {
+      "type": "string"
+    }
+  }
+}

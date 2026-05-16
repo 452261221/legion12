@@ -1,0 +1,96 @@
+[
+  {
+    "id": "asgard_s01_03m2a",
+    "name": "洛基",
+    "faction": "asgard",
+    "kind": "master",
+    "hp": 12,
+    "max_hp": 12,
+    "image_path": "res://规则/牌面/阿斯加德/洛基.png",
+    "text": "我方\n，可消耗1士气：选择以下一项。\n回合1次\n抽取1张牌，并弃置1张手牌。\n将墓地2张卡牌返回牌库底部，我方主宰增加1点血量。",
+    "source": {
+      "rule_pdf": "2.pdf",
+      "page": 6,
+      "card_code": "S01-03M2a",
+      "ocr_name": "洛基",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "takamagahara_s01_04m2",
+    "name": "须佐之男",
+    "faction": "takamagahara",
+    "kind": "master",
+    "hp": 9,
+    "max_hp": 9,
+    "image_path": "res://规则/牌面/高天原/须佐之男.png",
+    "text": "我方\n回合1次\n选择我方1张【高天原】军\n可消耗1士气：\n团，本回合位于前排进攻时兵力+2000。\n消耗2士气：将我方<草剑>置入前排，视为1张兵力5000\n的【武者】军团。(草剑仍可发动其效果)\n<草剑>离场时：可选择将其放回牌库顶部。",
+    "source": {
+      "rule_pdf": "4.pdf",
+      "page": 5,
+      "card_code": "S01-04M2",
+      "ocr_name": "须佐之男",
+      "import_stage": "raw_rule_book_import"
+    }
+  },
+  {
+    "id": "takamagahara_s01_04m1",
+    "name": "天照大神",
+    "faction": "takamagahara",
+    "kind": "master",
+    "hp": 8,
+    "max_hp": 8,
+    "image_path": "res://规则/牌面/高天原/天照大神.png",
+    "text": "我方 回合1次 可消耗1士气：选择对方1张军团，本回合费用-1。随后击杀对方1张费用为0的军团。\n我方 回合1次 可弃置1张手牌：将我方最多2张士气转为活跃。我方前排所有【高天原】军团本回合兵力+1000。",
+    "source": {
+      "card_code": "S01-04M1",
+      "ocr_name": "天照大神",
+      "import_stage": "rule_cards_sync"
+    }
+  },
+  {
+    "id": "takamagahara_s02_04m1",
+    "name": "月读",
+    "faction": "takamagahara",
+    "kind": "master",
+    "hp": 8,
+    "max_hp": 8,
+    "image_path": "res://规则/牌面/高天原/月读.png",
+    "text": "我方 回合1次 我方军团位移时，可消耗1士气：选择另外1张军团进行1格位移，并使其本回合费用-1。\n我方回合 当我方1张【高天原】军团从后排位移至前排时，此军团本回合进攻时兵力+1000。\n我方回合 当我方1张【高天原】军团从前排位移至后排时，将我方1张士气转为活跃。",
+    "source": {
+      "card_code": "S02-04M1",
+      "ocr_name": "月读",
+      "import_stage": "rule_cards_sync"
+    }
+  },
+  {
+    "id": "asgard_s01_03m1",
+    "name": "瓦尔基里",
+    "faction": "asgard",
+    "kind": "master",
+    "hp": 14,
+    "max_hp": 14,
+    "image_path": "res://规则/牌面/阿斯加德/瓦尔基里.png",
+    "text": "规则上，此主宰的抽牌阶段改为弃置牌库顶部2张牌。\n（先攻回合即可发动）\n我方 回合1次 可消耗1士气并对我方主宰造成1点伤害：选择墓地2张牌，其中1张返回牌库底部，另1张加入手牌。",
+    "source": {
+      "card_code": "S01-03M1",
+      "ocr_name": "瓦尔基里",
+      "import_stage": "rule_cards_sync"
+    }
+  },
+  {
+    "id": "asgard_s02_03m1",
+    "name": "雷神索尔",
+    "faction": "asgard",
+    "kind": "master",
+    "hp": 8,
+    "max_hp": 8,
+    "image_path": "res://规则/牌面/阿斯加德/雷神索尔.png",
+    "text": "游戏开始时，可将1张<雷神之锤>加入手牌，其视为1张起始手牌。\n我方回合 当我方主宰血量不高于3时，可消耗2士气：本回合我方所有【阿斯加德】军团在登场时获得冲锋。\n以上效果发动后，我方主宰本局游戏无法因任何效果增加血量。",
+    "source": {
+      "card_code": "S02-03M1",
+      "ocr_name": "雷神索尔",
+      "import_stage": "rule_cards_sync"
+    }
+  }
+]

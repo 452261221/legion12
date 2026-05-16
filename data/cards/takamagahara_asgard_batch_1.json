@@ -1,0 +1,112 @@
+[
+  {
+    "id": "takamagahara_s01_0408",
+    "name": "高杉晋作",
+    "faction": "takamagahara",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "takasugi_entry_draw_then_cost_down",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时抽取1张牌，选择对方1张军团，本回合费用-2",
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "choose_and_modify_cost_until_turn_end",
+            "target_scope": "enemy_battlefield",
+            "type": "legion",
+            "amount": -2
+          }
+        }
+      },
+      {
+        "id": "takasugi_attack_cost_down",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "cost": {
+          "morale": 1
+        },
+        "text": "进攻时可消耗1士气：选择对方1张军团，本回合费用-2",
+        "resolution": {
+          "action": "choose_and_modify_cost_until_turn_end",
+          "target_scope": "enemy_battlefield",
+          "type": "legion",
+          "amount": -2,
+          "optional": true
+        }
+      }
+    ],
+    "text": "登场时 抽取1张牌，选择对方1张军团，本回合费用-2。\n进攻时 可消耗1士气：选择对方1张军团，本回合费用-2。",
+    "image_path": "res://规则/牌面/高天原/高杉晋作.png",
+    "source": {
+      "card_code": "S01-0408",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "斗士"
+  },
+  {
+    "id": "asgard_s01_0310",
+    "name": "齐格鲁德",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "sigurd_shift",
+        "kind": "activated",
+        "once_per_turn_key": "sigurd_shift",
+        "text": "我方回合1次，可进行1次位移",
+        "resolution": {
+          "action": "move_source_one_step"
+        }
+      },
+      {
+        "id": "sigurd_attack_with_gram",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_has_artifact_definition": "asgard_s01_0317"
+        },
+        "text": "进攻时，若我方存在神剑格拉墨，此军团本回合兵力+1000",
+        "resolution": {
+          "action": "modify_source_power_until_turn_end",
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "可对我方主宰造成1点伤害：此军团登场费用-1。\n我方回合1次 可进行1次位移。\n进攻时 若我方存在<神剑格拉墨>，此军团本回合兵力+1000。",
+    "image_path": "res://规则/牌面/阿斯加德/齐格鲁德.png",
+    "source": {
+      "card_code": "S01-0310",
+      "import_stage": "manual_from_card_faces"
+    },
+    "play_options": [
+      {
+        "id": "sigurd_blood_price",
+        "label": "对我方主宰造成1点伤害：此军团登场费用-1",
+        "self_master_damage": 1,
+        "play_cost_modifier": -1
+      }
+    ],
+    "troop_type": "骑兵"
+  }
+]

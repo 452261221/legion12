@@ -1,0 +1,63 @@
+[
+  {
+    "id": "asgard_s02_0304",
+    "name": "玛格丽特一世",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "attack_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "margaret_entry_mill_top",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可弃置我方牌库顶部1张牌。",
+        "resolution": {
+          "action": "mill_cards",
+          "count": 1,
+          "optional": true
+        }
+      },
+      {
+        "id": "margaret_turn_master_damage_heal",
+        "kind": "triggered",
+        "event": "MasterDamaged",
+        "required_orientation": "active",
+        "condition": {
+          "controller_turn_only": true,
+          "event_player_is_controller": true,
+          "source_kind_is": "effect"
+        },
+        "text": "我方回合我方主宰因效果受到伤害时，可将此军团转为休整：我方主宰增加1点血量。随后本回合我方主宰血量无法因军团效果增加。",
+        "resolution": {
+          "action": "rest_source_card",
+          "optional": true,
+          "follow_up_action": {
+            "action": "heal_master",
+            "player_scope": "controller",
+            "amount": 1,
+            "follow_up_action": {
+              "action": "block_legion_source_heal_for_controller_until_turn_end"
+            }
+          }
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 可弃置我方牌库顶部1张牌。\n我方回合 我方主宰因效果受到伤害时，可将此军团转为休整：我方主宰增加1点血量。随后本回合我方主宰血量无法因军团效果增加。",
+    "image_path": "res://规则/牌面/阿斯加德/玛格丽特一世.png",
+    "source": {
+      "card_code": "S02-0304",
+      "import_stage": "manual_from_card_faces"
+    },
+    "troop_type": "术师"
+  }
+]

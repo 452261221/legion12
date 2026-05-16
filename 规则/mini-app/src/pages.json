@@ -1,0 +1,73 @@
+{
+  "pages": [
+    {
+      "path": "pages/cards/index",
+      "style": {
+        "navigationBarTitleText": "卡牌检索",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/faq/index",
+      "style": {
+        "navigationBarTitleText": "规则问答",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/card-detail/index",
+      "style": {
+        "navigationBarTitleText": "卡牌详情",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/deck/index",
+      "style": {
+        "navigationBarTitleText": "卡组列表",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/deck-detail/index",
+      "style": {
+        "navigationBarTitleText": "卡组详情",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/public-deck-detail/index",
+      "style": {
+        "navigationBarTitleText": "公开卡组详情",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/deck-select/index",
+      "style": {
+        "navigationBarTitleText": "选择卡牌",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    },
+    {
+      "path": "pages/deck-edit/index",
+      "style": {
+        "navigationBarTitleText": "填写卡组信息",
+        "enableShareAppMessage": true,
+        "enableShareTimeline": true
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f6f8fb"
+  }
+}

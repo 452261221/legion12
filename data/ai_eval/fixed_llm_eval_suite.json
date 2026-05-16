@@ -1,0 +1,40 @@
+{
+	"name": "fixed_llm_eval_suite",
+	"trace_root": "user://battle_logs/fixed_eval/fixed_llm_eval_suite",
+	"cases": [
+		{
+			"name": "starter_llm_short_real",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 12000,
+			"ai_policy_mode": "llm",
+			"max_steps": 12,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"llm_provider": "deepseek"
+		},
+		{
+			"name": "starter_llm_mid_real",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 2,
+			"seed_base": 12100,
+			"ai_policy_mode": "llm",
+			"max_steps": 20,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"llm_provider": "deepseek"
+		},
+		{
+			"name": "starter_llm_repair_probe",
+			"deck_path": "res://data/decks/starter_takamagahara_asgard_raw.json",
+			"game_count": 1,
+			"seed_base": 12200,
+			"ai_policy_mode": "llm",
+			"max_steps": 10,
+			"allow_turn_limit": true,
+			"use_real_llm": true,
+			"fake_llm_mode": "repair_probe_real",
+			"llm_provider": "deepseek"
+		}
+	]
+}

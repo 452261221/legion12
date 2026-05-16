@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "suncity_s01_0201",
+    "name": "图特摩斯三世",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "calamity_level": 3,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "thutmose_entry_destroy",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_thutmose_entry"
+        }
+      },
+      {
+        "id": "thutmose_attack_crush",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_thutmose_crush"
+        }
+      },
+      {
+        "id": "thutmose_death_crush",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_thutmose_crush"
+        }
+      }
+    ],
+    "text": "此军团登场回合不受反击战术效果影响。\n登场时 击杀对方1张兵力不高于5000的军团。\n进攻时 阵亡时 对方所有军团本回合兵力-1000。随后击杀对方1张兵力不高于1000的军团。",
+    "image_path": "res://规则/牌面/太阳城/图特摩斯三世.png",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "suncity_s01_0202",
+    "name": "拉美西斯二世",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ramesses_replay_entries",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_ramesses_replay_entries"
+        }
+      }
+    ],
+    "text": "此军团登场回合不受反击战术效果影响。\n若我方战场不存在<陵墓守卫>，此军团登场费用-2。\n登场时 选择<拉美西斯二世>以外最多3张【太阳城】军团，自选顺序发动其登场时效果。",
+    "image_path": "res://规则/牌面/太阳城/拉美西斯二世.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "suncity_s01_0203",
+    "name": "美尼斯",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 6,
+    "power": 5000,
+    "hp": 5000,
+    "calamity_level": 1,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "menes_attack_buff",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_menes_attack_buff"
+        }
+      }
+    ],
+    "text": "对方回合 若我方战场不存在<陵墓守卫>，此军团兵力+1000。\n进攻时 可弃置我方战场上1张军团：此军团本回合兵力+2000，并获得强攻。\n（进攻对主宰造成额外1点伤害）",
+    "image_path": "res://规则/牌面/太阳城/美尼斯.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "suncity_s01_0204",
+    "name": "陵墓构造体",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 6,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tomb_construct_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑畔。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "taunt",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "tomb_construct_entry_attach_tomb_guards",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_tomb_construct_attach_tomb_guards"
+        }
+      },
+      {
+        "id": "tomb_construct_death_release_tomb_guards",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_tomb_construct_release_tomb_guards"
+        }
+      }
+    ],
+    "text": "位于前排时获得挑畔。\n登场时 将我方墓地所有<陵墓守卫>叠放在此军团下方。\n此军团下每有1张<陵墓守卫>，获得兵力+1000。\n阵亡时 将此军团下方所有<陵墓守卫>休整登场。",
+    "image_path": "res://规则/牌面/太阳城/陵墓构造体.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "suncity_s01_0205",
+    "name": "霍列姆赫布",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 5,
+    "power": 5000,
+    "hp": 5000,
+    "calamity_level": 1,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "horemheb_entry_charge",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_horemheb_entry_charge"
+        }
+      }
+    ],
+    "text": "登场时 可弃置我方1张<陵墓守卫>：获得冲锋。\n（可在登场回合进攻）\n回合1次 此军团即将阵亡时，可将我方1张<陵墓守卫>代替承受本次致命进攻或效果。",
+    "image_path": "res://规则/牌面/太阳城/霍列姆赫布.png",
+    "troop_type": "斗士"
+  },
+  {
+    "id": "suncity_s01_0206",
+    "name": "萨拉丁",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 4,
+    "power": 4000,
+    "hp": 4000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "saladin_front_taunt",
+        "kind": "continuous",
+        "text": "位于前排时获得挑畔。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "taunt",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "saladin_move_once",
+        "kind": "activated",
+        "text": "我方回合1次 可进行1次位移。",
+        "target_mode": "none",
+        "once_per_turn_key": "saladin_move_once",
+        "resolution": {
+          "action": "choose_and_move_units",
+          "count": 1,
+          "target_scope": "allied_battlefield"
+        }
+      },
+      {
+        "id": "saladin_adjacent_attack_buff",
+        "kind": "continuous",
+        "text": "位于前排时，相邻的太阳城军团进攻时兵力+1000。",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "adjacent_battlefield",
+          "exclude_self": true,
+          "faction": "suncity",
+          "source_required_row": "front",
+          "amount": 1000,
+          "only_when_attacking": true
+        }
+      },
+      {
+        "id": "saladin_attack_move_tomb_guard",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_move_units",
+          "count": 1,
+          "target_scope": "allied_battlefield",
+          "id": "suncity_s01_0212"
+        }
+      },
+      {
+        "id": "saladin_death_move_tomb_guard",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_move_units",
+          "count": 1,
+          "target_scope": "allied_battlefield",
+          "id": "suncity_s01_0212"
+        }
+      }
+    ],
+    "text": "位于前排时获得挑畔。\n我方回合1次 可进行1次位移。\n位于前排时，此军团相邻的【太阳城】军团进攻时兵力+1000。\n进攻时、阵亡时 可选择我方1张<陵墓守卫>，进行1次位移。",
+    "image_path": "res://规则/牌面/太阳城/萨拉丁.png",
+    "troop_type": "骑兵"
+  },
+  {
+    "id": "suncity_s01_0211",
+    "name": "托勒密十三世",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 8,
+    "power": 8000,
+    "hp": 8000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "ptolemy_repeat_last_active_tactic",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_repeat_last_active_tactic"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 再次发动本回合打出的上1张<主动战术>效果。",
+    "image_path": "res://规则/牌面/太阳城/托勒密十三世.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s01_0207",
+    "name": "图坦卡蒙",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 4,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tutankhamun_entry_revive",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_tutankhamun_entry"
+        }
+      },
+      {
+        "id": "tutankhamun_death_recover",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_tutankhamun_death"
+        }
+      }
+    ],
+    "text": "登场时 若我方军团数量少于对方，可将墓地最多2张<陵墓守卫>活跃登场。\n阵亡时 可选择墓地1张<图坦卡蒙>以外费用不高于4的【太阳城】卡牌放回牌库顶部。",
+    "image_path": "res://规则/牌面/太阳城/图坦卡蒙.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "suncity_s01_0208",
+    "name": "阿伊",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 1,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged_no_loss",
+      "ranged"
+    ],
+    "effects": [
+      {
+        "id": "ai_entry_revive_tomb_guard_rested",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s01_0212",
+          "rested": true
+        }
+      },
+      {
+        "id": "ai_attack_buff_front_unit",
+        "kind": "triggered",
+        "event": "AttackDeclared",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "choose_and_modify_power_until_turn_end",
+          "count": 1,
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "required_row": "front",
+          "max_target_power": 2000,
+          "amount": 2000
+        },
+        "cost": {
+          "morale": 1
+        }
+      }
+    ],
+    "text": "远程进攻无损。\n登场时 可将墓地1张<陵墓守卫>休整登场。\n进攻时 可消耗1士气：选择我方前排1张兵力不高于2000的军团，本回合兵力+2000。",
+    "image_path": "res://规则/牌面/太阳城/阿伊.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s01_0209",
+    "name": "纳芙蒂蒂",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 1000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "charge",
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "nefertiti_entry_opponent_discards",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "opponent_hand_size_at_least": 6
+        },
+        "resolution": {
+          "action": "request_hand_discard_choice",
+          "player_scope": "opponent",
+          "discard_count": 1,
+          "requires_confirm": true
+        }
+      },
+      {
+        "id": "nefertiti_death_drain",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_hand_size_less_than_opponent": true
+        },
+        "resolution": {
+          "action": "deal_master_damage",
+          "player_scope": "opponent",
+          "amount": 1,
+          "follow_up_action": {
+            "action": "heal_master",
+            "player_scope": "controller",
+            "amount": 1
+          }
+        }
+      }
+    ],
+    "text": "冲锋。\n登场时 若对方手牌不少于6张，令对方弃置1张手牌。\n阵亡时 若我方手牌数少于对方，对对方主宰造成1点伤害，我方主宰回复1点生命。",
+    "image_path": "res://规则/牌面/太阳城/纳芙蒂蒂.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s01_0210",
+    "name": "尼托克丽丝",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 1000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "nitocris_entry_ready_tomb_guard",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "choose_and_ready_unit",
+          "count": 1,
+          "target_scope": "allied_battlefield",
+          "id": "suncity_s01_0212"
+        }
+      },
+      {
+        "id": "nitocris_death_revive_small_suncity",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "type": "legion",
+          "faction": "suncity",
+          "max_target_cost": 2
+        }
+      }
+    ],
+    "text": "登场时 可选择我方1张<陵墓守卫>重置为活跃。\n阵亡时 可将墓地1张费用不高于2的【太阳城】军团活跃登场。",
+    "image_path": "res://规则/牌面/太阳城/尼托克丽丝.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s01_0212",
+    "name": "陵墓守卫",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tomb_guard_opponent_turn_cost",
+        "kind": "continuous",
+        "text": "对方回合 此军团费用+1。",
+        "resolution": {
+          "action": "modify_play_cost",
+          "amount": 1,
+          "only_during_opponent_turn": true
+        }
+      },
+      {
+        "id": "tomb_guard_front_opponent_bonus",
+        "kind": "continuous",
+        "text": "对方回合 位于前排时兵力+1000。",
+        "resolution": {
+          "action": "modify_power",
+          "target_scope": "self",
+          "required_row": "front",
+          "only_during_opponent_turn": true,
+          "amount": 1000
+        }
+      }
+    ],
+    "text": "规则上，此军团构筑时不计入卡组数量，且不能进入手牌和牌库，游戏开始时置入墓地，此军团以任何形式离场均视为置入所有者墓地。\n我方回合 此军团在战场上可视为1张士气。\n对方回合 此军团费用+1，位于前排时兵力+1000。",
+    "image_path": "res://规则/牌面/太阳城/陵墓守卫.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "suncity_s01_0213",
+    "name": "锡瓦的卡巴",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 2,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "siwa_front_ranged",
+        "kind": "continuous",
+        "text": "位于前排时获得远程进攻。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "siwa_front_ranged_no_loss",
+        "kind": "continuous",
+        "text": "位于前排时远程进攻无损。",
+        "resolution": {
+          "action": "grant_keyword",
+          "target_scope": "self",
+          "keyword": "ranged_no_loss",
+          "required_row": "front"
+        }
+      },
+      {
+        "id": "siwa_hand_response_redirect",
+        "kind": "triggered",
+        "event": "AttackFinished",
+        "hidden_from_actions": true,
+        "only_during_opponent_turn": true,
+        "allow_hand_source": true,
+        "required_zone": "hand",
+        "text": "对方进攻后：此军团可从手牌无需消耗费用活跃登场。若如此做，下个我方重置阶段我方1张休整的士气无法转为活跃。",
+        "resolution": {
+          "optional": true,
+          "action": "suncity_siwa_after_attack"
+        }
+      }
+    ],
+    "text": "位于前排时，进攻距离+1，远程进攻无损。\n对方进攻后：此军团可从手牌无需消耗费用活跃登场。\n若进行以上操作，则下个我方重置阶段，我方1张休整的士气无法转为活跃。",
+    "image_path": "res://规则/牌面/太阳城/锡瓦的卡巴（以.png",
+    "troop_type": "刺客"
+  },
+  {
+    "id": "suncity_s01_0214",
+    "name": "克利奥帕特拉七世",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 2,
+    "power": 1000,
+    "hp": 1000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "cleopatra_rest_revive_tomb_guard",
+        "kind": "activated",
+        "text": "主动休整 可消耗1士气：将墓地1张<陵墓守卫>活跃登场。",
+        "target_mode": "none",
+        "rest_source": true,
+        "cost": {
+          "morale": 1
+        },
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s01_0212"
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n主动休整 可消耗1士气：将墓地1张<陵墓守卫>活跃登场。",
+    "image_path": "res://规则/牌面/太阳城/克利奥帕特拉七世.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s01_0215",
+    "name": "安卡神碑",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "ankh_entry_buff_tomb_guard",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "choose_and_modify_power_until_turn_end",
+          "count": 1,
+          "target_scope": "allied_battlefield",
+          "id": "suncity_s01_0212",
+          "amount": 2000
+        }
+      },
+      {
+        "id": "ankh_activate_mode",
+        "kind": "activated",
+        "text": "主动休整 选择以下一项：弃置1张手牌，选择我方1张休整的<陵墓守卫>转为活跃；或将我方1张<陵墓守卫>转为休整，抽取1张牌。",
+        "target_mode": "none",
+        "rest_source": true,
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "title": "安卡神碑：选择效果",
+          "options": [
+            {
+              "id": "discard_to_ready",
+              "label": "弃牌转活",
+              "cost": {
+                "discard_cards": 1
+              },
+              "resolution": {
+                "action": "choose_and_ready_unit",
+                "count": 1,
+                "target_scope": "allied_battlefield",
+                "id": "suncity_s01_0212",
+                "required_orientation": "rested"
+              }
+            },
+            {
+              "id": "rest_to_draw",
+              "label": "休整抽牌",
+              "resolution": {
+                "action": "suncity_ankh_rest_tomb_guard_draw"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "登场时 选择我方1张<陵墓守卫>，本回合兵力+2000。\n主动休整 选择以下一项。\n弃置1张手牌：选择我方1张休整的<陵墓守卫>转为活跃。\n将我方1张<陵墓守卫>转为休整：抽取1张牌。",
+    "image_path": "res://规则/牌面/太阳城/安卡神碑.png"
+  },
+  {
+    "id": "suncity_s01_0216",
+    "name": "卡诺匹斯箱",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canopic_box_entry_search_jar",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "search_deck",
+          "max_look": 40,
+          "count": 1,
+          "match": {
+            "type": "artifact",
+            "faction": "suncity",
+            "name_contains": "卡诺匹斯罐"
+          },
+          "follow_up_action": {
+            "action": "heal_master",
+            "player_scope": "controller",
+            "amount": 1,
+            "follow_up_action": {
+              "action": "send_source_to_grave"
+            }
+          }
+        }
+      }
+    ],
+    "text": "规则上，名字包含<卡诺匹斯>的圣物不计入圣物区上限。\n登场时 查看我方牌库，选择1张名字包含<卡诺匹斯罐>的圣物展示并加入手牌，重洗牌库。随后我方主宰增加1点血量，并弃置此圣物。",
+    "image_path": "res://规则/牌面/太阳城/卡诺匹斯箱.png"
+  },
+  {
+    "id": "suncity_s01_0217",
+    "name": "卡诺匹斯罐 一",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canopic_one_entry_buff",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_canopic_one_buff"
+        }
+      }
+    ],
+    "text": "规则上，名字包含<卡诺匹斯>的圣物不计入圣物区上限。\n登场时 选择我方1张【太阳城】军团，本回合兵力+2000并获得强攻。随后弃置此圣物。\n（进攻对主宰造成额外1点伤害）",
+    "image_path": "res://规则/牌面/太阳城/卡诺匹斯罐 一.png"
+  },
+  {
+    "id": "suncity_s01_0218",
+    "name": "卡诺匹斯罐 二",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canopic_two_entry_free_tactic",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "olympus_grant_next_tactic_free",
+          "count": 1,
+          "follow_up_action": {
+            "action": "send_source_to_grave"
+          }
+        }
+      }
+    ],
+    "text": "规则上，名字包含<卡诺匹斯>的圣物不计入圣物区上限。\n登场时 本回合我方从手牌中打出的下1张战术卡无需消耗费用。随后弃置此圣物。",
+    "image_path": "res://规则/牌面/太阳城/卡诺匹斯罐 二.png"
+  },
+  {
+    "id": "suncity_s01_0219",
+    "name": "卡诺匹斯罐 三",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canopic_three_entry_temporary_morale",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_add_temporary_morale",
+          "amount": 2,
+          "follow_up_action": {
+            "action": "send_source_to_grave"
+          }
+        }
+      }
+    ],
+    "text": "规则上，名字包含<卡诺匹斯>的圣物不计入圣物区上限。\n登场时 本回合获得2点临时士气。随后弃置此圣物。",
+    "image_path": "res://规则/牌面/太阳城/卡诺匹斯罐 三.png"
+  },
+  {
+    "id": "suncity_s01_0220",
+    "name": "卡诺匹斯罐 四",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canopic_four_entry_cannot_die",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "suncity_canopic_four_protect"
+        }
+      }
+    ],
+    "text": "规则上，名字包含<卡诺匹斯>的圣物不计入圣物区上限。\n登场时 选择我方最多2张【太阳城】军团，直到我方下个回合开始前获得免死。随后弃置此圣物。\n（仅1次，即将阵亡时，将兵力在本回合变为1000作为代替）",
+    "image_path": "res://规则/牌面/太阳城/卡诺匹斯罐 四.png"
+  },
+  {
+    "id": "suncity_s01_0221",
+    "name": "杜阿特之门",
+    "faction": "suncity",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "duat_gate_choose_mode",
+        "kind": "activated",
+        "text": "二选一：选择对方1张兵力不高于5000的军团击杀；或选择墓地最多1张<杜阿特之门>以外的【太阳城】卡牌加入手牌。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "choose_option_with_cost",
+          "options": [
+            {
+              "id": "destroy_enemy_unit",
+              "label": "击杀敌军",
+              "resolution": {
+                "action": "choose_and_destroy_unit",
+                "count": 1,
+                "target_scope": "enemy_battlefield",
+                "type": "legion",
+                "max_target_power": 5000
+              }
+            },
+            {
+              "id": "recover_suncity_card",
+              "label": "回收墓地",
+              "resolution": {
+                "action": "return_from_grave_to_hand",
+                "count": 1,
+                "faction": "suncity",
+                "exclude_definition_id": "suncity_s01_0221",
+                "always_request_choice": true,
+                "allow_up_to_count": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "text": "选择对方1张兵力不高于5000的军团击杀，或选择墓地最多1张<杜阿特之门>以外的【太阳城】卡牌加入手牌。",
+    "image_path": "res://规则/牌面/太阳城/杜阿特之门.png"
+  },
+  {
+    "id": "suncity_s01_0222",
+    "name": "法老王的庆典",
+    "faction": "suncity",
+    "type": "tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "pharaoh_celebration_pick_top_cards",
+        "kind": "activated",
+        "text": "查看牌库顶部5张牌，选择其中2张<法老王的庆典>以外的【太阳城】卡牌，其中1张加入手牌，另1张置入墓地，其余卡牌按自选顺序返回牌库底部。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "suncity_pharaoh_celebration"
+        }
+      }
+    ],
+    "text": "查看牌库顶部5张牌，选择其中2张<法老王的庆典>以外的【太阳城】卡牌展示，其中1张加入手牌，另1张置入墓地，其余卡牌自选顺序返回牌库底部。",
+    "image_path": "res://规则/牌面/太阳城/法老王的庆典.png"
+  },
+  {
+    "id": "suncity_s01_0223",
+    "name": "不朽之礼",
+    "faction": "suncity",
+    "type": "counter_tactic",
+    "cost": 2,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "immortal_gift_attack_departure",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "condition": {
+          "event_player_is_controller": true,
+          "source_kind_is": "attack",
+          "event_card_type_is": "legion",
+          "event_card_cost_at_least": 3
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "revive_from_grave",
+            "count": 1,
+            "id": "suncity_s01_0212",
+            "allow_up_to_count": true
+          }
+        }
+      },
+      {
+        "id": "immortal_gift_effect_departure",
+        "kind": "triggered",
+        "event": "CardDied",
+        "hidden_from_actions": true,
+        "condition": {
+          "event_player_is_controller": true,
+          "source_kind_is": "effect",
+          "event_card_type_is": "legion",
+          "event_card_cost_at_least": 3
+        },
+        "resolution": {
+          "action": "draw_cards",
+          "count": 1,
+          "follow_up_action": {
+            "action": "revive_from_grave",
+            "count": 1,
+            "id": "suncity_s01_0212",
+            "allow_up_to_count": true
+          }
+        }
+      }
+    ],
+    "text": "对方发动进攻或效果造成我方费用高于2的军团离场时：抽取1张牌。随后可将墓地1张<陵墓守卫>活跃登场。",
+    "image_path": "res://规则/牌面/太阳城/不朽之礼.png"
+  },
+  {
+    "id": "suncity_s01_0224",
+    "name": "智慧法典 卷一",
+    "faction": "suncity",
+    "type": "counter_tactic",
+    "cost": 3,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "codex_volume_one_tax_stack_effect",
+        "kind": "activated",
+        "text": "对方发动战术效果或圣物效果时：对方必须弃置1张手牌才可发动本次效果，否则无效。对方若成功发动效果：我方抽1，然后可将墓地1张<智慧法典>以外费用不高于3的战术或圣物加入手牌。",
+        "can_activate_on_stack": true,
+        "response_only": true,
+        "target_stack_controller_scope": "enemy",
+        "target_stack_source_types": [
+          "tactic",
+          "artifact"
+        ],
+        "resolution": {
+          "action": "suncity_codex_volume_one"
+        }
+      }
+    ],
+    "text": "对方发动战术效果或圣物效果时：对方必须弃置1张手牌才可发动本次效果，否则无效。\n对方若成功发动效果：我方抽取1张牌。随后可选择墓地1张<智慧法典>以外费用不高于3的<战术>或<圣物>回到手牌。",
+    "image_path": "res://规则/牌面/太阳城/智慧法典 卷一.png"
+  },
+  {
+    "id": "suncity_s02_0201",
+    "name": "增殖的甲虫",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 0,
+    "power": 1000,
+    "hp": 1000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "cannot_attack"
+    ],
+    "effects": [],
+    "text": "规则上，此军团构筑时不计入卡组数量，不能进入手牌和牌库，游戏开始时置入墓地，此军团以任何形式离场均视为置入所有者墓地。\n无法进攻，无法支援。",
+    "image_path": "res://规则/牌面/太阳城/增殖的甲虫.png",
+    "troop_type": "特殊"
+  },
+  {
+    "id": "suncity_s02_0202",
+    "name": "陵墓圣武士",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 6,
+    "power": 6000,
+    "hp": 6000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "tomb_paladin_died_revive_tomb_guard",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s01_0212"
+        }
+      }
+    ],
+    "text": "我方回合 本回合我方每有1张卡名包含<陵墓>的军团离场时，此军团登场费用-1。\n阵亡时 将墓地1张<陵墓守卫>活跃登场。",
+    "image_path": "res://规则/牌面/太阳城/陵墓圣武士.png",
+    "troop_type": "武者"
+  },
+  {
+    "id": "suncity_s02_0203",
+    "name": "哈特谢普苏特",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 3,
+    "power": 3000,
+    "hp": 3000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "hatshepsut_entry_revive_beetle",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s02_0201"
+        }
+      },
+      {
+        "id": "hatshepsut_died_draw",
+        "kind": "triggered",
+        "event": "CardDied",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "draw_cards",
+          "count": 1
+        }
+      }
+    ],
+    "text": "若我方战场不存在<陵墓守卫>，此军团登场费用-1。\n登场时 可将墓地1张<增殖的甲虫>活跃登场。\n阵亡时 可抽取1张牌。",
+    "image_path": "res://规则/牌面/太阳城/哈特谢普苏特.png",
+    "troop_type": "领军"
+  },
+  {
+    "id": "suncity_s02_0204",
+    "name": "伊姆何泰普",
+    "faction": "suncity",
+    "type": "legion",
+    "cost": 3,
+    "power": 2000,
+    "hp": 2000,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [
+      "ranged",
+      "ranged_no_loss"
+    ],
+    "effects": [
+      {
+        "id": "imhotep_entry_return_big_legion",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "condition": {
+          "controller_hand_size_less_than_opponent": true
+        },
+        "resolution": {
+          "optional": true,
+          "action": "return_from_grave_to_hand",
+          "type": "legion",
+          "faction": "suncity",
+          "min_target_cost": 6,
+          "count": 1,
+          "always_request_choice": true
+        }
+      },
+      {
+        "id": "imhotep_rest_prepare_discount",
+        "kind": "activated",
+        "text": "主动休整 本回合我方下1张带有天灾等级的【太阳城】军团登场费用-1。",
+        "target_mode": "none",
+        "rest_source": true,
+        "resolution": {
+          "action": "suncity_prepare_discount_from_battlefield",
+          "discount_amount": 1
+        }
+      }
+    ],
+    "text": "进攻距离+1，远程进攻无损。\n登场时 若我方手牌数量少于对方，可将墓地1张费用为6及以上的【太阳城】军团加入手牌。\n主动休整 本回合我方下1张带有天灾等级的【太阳城】军团登场费用-1。",
+    "image_path": "res://规则/牌面/太阳城/伊姆何泰普.png",
+    "troop_type": "术师"
+  },
+  {
+    "id": "suncity_s02_0205",
+    "name": "黄金圣甲虫",
+    "faction": "suncity",
+    "type": "artifact",
+    "cost": 4,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "golden_scarab_entry_revive_beetle",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s02_0201"
+        }
+      },
+      {
+        "id": "golden_scarab_rest_revive_beetle",
+        "kind": "activated",
+        "text": "主动休整 可将墓地1张<增殖的甲虫>活跃登场。",
+        "target_mode": "none",
+        "rest_source": true,
+        "resolution": {
+          "optional": true,
+          "action": "revive_from_grave",
+          "count": 1,
+          "id": "suncity_s02_0201"
+        }
+      },
+      {
+        "id": "golden_scarab_discard_weaken",
+        "kind": "activated",
+        "text": "我方回合1次 可弃置1张手牌：选择对方最多2张军团，本回合兵力-1000。",
+        "target_mode": "none",
+        "once_per_turn_key": "golden_scarab_discard_weaken",
+        "cost": {
+          "discard_cards": 1
+        },
+        "resolution": {
+          "action": "suncity_golden_scarab_weaken"
+        }
+      }
+    ],
+    "text": "若<黄金圣甲虫>位于我方圣物区，我方无法从手牌打出其他圣物。\n登场时 可将墓地1张<增殖的甲虫>活跃登场。\n主动休整 可将墓地1张<增殖的甲虫>活跃登场。\n我方回合1次 可弃置1张手牌：选择对方最多2张军团，本回合兵力-1000。",
+    "image_path": "res://规则/牌面/太阳城/黄金圣甲虫.png"
+  },
+  {
+    "id": "suncity_s02_0206",
+    "name": "无畏的刺杀",
+    "faction": "suncity",
+    "type": "tactic",
+    "cost": 1,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "fearless_assassination_buff",
+        "kind": "activated",
+        "text": "选择我方前排1张【太阳城】军团，本回合兵力+3000，进攻对方军团时获得必中。本回合此军团无法因效果重置为活跃，回合结束时弃置此军团。",
+        "target_mode": "card",
+        "resolution": {
+          "action": "suncity_fearless_assassination",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "faction": "suncity",
+          "required_row": "front"
+        }
+      }
+    ],
+    "text": "选择我方前排1张【太阳城】军团，本回合兵力+3000，进攻对方军团时获得必中。\n本回合此军团无法因效果重置为活跃，回合结束时弃置此军团。",
+    "image_path": "res://规则/牌面/太阳城/无畏的刺杀.png"
+  },
+  {
+    "id": "suncity_s02_0207",
+    "name": "沙漠君临",
+    "faction": "suncity",
+    "type": "tactic",
+    "cost": 4,
+    "power": 0,
+    "hp": 0,
+    "calamity_level": 0,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "desert_sovereignty_deploy",
+        "kind": "activated",
+        "text": "弃置我方战场上最多3张军团：将手牌中1张天灾等级与弃置军团数量相同的【太阳城】军团活跃登场。",
+        "target_mode": "none",
+        "resolution": {
+          "action": "suncity_desert_sovereignty"
+        }
+      }
+    ],
+    "text": "弃置我方战场上最多3张军团：将手牌中1张天灾等级与弃置军团数量相同的【太阳城】军团活跃登场。",
+    "image_path": "res://规则/牌面/太阳城/沙漠君临.png"
+  }
+]

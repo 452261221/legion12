@@ -1,0 +1,96 @@
+{
+  "project": "十二军团查卡器",
+  "sourceRoot": "E:\\代码项目\\十二军团\\规则",
+  "counts": {
+    "pdf": 9,
+    "docx": 1,
+    "xlsx": 3,
+    "image": 1
+  },
+  "files": [
+    {
+      "name": "1.pdf",
+      "relative_path": "1.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "2.pdf",
+      "relative_path": "2.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "3.pdf",
+      "relative_path": "3.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "4.pdf",
+      "relative_path": "4.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "5.pdf",
+      "relative_path": "5.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "6.pdf",
+      "relative_path": "6.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "7.pdf",
+      "relative_path": "7.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "8.pdf",
+      "relative_path": "8.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "9.pdf",
+      "relative_path": "9.pdf",
+      "suffix": ".pdf",
+      "category": "pdf"
+    },
+    {
+      "name": "Q&A.docx",
+      "relative_path": "Q&A.docx",
+      "suffix": ".docx",
+      "category": "docx"
+    },
+    {
+      "name": "Q&A.xlsx",
+      "relative_path": "Q&A.xlsx",
+      "suffix": ".xlsx",
+      "category": "xlsx"
+    },
+    {
+      "name": "S2四阵营补强卡效果表.xlsx",
+      "relative_path": "S2四阵营补强卡效果表.xlsx",
+      "suffix": ".xlsx",
+      "category": "xlsx"
+    },
+    {
+      "name": "S2彼界&奥林匹斯.xlsx",
+      "relative_path": "S2彼界&奥林匹斯.xlsx",
+      "suffix": ".xlsx",
+      "category": "xlsx"
+    },
+    {
+      "name": "牌桌.png",
+      "relative_path": "牌桌.png",
+      "suffix": ".png",
+      "category": "image"
+    }
+  ]
+}

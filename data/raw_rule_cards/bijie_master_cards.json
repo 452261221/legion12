@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bijie_s02_06m1",
+    "name": "莫瑞甘",
+    "faction": "bijie",
+    "kind": "master",
+    "hp": 8,
+    "max_hp": 8,
+    "image_path": "res://规则/牌面/彼界/莫瑞甘.png",
+    "text": "我方 回合1次 对方军团阵亡时，可获得1符文。\n我方 回合1次 可消耗2符文：选择我方1张【彼界】军团，在本回合其下一次击杀对方军团后转为活跃。",
+    "source": {
+      "card_code": "S02-06M1",
+      "ocr_name": "莫瑞甘",
+      "import_stage": "h5_catalog_sync"
+    }
+  },
+  {
+    "id": "bijie_s02_06m2",
+    "name": "安格斯·麦·奥格",
+    "faction": "bijie",
+    "kind": "master",
+    "hp": 8,
+    "max_hp": 8,
+    "image_path": "res://规则/牌面/彼界/安格斯·麦·奥格.png",
+    "text": "规则上，可完成的试炼数量增加1张。\n每完成1次试炼，可获得1符文。\n回合1次 当我方成功发动战术效果时，试炼+1。",
+    "source": {
+      "card_code": "S02-06M2",
+      "ocr_name": "安格斯·麦·奥格",
+      "import_stage": "h5_catalog_sync"
+    }
+  }
+]

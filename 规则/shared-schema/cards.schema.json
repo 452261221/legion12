@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://legion-12.local/cards.schema.json",
+  "title": "Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "series",
+    "cardNo",
+    "image",
+    "type",
+    "faction",
+    "rarity",
+    "tags",
+    "effectText",
+    "searchText",
+    "faqIds",
+    "verified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "series": {
+      "type": "string"
+    },
+    "cardNo": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "subType": {
+      "type": "string"
+    },
+    "faction": {
+      "type": "string"
+    },
+    "rarity": {
+      "type": "string"
+    },
+    "cost": {
+      "type": ["integer", "null"]
+    },
+    "attack": {
+      "type": ["integer", "null"]
+    },
+    "health": {
+      "type": ["integer", "null"]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effectText": {
+      "type": "string"
+    },
+    "flavorText": {
+      "type": "string",
+      "default": ""
+    },
+    "faqIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "searchText": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "page"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer"
+        }
+      }
+    },
+    "verified": {
+      "type": "boolean"
+    }
+  }
+}

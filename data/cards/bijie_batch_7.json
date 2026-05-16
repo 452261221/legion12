@@ -1,0 +1,94 @@
+[
+  {
+    "id": "bijie_s02_043",
+    "name": "芬恩",
+    "faction": "bijie",
+    "type": "legion",
+    "cost": 4,
+    "power": 5000,
+    "hp": 5000,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "finn_entry_advance_trial",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "advance_trial_progress",
+          "target": "first_trial",
+          "skip_completed": true,
+          "count": 1,
+          "complete_at": 2,
+          "follow_up_action": {
+            "action": "rest_source_card"
+          }
+        }
+      },
+      {
+        "id": "finn_after_trial_ready",
+        "kind": "triggered",
+        "event": "TrialProgressChanged",
+        "hidden_from_actions": true,
+        "condition": {
+          "source_card_id_is_self": true
+        },
+        "cost": {
+          "rune": 1
+        },
+        "resolution": {
+          "optional": true,
+          "action": "ready_source_card",
+          "once_per_turn_key": "finn_after_trial_ready"
+        }
+      }
+    ],
+    "text": "登场时 可发动试炼。\n此军团发动试炼后可消耗1符文：将此军团转为活跃，且本回合无法再次发动试炼。",
+    "troop_type": "武者"
+  },
+  {
+    "id": "bijie_s02_055",
+    "name": "湖中仙女的馈赠",
+    "faction": "bijie",
+    "type": "trial",
+    "cost": 0,
+    "power": 0,
+    "hp": 0,
+    "status": "implemented",
+    "keywords": [],
+    "traits": [],
+    "effects": [
+      {
+        "id": "lady_lake_complete_return_arthur",
+        "kind": "triggered",
+        "event": "TrialCompleted",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "resolution": {
+          "optional": true,
+          "action": "return_matching_card_from_deck_or_grave_to_hand",
+          "id": "bijie_s02_050",
+          "title": "选择牌库或墓地中的亚瑟王加入手牌",
+          "follow_up_action": {
+            "action": "recycle_grave_to_deck",
+            "count": 99,
+            "match": {
+              "id": "bijie_s02_050"
+            },
+            "shuffle": true,
+            "follow_up_action": {
+              "action": "prepare_next_played_legion_cost_modifier",
+              "amount": -3,
+              "definition_id": "bijie_s02_050"
+            }
+          }
+        }
+      }
+    ],
+    "text": "触发 可从牌库或墓地将1张<亚瑟王>加入手牌。随后将墓地所有<亚瑟王>返回牌库并重洗。本回合<亚瑟王>登场的费用-3。\n持续 我方已叠放<王者之剑>的<亚瑟王>即将阵亡时，移除<王者之剑>：代替承受本次致命进攻或效果。"
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "asgard_s02_0303",
+    "name": "卡纽特大帝",
+    "faction": "asgard",
+    "type": "legion",
+    "cost": 7,
+    "power": 6000,
+    "hp": 6000,
+    "calamity_level": 2,
+    "status": "implemented",
+    "keywords": [],
+    "effects": [
+      {
+        "id": "canute_entry_trigger_died_effects",
+        "kind": "triggered",
+        "event": "CardPlayed",
+        "self_only": true,
+        "hidden_from_actions": true,
+        "text": "登场时可选择我方战场或墓地最多2张非同名的阿斯加德军团，触发其阵亡效果。",
+        "resolution": {
+          "action": "trigger_selected_legion_died_effects",
+          "target_scope": "allied_battlefield",
+          "type": "legion",
+          "faction": "asgard"
+        }
+      }
+    ],
+    "text": "可对我方主宰造成1点伤害：此军团登场费用-1。\n登场时 可选择我方战场或墓地最多2张非同名的【阿斯加德】军团，触发其阵亡效果。",
+    "image_path": "res://规则/牌面/阿斯加德/卡纽特大帝.png",
+    "source": {
+      "card_code": "S02-0303",
+      "import_stage": "manual_from_card_faces"
+    },
+    "play_options": [
+      {
+        "id": "canute_blood_price",
+        "label": "对我方主宰造成1点伤害：此军团登场费用-1",
+        "self_master_damage": 1,
+        "play_cost_modifier": -1
+      }
+    ],
+    "troop_type": "领军"
+  }
+]
